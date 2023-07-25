@@ -1,0 +1,73 @@
+# This file:
+#   https://github.com/edrx/2023-1-C2-C4-ES/
+#       http://angg.twu.net/2023-1-C2-C4-ES/README.org.html
+#       http://angg.twu.net/2023-1-C2-C4-ES/README.org
+#               (find-angg "2023-1-C2-C4-ES/README.org")
+#               (find-angg "2023-1-C2-C4-ES/")
+# Author: Eduardo Ochs <eduardoochs@gmail.com>
+# See: (find-LATEX "2023-1-C2-tudo.tex")
+#      (find-LATEX "2023-1-C4-tudo.tex")
+#      (find-LATEX "2023-1-ES-tudo.tex")
+# 
+# Some eev-isms:
+# (defun c  () (interactive) (eek "C-c C-e h h"))
+# (defun o  () (interactive) (find-angg "2023-1-C2-C4-ES/README.org"))
+# (defun oo () (interactive) (find-angg "2022-2-C2-C3/README.org"))
+# (defun v  () (interactive) (brg     "~/2023-1-C2-C4-ES/README.html"))
+# (defun cv () (interactive) (c) (v))
+# 
+# (find-mygitrepo-links "2023-1-C2-C4-ES")
+# (find-MMMMgit-links   "2023-1" "C2-C4-ES")
+# (find-orgnode "Table of Contents")
+#+OPTIONS: toc:nil num:nil
+
+Este repositório contém a fonte em LaTeX dos slides, testes e provas
+dos meus cursos de Cálculo 2, Cálculo 4 e Estatística pro Serviço
+Social do semestre 2023.1 da UFF.
+
+Páginas dos cursos (com links pra todos os PDFs e vídeos): [[http://angg.twu.net/2023.1-C2.html][C2]], [[http://angg.twu.net/2023.1-C4.html][C4]], [[http://angg.twu.net/2023.1-ES.html][ES]], [[http://angg.twu.net/2023.1-LA.html][LA]].
+
+[[http://angg.twu.net/2021aulas-por-telegram.html][Sobre aulas por Telegram]].
+
+[[http://angg.twu.net/contact.html][Como entrar em contato comigo]].
+
+#+begin_src sh
+# Para baixar tudo e compilar
+# os .texs faca isto aqui:
+#
+rm -Rfv /tmp/2023-1-C2-C4-ES/
+mkdir   /tmp/2023-1-C2-C4-ES/
+cd      /tmp/2023-1-C2-C4-ES/
+git clone https://github.com/edrx/2023-1-C2-C4-ES .
+make
+#+end_src
+
+#+begin_comment
+# (find-MMMMgit-links   "2023-1" "C2-C4-ES")
+#+end_comment
+
+#+begin_comment
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+cd ~/2023-1-C2-C4-ES/
+laf
+rm -v *~
+rm -v *.html
+
+# (find-fline   "~/2023-1-C2-C4-ES/")
+# (magit-status "~/2023-1-C2-C4-ES/")
+# (find-gitk    "~/2023-1-C2-C4-ES/")
+#
+#   (s)tage all changes
+#   (c)ommit -> (c)reate
+#   (P)ush -> (p)ushremote
+#   https://github.com/edrx/2023-1-C2-C4-ES
+#
+#+end_comment
+
+# Local Variables:
+# coding:               utf-8-unix
+# modes:                (org-mode fundamental-mode)
+# org-html-postamble:   nil
+# End:
