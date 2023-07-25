@@ -1,0 +1,2137 @@
+% (find-LATEX "2023-1-C2-somas-de-riemann.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-somas-de-riemann.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-somas-de-riemann.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-somas-de-riemann.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-somas-de-riemann.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-somas-de-riemann.tex"))
+% (defun o  () (interactive) (find-LATEX "2022-2-C2-somas-de-riemann.tex"))
+% (defun ot () (interactive) (find-LATEX "2022-2-C2-TFC1-e-TFC2.tex"))
+% (defun oi () (interactive) (find-LATEX "2022-1-C2-infs-e-sups.tex"))
+% (defun u  () (interactive) (find-latex-upload-links "2023-1-C2-somas-de-riemann"))
+% (defun v  () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-somas-de-riemann.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-somas-de-riemann")
+% (find-pdf-page   "~/LATEX/2023-1-C2-somas-de-riemann.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-somas-de-riemann.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-somas-de-riemann.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-somas-de-riemann.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-somas-de-riemann.pdf
+%               file:///tmp/2023-1-C2-somas-de-riemann.pdf
+%           file:///tmp/pen/2023-1-C2-somas-de-riemann.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-somas-de-riemann.pdf
+% (find-LATEX "2019.mk")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Piecewise1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Pict3D1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v C2Subst1.lua C2Formulas1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Gram2.lua Tree1.lua Caepro5.lua ~/LATEX/")
+% (find-MM-aula-links "2023-1-C2-somas-de-riemann" "C2" "c2m231sr" "c2sr")
+
+% «.defs»			(to "defs")
+% «.title»			(to "title")
+% «.links»			(to "links")
+% «.montanhas»			(to "montanhas")
+% «.montanhas-figs»		(to "montanhas-figs")
+% «.miranda-sup-inf»		(to "miranda-sup-inf")
+% «.aviso»			(to "aviso")
+% «.particoes»			(to "particoes")
+% «.def-particao»		(to "def-particao")
+% «.def-inf-e-sup»		(to "def-inf-e-sup")
+% «.algumas-somas»		(to "algumas-somas")
+% «.def-integral»		(to "def-integral")
+% «.particoes-exercs»		(to "particoes-exercs")
+% «.dica-simplificacao»		(to "dica-simplificacao")
+% «.imagens-figuras»		(to "imagens-figuras")
+% «.imagens-de-intervalos»	(to "imagens-de-intervalos")
+% «.imagens-exercicio»		(to "imagens-exercicio")
+% «.descontinua»		(to "descontinua")
+
+% «.instrucoes-des-defs»	(to "instrucoes-des-defs")
+% «.instrucoes-des-1»		(to "instrucoes-des-1")
+% «.instrucoes-des-2»		(to "instrucoes-des-2")
+% «.instrucoes-des-ex»		(to "instrucoes-des-ex")
+% «.instrucoes-des-grid»	(to "instrucoes-des-grid")
+% «.instrucoes-des-ex-2»	(to "instrucoes-des-ex-2")
+% «.into-e-intu»		(to "into-e-intu")
+% «.um-jogo»			(to "um-jogo")
+% «.um-jogo-2»			(to "um-jogo-2")
+% «.dirichlet»			(to "dirichlet")
+% «.integral-como-limite»	(to "integral-como-limite")
+% «.TFC1»			(to "TFC1")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231sr" "2023-1-C2-somas-de-riemann")
+% (code-eevvideo      "c2m231sr" "2023-1-C2-somas-de-riemann")
+% (code-eevlinksvideo "c2m231sr" "2023-1-C2-somas-de-riemann")
+% (find-c2m231srvideo "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+\def\Rext{\overline{\R}}
+\def\V{\mathbf{V}}
+\def\F{\mathbf{F}}
+
+\def\into{\overline ∫}
+\def\intu{\underline∫}
+\def\intou{\overline{\underline∫}}
+\def\INTx#1#2#3#4{#1_{x=#2}^{x=#3} #4 \, dx}
+\def\INTP  #1#2#3{#1_{#2}          #3 \, dx}
+
+\def\mname#1{\ensuremath{[\text{#1}]}}
+\def\minf{\mname{inf}}
+\def\msup{\mname{sup}}
+\def\sse {\text{sse}}
+
+\def\sumiN#1{\sum_{i=1}^N #1 (b_i-a_i)}
+
+\sa{into_P     f(x) dx}{\INTP{\into} {P}{f(x)}}
+\sa{intu_P     f(x) dx}{\INTP{\intu} {P}{f(x)}}
+\sa{intou_P    f(x) dx}{\INTP{\intou}{P}{f(x)}}
+\sa{into_ab2k  f(x) dx}{\INTP{\into} {[a,b]_{2^k}}{f(x)}}
+\sa{intu_ab2k  f(x) dx}{\INTP{\intu} {[a,b]_{2^k}}{f(x)}}
+\sa{intou_ab2k f(x) dx}{\INTP{\intou}{[a,b]_{2^k}}{f(x)}}
+\sa{into_xab   f(x) dx}{\INTx{\into} {a}{b}{f(x)}}
+\sa{intu_xab   f(x) dx}{\INTx{\intu} {a}{b}{f(x)}}
+\sa{intou_xab  f(x) dx}{\INTx{\intou}{a}{b}{f(x)}}
+\sa{int_xab    f(x) dx}{\INTx{\int}  {a}{b}{f(x)}}
+
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231srp 1 "title")
+% (c2m231sra   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo C2 - 2023.1}
+
+\bsk
+
+Aulas 15 até 19: Somas de Riemann
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «links»  (to ".links")
+% (c2m231srp 2 "links")
+% (c2m231sra   "links")
+
+{\bf Links}
+
+\scalebox{0.6}{\def\colwidth{12cm}\firstcol{
+
+\par Leithold:
+\par \Ca{Leit5p35} (p.318) Figura 3
+\par \Ca{Leit5p36} (p.319) Figura 4
+\par \Ca{Leit5p41} (p.324) 5.5. A integral definida
+
+\ssk
+
+\par Miranda:
+\par \Ca{Miranda207} 7.1 Áreas e somas de Riemann
+\par \Ca{Miranda212} 7.2 Integral definida
+\par \Ca{Miranda217} 7.3. Definição 3: Soma superior e inferior
+
+\ssk
+
+\par Livro de Análise do Ross:
+\par \Ca{RossAp16} (p.269) The Riemann Integral
+
+\msk
+
+\par Vou (re)usar muito material destes PDFzinhos:
+\par \Ca{2fT60} 2022.2, aulas 13, 14 e 16: Somas de Riemann
+\par \Ca{2fT89} 2022.2, aula 19, 14 e 16: o TFC1 e o TFC2
+\par \Ca{2eT39} 2022.1, aula 15: infs e sups
+
+\msk
+
+\par Algumas figuras importantes:
+\par \Ca{2eT95} A integral como limite
+\par \Ca{2fT91} Algumas definições: partição, inf e sup, integral
+
+\bsk
+
+\par \Ca{2gQ32} Quadros da aula 15 (23/maio/2023)
+\par \Ca{2gQ34} Quadros da Aula 16 (26/maio/2023)
+\par \Ca{2gQ37} Quadros da Aula 18 (02/junho/2023)
+\par \Ca{2gQ39} Quadros da Aula 19 (06/junho/2023)
+
+}\anothercol{
+}}
+
+
+\newpage
+
+% «montanhas»  (to ".montanhas")
+% (c2m231srp 3 "montanhas")
+% (c2m231sra   "montanhas")
+
+% (c2m222srp 8 "exercicio-4")
+% (c2m222sra   "exercicio-4")
+% (c2m221somas3p 4 "exercicio-1")
+% (c2m221somas3a   "exercicio-1")
+
+{\bf Montanhas}
+
+\def\sumo{\sum_{i=1}^{8}}
+\def\sumoo#1{\sumo #1 (x_i - x_{i-1})}
+
+\scalebox{0.9}{\def\colwidth{12cm}\firstcol{
+
+Seja $f(x)$ a função da próxima página -- ``as montanhas''.
+
+Você vai receber (pelo menos) uma cópia dessa página.
+
+Faça cada item abaixo em um dos 12 gráficos da $f(x)$.
+
+\msk
+
+Represente graficamente cada um dos somatórios abaixo.
+
+Se você tiver dificuldade com algum desses somatórios
+
+comece expandindo ele em dois passos, como na página 7.
+
+\msk
+
+a) $\sumoo{f(x_i)}$
+
+\ssk
+
+b) $\sumoo{f(x_{i-1})}$
+
+\ssk
+
+c) $\sumoo{\max(f(x_{i-1}), f(x_i))}$
+
+\ssk
+
+d) $\sumoo{\min(f(x_{i-1}), f(x_i))}$
+
+\ssk
+
+e) $\sumoo{f(\frac{x_{i-1} + x_i}{2})}$
+
+\ssk
+
+f) $\sumoo{\frac{f(x_{i-1}) + f(x_i)}{2}}$
+
+}\anothercol{
+}}
+
+
+\newpage
+
+
+%  __  __                   _        _           
+% |  \/  | ___  _   _ _ __ | |_ __ _(_)_ __  ___ 
+% | |\/| |/ _ \| | | | '_ \| __/ _` | | '_ \/ __|
+% | |  | | (_) | |_| | | | | || (_| | | | | \__ \
+% |_|  |_|\___/ \__,_|_| |_|\__\__,_|_|_| |_|___/
+%                                                
+% «montanhas-figs»  (to ".montanhas-figs")
+% (c2m231srp 4 "montanhas-figs")
+% (c2m231sra   "montanhas-figs")
+% (c2m222srp 9 "mountains")
+% (c2m222sra   "mountains")
+% (c2m221somas3p 3 "mountains")
+% (c2m221somas3a   "mountains")
+
+% (find-angg "LUA/Piecewise1.lua" "Xtoxytoy-test2")
+%
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(23,9))
+%L spec   = "(0,1)--(5,6)--(7,4)--(11,8)--(15,4)--(17,6)--(23,0)"
+%L xs     = {    1,3,    6,     9,  11, 13,   16,19,    21      }
+%L labely = -1
+%L pws    = PwSpec.from(spec)
+%L xtos   = Xtoxytoy.from(pws:fun(), xs)
+%L vlines = xtos:topict("v")
+%L curve  = pws:topict()
+%L labels = PictList {}
+%L for i,x in ipairs(xs) do
+%L   labels:addputstrat(v(x,labely), "\\cell{x_"..(i-1).."}")
+%L end
+%L p = PictList { vlines, curve:prethickness("2pt"), labels }
+%L p:pgat("pA", "mountain"):output()
+\pu
+
+\unitlength=8pt
+
+\vspace*{-0.25cm}
+\hspace*{-0.5cm}
+$\scalebox{0.55}{$
+ \begin{array}{ccccc}
+ \mountain && \mountain && \mountain \\[20pt]
+ \mountain && \mountain && \mountain \\[20pt]
+ \mountain && \mountain && \mountain \\[20pt]
+ \mountain && \mountain && \mountain \\[20pt]
+ \end{array}
+ $}
+$
+
+\newpage
+
+%            _                                               
+%  _ __ ___ (_)_ __          ___   _ __ ___   __ ___  __     
+% | '_ ` _ \| | '_ \        / _ \ | '_ ` _ \ / _` \ \/ /     
+% | | | | | | | | | |      |  __/ | | | | | | (_| |>  <      
+% |_| |_| |_|_|_| |_|____   \___| |_| |_| |_|\__,_/_/\_\____ 
+%                  |_____|                            |_____|
+%
+% «miranda-sup-inf»  (to ".miranda-sup-inf")
+% (c2m231srp 5 "montanhas-min-e-max")
+% (c2m231sra   "montanhas-min-e-max")
+% (c2m222srp 10 "soma-superior-e")
+% (c2m222sra    "soma-superior-e")
+
+{\bf Miranda: somas inferiores e superiores}
+
+\scalebox{0.65}{\def\colwidth{12cm}\firstcol{
+
+Nas páginas 217 e 218 o Miranda define as notações $I(f,P)$ e
+$S(f,P)$, e lá no meio dessas definições ele define
+%
+$$\min_{x∈I} f(x)
+  \qquad
+  \text{e}
+  \qquad
+  \max_{x∈I} f(x)
+$$
+
+usando o truque do ``vire-se'': ele mostra uma figura e o leitor tem
+que se virar pra entender o que essas notações querem dizer... veja:
+
+% (find-books "__analysis/__analysis.el" "miranda")
+% (find-books "__analysis/__analysis.el" "miranda" "soma superior")
+% (find-dmirandacalcpage 217   "soma superior e inferior")
+% (find-dmirandacalcpage 218   "min_")
+\Ca{Miranda217} (Definição 3)
+
+\bsk
+
+{\bf Mais itens pra fazer na figura das montanhas}
+
+a) Entenda o que essas notações do Miranda querem dizer
+
+e verifique que na figura das montanhas temos:
+%
+$$\begin{array}{ccccc}
+   && \D \max(f(x_1),f(x_2))
+     &\lneqq& \D \max_{x∈[x_1,x_2]}f(x) \\
+   \D     \min_{x∈[x_2,x_3]}f(x)
+     &\lneqq& \min(f(x_2),f(x_3)) \\
+  \end{array}
+$$
+
+e depois represente nas montanhas:
+
+\ssk
+
+b) $\sumoo{(\max_{x∈[x_{i-1},x_i]} f(x))}$
+
+\ssk
+
+c) $\sumoo{(\min_{x∈[x_{i-1},x_i]} f(x))}$
+
+}\anothercol{
+}}
+
+
+
+\newpage
+
+% «aviso»  (to ".aviso")
+% (c2m231srp 6 "aviso")
+% (c2m231sra   "aviso")
+
+{\bf Aviso}
+
+\scalebox{0.9}{\def\colwidth{10cm}\firstcol{
+
+As próximas páginas têm definições precisas de:
+
+partição, inf e sup, $\minf$ e $\msup$, integral definida,
+
+e um monte de definições intermediárias que a
+
+gente vai precisar pra entender as definições
+
+mais importantes...
+
+\msk
+
+{\sl O objetivo desta parte do curso é fazer vocês aprenderem um monte
+  de truques pra entenderem definições complicadas ``visualizando o
+  que elas querem dizer''. Estes truques vão ser uma das partes do
+  curso que vão ser mais úteis pras matérias seguintes, mas esses
+  assuntos vão valer bem poucos pontos na prova.}
+
+% 2gQ32
+
+}\anothercol{
+}}
+
+
+\newpage
+
+% «particoes»  (to ".particoes")
+% (c2m231srp 7 "particoes")
+% (c2m231sra   "particoes")
+% (c2m212somas1p 9 "particoes")
+% (c2m212somas1a   "particoes")
+
+{\bf Partições, informalmente}
+
+\scalebox{0.47}{\def\colwidth{12cm}\firstcol{
+
+Informalmente uma partição de um intervalo $[a,b]$ é um modo de
+decompor $[a,b]$ em intervalos menores consecutivos. Por exemplo,
+%
+$$[2,7] = [2,3.5]∪[3.5,4]∪[4,6]∪[6,7]$$
+
+A definição ``certa'' é mais complicada... vamos vê-la daqui a pouco.
+O caso geral da igualdade acima é:
+%
+$$[a,b] = [a_1,b_1]∪[a_2,b_2]∪\ldots∪[a_N,b_N],$$
+
+onde:
+
+$N$ é o número de intervalos,
+
+$a=a_1$, $b=b_N$, (``extremidades'')
+
+$a_i<b_i$ para todo $i$ em que isto faz sentido ($i=1,\ldots,N$)
+
+$b_i=a_{i+1}$ para todo $i$ e.q.i.f.s.; neste caso, $i=1,\ldots,N-1$
+
+\bsk
+
+Um jeito prático de definir uma partição é usando uma tabela.
+
+Por exemplo, esta tabela
+%
+$$\begin{array}{cccc}
+  i & a_i & b_i & I_i \\\hline
+  1 & 2   & 3.5 & [2, 3.5] \\
+  2 & 3.5 & 4   & [3.5, 4] \\
+  3 & 4   & 6   & [4,   6] \\
+  4 & 6   & 7   & [6,   7] \\
+  \end{array}
+$$
+
+corresponde à partição de $[2,7]$ do início deste slide.
+
+\bsk
+
+% (find-dmirandacalcpage 212 "7.2. Integral definida")
+% (find-leitholdptpage (+ 17 324) "5.5. A integral definida")
+Veja: \Ca{Miranda212}, \Ca{Leit5p41} (p.324, seção 5.5).
+
+}\anothercol{
+
+Uma definição um pouco melhor de partição é a seguinte.
+
+Digamos que $P$ seja um subconjunto não-vazio e finito de $\R$,
+
+e que o menor elemento de $P$ seja $a$ e o maior seja $b$.
+
+\ColorRed{Então $P$ é uma partição do intervalo $[a,b]$.}
+
+\msk
+
+Exemplo: a partição $P=\{2,3.5,4,6,7\}$ corresponde a:
+%
+$$[2,7] = [2,3.5]∪[3.5,4]∪[4,6]∪[6,7]$$
+
+
+
+Pra fazer a tradução da ``versão conjunto'' pra ``versão tabela''
+ponha os elementos de $P$ em ordem e chame-os de $b_0,\ldots,b_N$;
+defina cada $a_i$ como sendo $b_{i-1}$ -- por exemplo, $a_1 = b_0$ --
+e encontre $a$, $b$, e $N$. Depois que você tem a ``versão tabela'' é
+bem fácil obter a ``versão união de intervalos''.
+
+\bsk
+
+Quando dizemos algo como ``Seja $P$ a partição $\{2.5,4,6\}$'' estamos
+criando um contexto no qual há uma partição ``default'' definida... e
+neste contexto vamos ter valores definidos para $N$, $a$, $b$, e para
+cada $a_i$ e $b_i$. Por exemplo...
+
+\msk
+
+Seja $P$ a partição $\{2.5,4,6\}$. Então
+%
+$$\begin{array}{rcl}
+  \sum_{i=1}^N f(b_i)·(b_i-a_i)
+     &=& \sum_{i=1}^2 f(b_i)·(b_i-a_i) \\
+     &=& f(b_1)·(b_1-a_1) \\
+     &+& f(b_2)·(b_2-a_2) \\
+     &=& f(4)·(4-2.5) \\
+     &+& f(6)·(6-4) \\
+  \end{array}
+$$
+
+
+}}
+
+
+\newpage
+
+% «exercicio-4»  (to ".exercicio-4")
+% (c2m212somas1p 10 "exercicio-4")
+% (c2m212somas1a    "exercicio-4")
+% (c2sop 10 "exercicio-4")
+% (c2soa    "exercicio-4")
+% (c2m202somas1p 8 "exercicio-4")
+% (c2m202somas1    "exercicio-4")
+
+% «exercicio-5»  (to ".exercicio-5")
+% (c2m212somas1p 11 "exercicio-5")
+% (c2m212somas1a    "exercicio-5")
+% (c2m202somas1p 9 "exercicio-5")
+% (c2m202somas1    "exercicio-5")
+
+% «ponto-decimal»  (to ".ponto-decimal")
+% Ah, obs, repara que eu vou usar a convencao internacional e vou
+% sempre escrever "1.5" ao inves de "1,5" - e recomendo que voces usem
+% ela tambem pra gente poder usar a virgula pra outras coisas. Por
+% exemplo, na pagina 9 temos P = {2, 3.5, 4, 6, 7}, e se a gente
+% escrever "3,5" ao inves de "3.5" vamos ter que usar ";"s como
+% separadores entres os numeros...
+
+% «partition-sum»  (to ".partition-sum")
+% (c2m211somas1p 12 "partition-sum")
+% (c2m211somas1a    "partition-sum")
+
+% «subst»  (to ".subst")
+% (c2m202somas1p 11 "subst")
+% (c2m202somas1     "subst")
+
+
+\newpage
+
+%  ____        __                    _   _                 
+% |  _ \  ___ / _|  _ __   __ _ _ __| |_(_) ___ __ _  ___  
+% | | | |/ _ \ |_  | '_ \ / _` | '__| __| |/ __/ _` |/ _ \ 
+% | |_| |  __/  _| | |_) | (_| | |  | |_| | (_| (_| | (_) |
+% |____/ \___|_|   | .__/ \__,_|_|   \__|_|\___\__,_|\___/ 
+%                  |_|                                     
+%
+% «def-particao»  (to ".def-particao")
+% (c2m231srp 7 "def-particao")
+% (c2m231sra   "def-particao")
+% (c2m222tfcsp 3 "def-particao")
+% (c2m222tfcsa   "def-particao")
+
+{\bf A definição de partição}
+
+\scalebox{0.85}{\def\colwidth{11cm}\firstcol{
+
+Se $P$ é um subconjunto \ColorRed{finito} e \ColorRed{não-vazio} de $\R$,
+
+então podemos interpretar $P$ como uma partição...
+
+Por exemplo, se $P=\{200,20,42,99,63,33,20,20\}$
+
+então $P=\{20,33,42,63,99,200\}$, e aí vamos interpretar
+
+esse conjunto de 6 pontos -- ordenados em ordem crescente --
+
+como uma partição do intervalo $I = [a,b] = [20,200]$ em
+
+5 subintervalos (``$N=5$''), assim:
+
+$$\begin{array}{ccccccl}
+  20 & 33 & 42 & 63 & 99 & 200 \\
+  x_0 & x_1 & x_2 & x_3 & x_4 & x_5 \\
+  a_1 & b_1 &     &     &     &     & I_1=[a_1,b_1] \\
+      & a_2 & b_2 &     &     &     & I_2=[a_2,b_2] \\
+      &     & a_3 & b_3 &     &     & I_3=[a_3,b_3] \\
+      &     &     & a_4 & b_4 &     & I_4=[a_4,b_4] \\
+      &     &     &     & a_5 & b_5 & I_5=[a_5,b_5] \\
+   a  &     &     &     &     &  b  & I  = [a,b] = [x_0,x_N]\\
+  \end{array}
+$$
+
+}\anothercol{
+}}
+
+
+\newpage
+
+%  ____        __   _        __                          
+% |  _ \  ___ / _| (_)_ __  / _|   ___   ___ _   _ _ __  
+% | | | |/ _ \ |_  | | '_ \| |_   / _ \ / __| | | | '_ \ 
+% | |_| |  __/  _| | | | | |  _| |  __/ \__ \ |_| | |_) |
+% |____/ \___|_|   |_|_| |_|_|    \___| |___/\__,_| .__/ 
+%                                                 |_|    
+% «def-inf-e-sup»  (to ".def-inf-e-sup")
+% (c2m231srp 9 "def-inf-e-sup")
+% (c2m231sra   "def-inf-e-sup")
+% (c2m222tfcsp 4 "def-inf-e-sup")
+% (c2m222tfcsa   "def-inf-e-sup")
+% (c2m221isp 3 "algumas-definicoes")
+% (c2m221isa   "algumas-definicoes")
+
+{\bf As definições de inf e sup}
+
+\scalebox{0.9}{\def\colwidth{10cm}\firstcol{
+
+Digamos que $f:\R→\R$ e $B⊂\R$.
+
+Vamos definir $\inf(f(B))$ e $\sup(f(B))$ ---
+
+e também $\inf(D)$ e $\sup(D)$, pra $D⊂\R$ ---
+
+desta forma:
+%
+$$\begin{array}{rcl}
+  \Rext &=& \R∪\{-∞,+∞\} \\
+  C  &=& \setofst{(x,f(x))}{x∈B} \\
+  D  &=& \setofst{f(x)}{x∈B} \\
+  D' &=& \setofst{y∈\R}{∃x∈B.\ f(x)=y} \\
+  L &=& \setofst{y∈\Rext}{∀d∈D.\;y≤d} \\
+  U &=& \setofst{y∈\Rext}{∀d∈D.\;d≤y} \\
+  (α=\inf(D)) &=& α∈L ∧ (∀ℓ∈L.\;ℓ \le α) \\
+  (β=\sup(D)) &=& β∈U ∧ (∀u∈U.\;β \le u) \\
+  \end{array}
+$$
+
+% Com isto podemos definir a integral definida.
+
+% A definição formal dela está na próxima página.
+
+}\anothercol{
+}}
+
+\newpage
+
+%     _    _                                                                 
+%    / \  | | __ _ _   _ _ __ ___   __ _ ___   ___  ___  _ __ ___   __ _ ___ 
+%   / _ \ | |/ _` | | | | '_ ` _ \ / _` / __| / __|/ _ \| '_ ` _ \ / _` / __|
+%  / ___ \| | (_| | |_| | | | | | | (_| \__ \ \__ \ (_) | | | | | | (_| \__ \
+% /_/   \_\_|\__, |\__,_|_| |_| |_|\__,_|___/ |___/\___/|_| |_| |_|\__,_|___/
+%            |___/                                                           
+%
+% «algumas-somas»  (to ".algumas-somas")
+% (c2m231srp 10 "algumas-somas")
+% (c2m231sra    "algumas-somas")
+% (c2m221somas3p 13 "metodos-nomes")
+% (c2m221somas3a    "metodos-nomes")
+
+{\bf Algumas somas de Riemann}
+
+\scalebox{0.65}{\def\colwidth{9cm}\firstcol{
+
+Vou definir:
+%
+$$\begin{array}{ccl}
+  \mname{L}    &=& \sumiN {f(a_i)}                    \\[2pt]
+  \mname{R}    &=& \sumiN {f(b_i)}                    \\[2pt]
+  \mname{Trap} &=& \sumiN {\frac{f(a_i) + f(b_i)}{2}} \\[2pt]
+  \mname{M}    &=& \sumiN {f(\frac{a_i+b_i}{2})}      \\[2pt]
+  \mname{min}  &=& \sumiN {\min(f(a_i), f(b_i))}      \\[2pt]
+  \mname{max}  &=& \sumiN {\max(f(a_i), f(b_i))}      \\[2pt]
+  \mname{inf}  &=& \sumiN {\inf(f([a_i,b_i]))}        \\[2pt]
+  \mname{sup}  &=& \sumiN {\sup(f([a_i,b_i]))}        \\
+  \end{array}
+$$
+
+Compare com: os exercícios das montanhas, 
+
+as páginas 208--210 do Miranda (\Ca{Miranda208}), e:
+
+{\footnotesize
+
+\url{https://pt.wikipedia.org/wiki/Soma_de_Riemann}
+
+}
+
+\msk
+
+Nas duas últimas linhas o $f([a_i,b_i])$ é a \ColorRed{imagem
+
+de um intervalo}. Temos:
+%
+$$\begin{array}{rcl}
+  f(A) &=& \setofst{f(a)}{a∈A} \\
+  f(\{7,8,9\}) &=& \setofst{f(a)}{a∈\{7,8,9\}} \\
+               &=& \{f(7), f(8), f(9)\} \\
+  \end{array}
+$$
+
+% (find-LATEXgrep "grep --color=auto -niH --null -e imagens 202*.tex")
+
+}\anothercol{
+}}
+
+% (c2m222p2p 4 "questao-3")
+% (c2m222p2a   "questao-3")
+% (find-dmirandacalcpage 212 "7.2. Integral definida")
+% (find-leitholdptpage (+ 17 324) "5.5. A integral definida")
+% Veja: \Ca{Miranda212}, \Ca{Leit5p41} (p.324, seção 5.5).
+
+% 2fT125
+
+
+\newpage
+
+%  ____        __   _       _                       _ 
+% |  _ \  ___ / _| (_)_ __ | |_ ___  __ _ _ __ __ _| |
+% | | | |/ _ \ |_  | | '_ \| __/ _ \/ _` | '__/ _` | |
+% | |_| |  __/  _| | | | | | ||  __/ (_| | | | (_| | |
+% |____/ \___|_|   |_|_| |_|\__\___|\__, |_|  \__,_|_|
+%                                   |___/             
+%
+% «def-integral»  (to ".def-integral")
+% (c2m231srp 11 "def-integral")
+% (c2m231sra    "def-integral")
+% (c2m222tfcsp 5 "def-integral")
+% (c2m222tfcsa   "def-integral")
+
+\vspace*{-0.3cm}
+
+$$\scalebox{0.44}{$
+  \begin{array}{rcl}
+  [a,b]_N &=& \setofst{a+k(\frac{b-a}{N})}{k∈\{0,\ldots,N\}} \\
+          &=& \{ a+0(\frac{b-a}{N}),
+              \; a+1(\frac{b-a}{N}),
+              \; \ldots,
+              \; a+N(\frac{b-a}{N}) \} \\
+          &=& \{ a,
+              \; a + \frac{b-a}{N},
+              \; a + 2\frac{b-a}{N},
+              \; a + 3\frac{b-a}{N},
+              \; \ldots, \; b\} \\
+  \D \ga{into_P  f(x) dx} &=&    \msup_P \\[-5pt]
+                          &=& \D \sum_{i=1}^{N} \sup(f([a_i,b_i])) (b_i-a_i) \\
+  \D \ga{intu_P  f(x) dx} &=&    \minf_P \\[-5pt]
+                          &=& \D \sum_{i=1}^{N} \inf(f([a_i,b_i])) (b_i-a_i) \\ \\[-5pt]
+  \D \ga{intou_P f(x) dx} &=& \D \INTP{\into}{P}{f(x)}
+                               - \INTP{\intu}{P}{f(x)} \\ \\[-5pt]
+  \D \ga{into_xab  f(x) dx} &=& \D \lim_{k→∞} \ga{into_ab2k f(x) dx} \\
+  \D \ga{intu_xab  f(x) dx} &=& \D \lim_{k→∞} \ga{intu_ab2k f(x) dx} \\ \\[-5pt]
+  \D \ga{intou_xab f(x) dx} &=& \D \ga{into_xab f(x) dx}
+                                 - \ga{intu_xab f(x) dx} \\ \\[-5pt]
+  \D \left( \ga{int_xab f(x) dx} \text{\;\;existe} \right)
+                             &=& \D \left( \ga{into_xab  f(x) dx}
+                                         = \ga{intu_xab  f(x) dx} \right)     \\ \\[-7pt]
+                             &=& \D \left( \ga{intou_xab f(x) dx} = 0 \right) \\ \\[-7pt]
+  \D \ga{int_xab f(x) dx}    &=& \D \ga{into_xab f(x) dx}
+                                 \qquad \text{(se a integral existir)} \\  \\[-7pt]
+                             &=& \D \ga{intu_xab f(x) dx}
+                                 \qquad \text{(se a integral existir)} \\
+  \end{array}
+  $}
+$$
+
+
+
+\newpage
+
+% «particoes-exercs»  (to ".particoes-exercs")
+% (c2m231srp 11 "particoes-exercs")
+% (c2m231sra    "particoes-exercs")
+% (c2m212somas1p 9 "particoes")
+% (c2m212somas1a   "particoes")
+
+{\bf Exercícios sobre partições}
+
+\scalebox{0.55}{\def\colwidth{10cm}\firstcol{
+
+
+
+a) Converta esta ``partição''
+%
+$$[4,12] = [4,5]∪[5,6]∪[6,9]∪[9,10]∪[10,12]$$
+
+para uma tabela. Neste caso quem são $a$, $b$ e $N$?
+
+\bsk
+
+b) Seja $P=\{2.5,3,4,6,10\}$.
+
+Converta $P$ para o ``formato tabela'' e para o
+
+``formato união de subintervalos'', que é este aqui:
+%
+$$[a,b] = [a_1,b_1]∪\ldots∪[a_N,b_N].$$
+
+
+\msk
+
+c) Seja $P=\{4,2,1,1.5\}$.
+
+Interprete $P$ como uma partição. Diga quem são o $N$,
+
+o $a$ e o $b$ dela e monte a tabela dos subintervalos dela.
+
+\msk
+
+d) Seja $P=[2,4]_6$.
+
+Diga quem são os pontos da partição $P$.
+
+\msk
+
+e) Seja $P=[2,5]_{2^3}$.
+
+Diga quem são os pontos da partição $P$.
+
+}\anothercol{
+
+% «dica-simplificacao»  (to ".dica-simplificacao")
+% (c2m231srp 12 "dica-simplificacao")
+% (c2m231sra    "dica-simplificacao")
+% (c2m211somas1p 16 "exercicio-9-dicas")
+% (c2m211somas1a    "exercicio-9-dicas")
+
+{\bf Uma dica sobre simplificação}
+
+No Ensino Médio às vezes convencem a gente de que uma fração como
+$\frac64$ \ColorRed{\underline{\underline{tem}}} que ser simplificada
+pra $\frac32$, mas se a gente tem que listar uma sequência de números
+começando em 0 em que cada número novo é o anterior mais $\frac14$ eu
+acho bem melhor escrever essa sequência como
+%
+$$\frac04, \frac14, \frac24, \frac34, \frac44, \frac54, \frac64, \ldots$$
+%
+do que como:
+%
+$$0, \frac14, \frac12, \frac34, 1, \frac54, \frac32, \ldots$$
+
+\bsk
+
+Lembre destes trechos da Dica 7: \Ca{2gT4}
+
+% (c2m231introp 3 "releia-a-dica-7")
+% (c2m231introa   "releia-a-dica-7")
+
+``Uma solução bem escrita é fácil de ler e fácil de verificar'', e
+``Se as outras pessoas acharem que ler a sua solução é um sofrimento,
+isso é mau sinal; se as outras pessoas acharem que a sua solução está
+claríssima e que elas devem estudar com você, isso é bom sinal''.
+
+}}
+
+\newpage
+
+% (c2m231introp 11 "imagens-de-intervalos")
+% (c2m231introa    "imagens-de-intervalos")
+
+
+\newpage
+
+%  ___                                           __ _           
+% |_ _|_ __ ___   __ _  __ _  ___ _ __  ___ _   / _(_) __ _ ___ 
+%  | || '_ ` _ \ / _` |/ _` |/ _ \ '_ \/ __(_) | |_| |/ _` / __|
+%  | || | | | | | (_| | (_| |  __/ | | \__ \_  |  _| | (_| \__ \
+% |___|_| |_| |_|\__,_|\__, |\___|_| |_|___(_) |_| |_|\__, |___/
+%                      |___/                          |___/     
+%
+% «imagens-figuras»  (to ".imagens-figuras")
+% (c2m231srp 13 "imagens-figuras")
+% (c2m231sra    "imagens-figuras")
+% (c2m221somas3p 5 "imagens-figuras")
+% (c2m221somas3a   "imagens-figuras")
+
+% (find-angg "LUA/Piecewise1.lua" "Xtoxytoy-test3")
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(8,4))
+%L 
+%L cthick = "2pt"     -- curve
+%L dthick = "0.25pt"  -- dots
+%L sthick = "4pt"     -- segments
+%L 
+%L -- Curve:
+%L cspec   = "(0,2)--(2,4)--(6,0)--(8,2)"
+%L cpws    = PwSpec.from(cspec)
+%L curve   = cpws:topict():prethickness(cthick)
+%L 
+%L -- Segments:
+%L sspec = "(1,0)c--(2,0)--(4,0)c" ..
+%L        " (1,3)c--(2,4)--(4,2)c" ..
+%L        " (0,2)c--(0,4)c"
+%L spws   = PwSpec.from(sspec)
+%L segs   = spws:topict():prethickness(sthick):Color("Orange")
+%L 
+%L -- Dots:
+%L dotsn = function (nsubsegs)
+%L     local xs    = seqn(1, 4, nsubsegs)
+%L     local dots0 = Xtoxytoy.from(cpws:fun(), xs)
+%L     local dots  = dots0:topict("vhxpy"):prethickness(dthick):Color("Red")
+%L     return dots
+%L   end
+%L 
+%L PictList { curve, dotsn(1)  } :pgat("pgatc", "ImageOne")   :output()
+%L PictList { curve, dotsn(3)  } :pgat("pgatc", "ImageThree") :output()
+%L PictList { curve, dotsn(6)  } :pgat("pgatc", "ImageSix")   :output()
+%L PictList { curve, dotsn(12) } :pgat("pgatc", "ImageTwelve"):output()
+%L PictList { curve, segs }      :pgat("pgatc", "ImageSegs")  :output()
+\pu
+
+
+
+\newpage
+
+% «imagens-de-intervalos»  (to ".imagens-de-intervalos")
+% (c2m231srp 13 "imagens-de-intervalos")
+% (c2m231sra    "imagens-de-intervalos")
+% (c2m221somas3p 6 "imagens-figuras-2")
+% (c2m221somas3a   "imagens-figuras-2")
+
+{\bf Imagens de intervalos}
+
+\scalebox{0.5}{\def\colwidth{12.5cm}\firstcol{
+
+{}
+
+Se $f:\R→\R$ então em princípio a expressão $f(\{7,8,9\})$ deveria dar
+um erro, porque $f$ é uma função que espera receber um número, e
+$\{7,8,9\}$ é um conjunto... mas aí normalmente a gente define que o
+comportamento da $f$ quando ela recebe um conjunto vai ser este aqui:
+%
+$$f(A) \;\;=\;\; \setofst{f(a)}{a∈A}$$
+
+A gente diz que $f(A)$ é \ColorRed{a imagem do conjunto $A$}.
+
+\bsk
+
+Algumas pessoas -- como o Carlos, aqui: \Ca{2gT12} --
+
+acham que isto é sempre verdade:
+%
+$$f([a,b]) = [f(a),f(b)].$$
+
+\standout{Não seja como o Carlos!!! Seja como o Bob!!!}
+
+\bsk
+
+Nas figuras à direita temos:
+%
+$$\begin{array}{rcl}
+  f(\{1,4\}) &=& \{f(1),f(4)\} \\
+             &=& \{3,2\} \\
+             &=& \{2,3\} \\
+  f(\{1,2,3,4\}) &=& \{f(1),f(2),f(3),f(4)\} \\
+                 &=& \{2,3,4,3\} \\
+                 &=& \{2,3,4\} \\
+  f([1,4]) &=& [2,4] \\{}
+  [f(1),f(4)] &=& [3,2] \\
+              &=& \setofst{y∈\R}{3≤y≤2} \\
+              &=& ∅ \\
+              &≠& f([1,4]) \\
+  \end{array}
+$$
+
+}\anothercol{
+
+\vspace*{0cm}
+
+$\phantom{mmmm}
+ \scalebox{2}{$
+  \begin{array}{l}
+    {\ImageOne}    \\
+    {\ImageThree}  \\
+    {\ImageSix}  \\
+    {\ImageTwelve} \\
+    {\ImageSegs}   \\
+  \end{array}
+ $}
+$
+
+}}
+
+
+
+% (c2m222srp 14 "exercicio-7")
+% (c2m222sra    "exercicio-7")
+
+\newpage
+
+
+%  ___                                                               
+% |_ _|_ __ ___   __ _  __ _  ___ _ __  ___    _____  _____ _ __ ___ 
+%  | || '_ ` _ \ / _` |/ _` |/ _ \ '_ \/ __|  / _ \ \/ / _ \ '__/ __|
+%  | || | | | | | (_| | (_| |  __/ | | \__ \ |  __/>  <  __/ | | (__ 
+% |___|_| |_| |_|\__,_|\__, |\___|_| |_|___/  \___/_/\_\___|_|  \___|
+%                      |___/                                         
+%
+% «imagens-exercicio»  (to ".imagens-exercicio")
+% (c2m231srp 14 "imagens-exercicio")
+% (c2m231sra    "imagens-exercicio")
+% (c2m221somas3p 7 "exercicio-2")
+% (c2m221somas3a   "exercicio-2")
+
+{\bf Imagens de intervalos: exercício}
+
+\scalebox{0.85}{\def\colwidth{6.5cm}\firstcol{
+
+Seja $f(x)$ esta função:
+
+\msk
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(8,4))
+%L spec   = "(0,2)--(2,4)--(6,0)--(8,2)"
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList { curve:prethickness("2pt") }
+%L p:pgat("pgatc", "falsoseno"):output()
+\pu
+%
+$f(x) = \falsoseno$
+
+\msk
+
+Calcule estas imagens de intervalos:
+
+\msk
+
+\begin{tabular}[t]{l}
+a) $f([0,1])$ \\
+b) $f([1,2])$ \\
+c) $f([0,2])$ \\
+d) $f([2,3])$ \\
+e) $f([1,3])$ \\
+f) $f([0,3])$ \\
+g) $f([0,4])$ \\
+h) $f([4,8])$ \\
+i) $f([0,8])$ \\
+j) $f([1,7])$ \\
+\end{tabular}
+\qquad
+\begin{tabular}[t]{l}
+a') $f((0,1))$ \\
+b') $f((1,2))$ \\
+c') $f((0,2))$ \\
+d') $f((2,3))$ \\
+e') $f((1,3))$ \\
+f') $f((0,3))$ \\
+g') $f((0,4))$ \\
+h') $f((4,8))$ \\
+i') $f((0,8))$ \\
+j') $f((1,7))$ \\
+\end{tabular}
+
+}\anothercol{
+
+Dicas:
+
+\msk
+
+Faça os itens (a) até (j) primeiro. Os itens (a') até (j') são bem
+mais difíceis, e em alguns deles os resultados vão ser conjuntos
+fechados ou ``semi-abertos''.
+
+\msk
+
+O Leithold define intervalos
+
+semi-abertos aqui: \Ca{Leit1p7}
+
+\msk
+
+Daqui a pouco nós vamos ver um modo de testar as respostas dos itens
+desse exercício, e um modo de resolver ele por chutar e testar... mas
+aguente um pouquinho!
+
+
+}}
+
+\newpage
+
+%  ____                            _   _                   
+% |  _ \  ___  ___  ___ ___  _ __ | |_(_)_ __  _   _  __ _ 
+% | | | |/ _ \/ __|/ __/ _ \| '_ \| __| | '_ \| | | |/ _` |
+% | |_| |  __/\__ \ (_| (_) | | | | |_| | | | | |_| | (_| |
+% |____/ \___||___/\___\___/|_| |_|\__|_|_| |_|\__,_|\__,_|
+%                                                          
+% «descontinua»  (to ".descontinua")
+% (c2m231srp 15 "descontinua")
+% (c2m231sra    "descontinua")
+% (c2m221isp 12 "exercicio-5")
+% (c2m221isa    "exercicio-5")
+
+{\bf Agora uma função descontínua}
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(9,7))
+%L spec   = "(0,3)--(2,1)o (2,3)c (2,5)o--(7,0)"
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList { curve:prethickness("2pt") }
+%L p:addputstrat(v(2.7,5.5), "\\cell{(2,5)}")
+%L p:addputstrat(v(7.7,0.5), "\\cell{(7,0)}")
+%L p:pgat("pgatc"):preunitlength("17pt"):sa("Exercicio 5"):output()
+\pu
+
+\msk
+
+Sejam
+%
+$f(x) = \scalebox{0.5}{$\ga{Exercicio 5}$}$
+
+e $B=[1,3]$.
+
+\msk
+
+Represente graficamente estes conjuntos ---
+
+as definições deles são as mesmas do slide 3:
+%
+$$\begin{array}{rcl}
+  % \Rext &=& \R∪\{-∞,+∞\} \\
+  C  &=& \setofst{(x,f(x))}{x∈B} \\
+  D  &=& \setofst{f(x)}{x∈B} \\
+  D' &=& \setofst{y∈\R}{∃x∈B.\ f(x)=y} \\
+  L &=& \setofst{y∈\Rext}{∀d∈D.\;y≤d} \\
+  U &=& \setofst{y∈\Rext}{∀d∈D.\;d≤y} \\
+  % (α=\inf(D)) &=& α∈L ∧ (∀ℓ∈L.\;ℓ \le α) \\
+  % (β=\sup(D)) &=& β∈U ∧ (∀u∈U.\;β \le u) \\
+  \end{array}
+$$
+
+
+% (c2m222tfcsp 3 "def-particao")
+% (c2m222tfcsa   "def-particao")
+% \Ca{2fT91} A definição de partição
+% \Ca{2fT93} A definição do $[a,b]_n$
+% \Ca{2fT94} Alguns exercícios sobre partições
+
+% 2fT73
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+% «acima-e-abaixo»  (to ".acima-e-abaixo")
+% (c2m222srp 15 "acima-e-abaixo")
+% (c2m222sra    "acima-e-abaixo")
+
+{\bf Retângulos acima e abaixo}
+
+\scalebox{0.9}{\def\colwidth{12cm}\firstcol{
+
+Lembre que eu contei que em cursos tradicionais de Cálculo 2 --
+aqueles em que as pessoas passam centenas de horas fazendo contas à
+mão, e mais outras centenas de horas estudando por aqueles livros que
+fingem que certas coisas dificílimas são óbvias -- as pessoas acabam
+aprendendo algumas coisas super úteis que não aparecem listadas
+explicitamente no programa do curso...
+
+\msk
+
+Uma dessas coisas é aprender a entender definições que {\sl
+  aparentemente} envolvem um número infinito de contas. Se a gente for
+como o Bob a gente consegue visualizar o que essas definições ``querem
+dizer''.
+
+\msk
+
+As definições formais de ``retângulo acima (ou abaixo) da curva'' e
+``melhor retângulo acima (ou abaixo) da curva'' são assim -- elas
+aparentemente precisam de infinitas contas.
+
+}\anothercol{
+}}
+
+\newpage
+
+% «para-todo-e-existe»  (to ".para-todo-e-existe")
+% (c2m222srp 16 "para-todo-e-existe")
+% (c2m222sra    "para-todo-e-existe")
+% (c2m212somas2p 14 "para-todo-e-existe")
+% (c2m212somas2a    "para-todo-e-existe")
+
+{\bf ``Para todo'' ($∀$) e ``existe'' ($∃$)}
+
+\msk
+
+$\scalebox{0.9}{$
+  \begin{array}{rcl}
+  (∀a∈\{2,3,5\}.a^2<10) &=& (a^2<10)[a:=2] \;∧ \\&&
+                            (a^2<10)[a:=3] \;∧ \\&&
+                            (a^2<10)[a:=5] \\
+                        &=& (2^2<10) ∧
+                            (3^2<10) ∧
+                            (5^2<10) \\
+                        &=& (4<10) ∧
+                            (9<10) ∧
+                            (25<10) \\
+                        &=& \V ∧ \V ∧ \F \\
+                        &=& \F \\[5pt]
+  (∃a∈\{2,3,5\}.a^2<10) &=& (a^2<10)[a:=2] \;∨ \\&&
+                            (a^2<10)[a:=3] \;∨ \\&&
+                            (a^2<10)[a:=5] \\
+                        &=& (2^2<10) ∨
+                            (3^2<10) ∨
+                            (5^2<10) \\
+                        &=& (4<10) ∨
+                            (9<10) ∨
+                            (25<10) \\
+                        &=& \V ∨ \V ∨ \F \\
+                        &=& \V \\
+  \end{array}
+ $}
+$
+
+\newpage
+
+% «visualizando-fas-e-exs»  (to ".visualizando-fas-e-exs")
+% (c2m222srp 17 "visualizando-fas-e-exs")
+% (c2m222sra    "visualizando-fas-e-exs")
+% (c2m212somas2p 15 "visualizando-fas-e-exs")
+% (c2m212somas2a    "visualizando-fas-e-exs")
+% (c2m211substp 24 "visualizando-fas-e-exs")
+% (c2m211substa    "visualizando-fas-e-exs")
+
+{\bf Visualizando `$∀$'s e `$∃$'s}
+
+Repare...
+
+\msk
+
+{
+\def\V    {\mathbf{V}}
+\def\F    {\mathbf{F}}
+\def\mbc#1{\hbox to 8pt{\hss$#1$\hss}}
+\def\V    {\mbc{\mathbf{V}}}
+\def\F    {\mbc{\mathbf{F}}}
+
+$\scalebox{0.9}{$
+  \begin{array}{lcl}
+  (∀x∈\{1,\ldots,7\}.2≤x)            &=& \F∧\V∧\V∧\V∧\V∧\V∧\V \\
+  (∀x∈\{1,\ldots,7\}.\ph{mm}x<4)     &=& \V∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.2≤x<4)          &=& \F∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmmmm}x=6) &=& \F∧\F∧\F∧\F∧\F∧\V∧\F \\
+  (∀x∈\{1,\ldots,7\}.2≤x<4∨     x=6) &=& \F∧\V∧\V∧\F∧\F∧\V∧\F \\
+  \end{array}
+  $}
+$
+}
+
+\msk
+
+...que dá pra {\sl visualizar} o que a expressão
+
+$(∀x∈\{1,\ldots,7\}.2≤x<4∨x=6)$
+
+``quer dizer'' visualizando os `$\V$'s e `$\F$'s
+
+de expressões mais simples, e combinando
+
+esses ``mapas'' de `$\V$'s e `$\F$'s.
+
+\newpage
+
+% «visualizando-fas-e-exs-2»  (to ".visualizando-fas-e-exs-2")
+% (c2m222srp 18 "visualizando-fas-e-exs-2")
+% (c2m222sra    "visualizando-fas-e-exs-2")
+% (c2m212somas2p 16 "visualizando-fas-e-exs-2")
+% (c2m212somas2a    "visualizando-fas-e-exs-2")
+% (c2m211substp 20 "visualizando-fas-e-exs-2")
+% (c2m211substa    "visualizando-fas-e-exs-2")
+
+{\bf Visualizando `$∀$'s e `$∃$'s (2)}
+
+Às vezes vai valer a pena \ColorRed{definir proposições}
+
+como nomes mais curtos, como $F(x) = (2≤x)$,
+
+$G(x) = (x≤4)$, $H(x) = (x=6)$... Aí:
+
+\msk
+
+{
+\def\mbc#1{\hbox to 8pt{\hss$#1$\hss}}
+\def\V    {\mbc{\mathbf{V}}}
+\def\F    {\mbc{\mathbf{F}}}
+
+$\scalebox{0.9}{$
+  \begin{array}{lcl}
+  (∀x∈\{1,\ldots,7\}.F(x))              &=& \F∧\V∧\V∧\V∧\V∧\V∧\V \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmii}G(x))    &=& \V∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x))         &=& \F∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmmmmmi}H(x)) &=& \F∧\F∧\F∧\F∧\F∧\V∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x)∨ H(x))   &=& \F∧\V∧\V∧\F∧\F∧\V∧\F \\
+  \end{array}
+  $}
+$
+}
+
+\msk
+
+É isso que a gente vai fazer pra analisar expressões
+
+como $(∀x∈A.▁▁▁)$ e $(∃x∈A.▁▁▁)$ e descobrir quais
+
+são verdadeiras e quais não --- \ColorRed{mesmo quando o conjunto
+
+$A$ é um conjunto infinito}, como $\N$, $\R$ ou $[2,10]$.
+
+
+\newpage
+
+% «visualizando-fas-e-exs-3»  (to ".visualizando-fas-e-exs-3")
+% (c2m222srp 19 "visualizando-fas-e-exs-3")
+% (c2m222sra    "visualizando-fas-e-exs-3")
+% (c2m212somas2p 17 "visualizando-fas-e-exs-3")
+% (c2m212somas2a    "visualizando-fas-e-exs-3")
+% (c2m211substp 26 "visualizando-fas-e-exs-3")
+% (c2m211substa    "visualizando-fas-e-exs-3")
+
+{\bf Visualizando `$∀$'s e `$∃$'s (3)}
+
+\scalebox{0.8}{\def\colwidth{12cm}\firstcol{
+
+Às vezes vamos ter que fazer figuras com muitos `$\V$'s e `$\F$'s,
+
+e vai ser mais fácil visualizar onde estão os `$\V$'s e `$\F$'s
+
+delas se usarmos sinais mais fáceis de distinguir...
+
+\msk
+
+Vou usar essa convenção aqui:
+
+O $\V$ é uma bolinha preta, ou sólida: $•$
+
+O $\F$ é uma bolinha branca, ou oca: $∘$
+
+\msk
+
+{
+\def\mbc#1{\hbox to 8pt{\hss$#1$\hss}}
+\def\V    {\mbc{\mathbf{V}}}
+\def\V    {\mbc{•}}
+\def\F    {\mbc{∘}}
+
+$\scalebox{0.9}{$
+  \begin{array}{lcl}
+  (∀x∈\{1,\ldots,7\}.F(x))              &=& \F∧\V∧\V∧\V∧\V∧\V∧\V \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmii}G(x))    &=& \V∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x))         &=& \F∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmmmmmi}H(x)) &=& \F∧\F∧\F∧\F∧\F∧\V∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x)∨ H(x))   &=& \F∧\V∧\V∧\F∧\F∧\V∧\F \\
+  \end{array}
+  $}
+$
+}
+
+\bsk
+
+Você \ColorRed{pode} fazer as suas próprias definições ---
+
+como o meu ``$•:=\V$ e $∘:=\F$'' acima --- mas elas
+
+\standout{têm} que ficar claras o suficiente... releia a dica 7:
+
+\ssk
+
+{\footnotesize
+
+% (c2m212introp 3 "dica-7")
+% (c2m212introa   "dica-7")
+%    http://angg.twu.net/LATEX/2021-2-C2-intro.pdf#page=3
+\url{http://angg.twu.net/LATEX/2021-2-C2-intro.pdf\#page=3}
+
+}
+
+}\anothercol{
+}}
+
+\newpage
+
+%  ___           _                  _                 _       __     
+% |_ _|_ __  ___| |_ _ __ ___    __| | ___  ___    __| | ___ / _|___ 
+%  | || '_ \/ __| __| '__/ __|  / _` |/ _ \/ __|  / _` |/ _ \ |_/ __|
+%  | || | | \__ \ |_| |  \__ \ | (_| |  __/\__ \ | (_| |  __/  _\__ \
+% |___|_| |_|___/\__|_|  |___/  \__,_|\___||___/  \__,_|\___|_| |___/
+%                                                                    
+% «instrucoes-des-defs»  (to ".instrucoes-des-defs")
+% (c2m231srp 21 "instrucoes-des-defs")
+% (c2m231sra    "instrucoes-des-defs")
+%
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(7,5))
+%L spec   = "(0,2)--(2,4)--(5,1)--(7,3)"
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList { curve:prethickness("2pt") }
+%L p:pgat("pgatc", "falsoseno"):output()
+\pu
+%
+\sa{Color A}{\ColorRed}
+\sa{Color B}{\ColorOrange}
+\sa{Color C}{\ColorGreen}
+\def\COLOR#1#2{\ga{Color #1}{#2}}
+\def\undem#1#2{\underbrace{#1}_{\text{em }#2}}
+\def\undemc#1#2#3{\underbrace{#2}_{\COLOR{#1}{\text{em }#3}}}
+%
+\def\fx #1{f(\undemc{A}{\mathstrut #1}{(#1,0)})}
+\def\Fx #1{  \undemc{A}{\mathstrut #1}{(#1,0)} }
+\def\fxy#1#2{\undemc{B}{\fx{#1}<#2}{(#1,f(#1))}}
+\def\fafxy#1{\undemc{C}{∀x∈\{1,2,3\}. \fxy{x}{#1}}{(0,#1)}}
+\def\LAND{\;\;∧\;\;}
+
+\newpage
+
+%  ___           _                  _           
+% |_ _|_ __  ___| |_ _ __ ___    __| | ___  ___ 
+%  | || '_ \/ __| __| '__/ __|  / _` |/ _ \/ __|
+%  | || | | \__ \ |_| |  \__ \ | (_| |  __/\__ \
+% |___|_| |_|___/\__|_|  |___/  \__,_|\___||___/
+%                                               
+% «instrucoes-des-1»  (to ".instrucoes-des-1")
+% (c2m231srp 21 "instrucoes-des-1")
+% (c2m231sra    "instrucoes-des-1")
+% (c2m222srp 20 "instrucoes-des-1")
+% (c2m222sra    "instrucoes-des-1")
+
+{\bf Instruções de desenho (explícitas)}
+
+\msk
+
+Sejam $f(x) = \falsoseno$ ,
+
+\msk
+
+e $P(y) \;=\; \fafxy{y} .$
+
+\bsk
+
+As anotações sob as chaves são ``instruções de desenho''
+
+que o Bob vai usar pra calcular cada $P(y)$ de cabeça,
+
+e pra visualizar o que $P(y)$ ``quer dizer''...
+
+\ssk
+
+Na próxima página eu fiz as figuras pra $P(3.5)$.
+
+
+% (c2m221isp 5 "exercicio-1")
+% (c2m221isa   "exercicio-1")
+
+\newpage
+
+%  ___           _                  _              __ _       
+% |_ _|_ __  ___| |_ _ __ ___    __| | ___  ___   / _(_) __ _ 
+%  | || '_ \/ __| __| '__/ __|  / _` |/ _ \/ __| | |_| |/ _` |
+%  | || | | \__ \ |_| |  \__ \ | (_| |  __/\__ \ |  _| | (_| |
+% |___|_| |_|___/\__|_|  |___/  \__,_|\___||___/ |_| |_|\__, |
+%                                                       |___/ 
+% «instrucoes-des-2»  (to ".instrucoes-des-2")
+% (c2m231srp 22 "instrucoes-des-2")
+% (c2m231sra    "instrucoes-des-2")
+% (c2m222srp 21 "instrucoes-des-2")
+% (c2m222sra    "instrucoes-des-2")
+
+% (c2m221isp 2 "uma-figura")
+% (c2m221isa   "uma-figura")
+%
+%L fromep    = PwSpec.fromep
+%L thick     = function (th) return "\\linethickness{"..th.."}" end
+%L
+%L p = PictList {
+%L   thick("1pt"),
+%L   fromep(" (0,2)--(2,4)--(5,1)--(7,3)  "),
+%L   thick("2pt"),
+%L   fromep(" (1,0)c (2,0)c (3,0)c          "):color("red"),
+%L   fromep(" (1,3)c (2,4)o (3,3)c          "):color("orange"),
+%L   fromep(" (0,3.5)o                      "):Color("Green"),
+%L }
+%L p = (p
+%L       :setbounds(v(0,0), v(7,5))
+%L       :pgat("gat")
+%L       :pgat("p")
+%L       :preunitlength("10pt")
+%L       :sa("instrucoes des")
+%L     )
+%L p:output()
+\pu
+
+\def\Fxy#1#2#3#4{\undemc{B}{\mathstrut #1<#2}{(#3,#4)}}
+\def\Bxy#1#2#3{\undemc{B}{\mathstrut\COLOR{B}{#1}}{(#2,#3)}}
+
+\scalebox{0.65}{\def\colwidth{11cm}\firstcol{
+
+$\begin{array}[t]{rcl}
+ P(3.5) &=& \fafxy{3.5} \\
+ \\[-5pt]
+ &=& \undemc{C}{ (\fxy{1}{3.5})
+           \LAND (\fxy{2}{3.5})
+           \LAND (\fxy{3}{3.5})}
+                      {(0,3.5)} \\
+ \\[-5pt]
+ &=& \undemc{C}{ (\Fxy 3{3.5}13)
+           \LAND (\Fxy 4{3.5}24)
+           \LAND (\Fxy 3{3.5}33)}
+                     {(0,3.5)} \\
+ \\[-5pt]
+ &=& \undemc{C}{ (\Bxy{•}{1}{3}) \LAND (\Bxy{∘}{2}{4}) \LAND (\Bxy{•}{3}{3})}
+             {(0,3.5)} \\
+ \\[-5pt]
+ &=& \undemc{C}{ \mathstrut{\COLOR{C}{∘}} }{(0,3.5)} \\
+ \end{array}
+$
+
+}\anothercol{
+
+\vspace*{6cm}
+
+\def\closeddot{\circle*{0.3}}
+\def\opendot  {\circle*{0.3}\color{white}\circle*{0.2}}
+
+\def\closeddot{\circle*{0.5}}
+\def\opendot  {\circle*{0.5}\color{white}\circle*{0.3}}
+
+$\scalebox{2}{$
+  \ga{instrucoes des}
+ $}
+$
+
+}}
+
+\newpage
+
+%  ___           _                  _                       
+% |_ _|_ __  ___| |_ _ __ ___    __| | ___  ___    _____  __
+%  | || '_ \/ __| __| '__/ __|  / _` |/ _ \/ __|  / _ \ \/ /
+%  | || | | \__ \ |_| |  \__ \ | (_| |  __/\__ \ |  __/>  < 
+% |___|_| |_|___/\__|_|  |___/  \__,_|\___||___/  \___/_/\_\
+%                                                           
+% «instrucoes-des-ex»  (to ".instrucoes-des-ex")
+% (c2m231srp 23 "instrucoes-des-ex")
+% (c2m231sra    "instrucoes-des-ex")
+% (c2m222srp 19 "exercicio-8")
+% (c2m222sra    "exercicio-8")
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(6,4))
+%L spec   = "(0,1)--(2,3)--(4,1)--(6,3)"
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList { curve:prethickness("0.5pt") }
+%L p:pgat("pgatc"):sa("instrthin"):output()
+\pu
+
+{\bf Instruções de desenho: exercício}
+
+\scalebox{0.6}{\def\colwidth{9cm}\firstcol{
+
+Sejam:
+
+$\begin{array}{rcl}
+ f(x) &=& \ga{instrthin}       \;, \\
+ \\[-7pt]
+ P(y) &=& ∀x∈\{1,2,3\}. f(x)<y \;, \\
+ Q(y) &=& ∀x∈\{1,2,3\}. f(x)≤y \;, \\
+ R(y) &=& ∀x∈\{1,2,3\}. f(x)≥y \;, \\
+ S(y) &=& ∀x∈\{1,2,3\}. f(x)>y \;, \\
+ \\[-7pt]
+ P'(y) &=& ∀x∈[3,5]. f(x)<y \;, \\
+ Q'(y) &=& ∀x∈[3,5]. f(x)≤y \;, \\
+ R'(y) &=& ∀x∈[3,5]. f(x)≥y \;, \\
+ S'(y) &=& ∀x∈[3,5]. f(x)>y \;. \\
+ \end{array}
+$
+
+\bsk
+
+Para cada uma das expressões à direita visualize-a, represente-a
+graficamente numa das cópias do gráfico da $f(x)$ da próxima página, e
+dê o resultado dela.
+
+Note que aqui eu não estou dando instruções de desenho {\sl
+  explícitas} -- você vai ter que escolher como você vai fazer pra
+visualizar cada expressão.
+
+
+}\anothercol{
+
+a) $P(3.5), P(3.0), \ldots, P(0.5)$  
+
+b) $Q(3.5), Q(3.0), \ldots, Q(0.5)$  
+
+c) $R(3.5), R(3.0), \ldots, R(0.5)$  
+
+d) $S(3.5), S(3.0), \ldots, S(0.5)$  
+
+\msk
+
+e) $P'(3.5), P'(3.0), \ldots, P'(0.5)$
+
+f) $Q'(3.5), Q'(3.0), \ldots, Q'(0.5)$  
+
+g) $R'(3.5), R'(3.0), \ldots, R'(0.5)$  
+
+h) $S'(3.5), S'(3.0), \ldots, S'(0.5)$  
+
+\bsk
+
+Nos itens (e) até (f) os seus desenhos vão ter infinitas bolinhas...
+aliás, você vai ter que fazer desenhos que {\sl finjam} que têm
+infinitas bolinhas, e nos quais o leitor consiga entender o que você
+quis representar... veja este slide antigo:
+
+\ssk
+
+% (c2m212somas2p 53 "dirichlet-3")
+% (c2m212somas2a    "dirichlet-3")
+% (c2m211somas24p 34 "que-finja-ter-infinitas")
+% (c2m211somas24a    "que-finja-ter-infinitas")
+%      http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf#page=29
+% \url{http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf\#page=29}
+%
+\Ca{2dT142} ``E pra conjuntos infinitos?''
+
+
+}}
+
+\newpage
+
+%  ___           _                  _                        _     _ 
+% |_ _|_ __  ___| |_ _ __ ___    __| | ___  ___    __ _ _ __(_) __| |
+%  | || '_ \/ __| __| '__/ __|  / _` |/ _ \/ __|  / _` | '__| |/ _` |
+%  | || | | \__ \ |_| |  \__ \ | (_| |  __/\__ \ | (_| | |  | | (_| |
+% |___|_| |_|___/\__|_|  |___/  \__,_|\___||___/  \__, |_|  |_|\__,_|
+%                                                 |___/              
+%
+% «instrucoes-des-grid»  (to ".instrucoes-des-grid")
+% (c2m231srp 24 "instrucoes-des-grid")
+% (c2m231sra    "instrucoes-des-grid")
+% (c2m222srp 23 "exercicio-8-figs")
+% (c2m222sra    "exercicio-8-figs")
+
+\def\IT{\ga{instrthin}}
+\def\ITS{\IT & \IT & \IT & \IT & \IT & \IT & \IT & \IT & \IT }
+
+$\scalebox{0.6}{$
+ \begin{matrix}
+ \ITS \\
+ \ITS \\
+ \ITS \\
+ \ITS \\
+ \ITS \\
+ \ITS \\
+ \ITS \\
+ \ITS \\
+ \ITS \\
+ \end{matrix}
+ $}
+$
+
+
+\newpage
+
+% «instrucoes-des-ex-2»  (to ".instrucoes-des-ex-2")
+% (c2m231srp 25 "instrucoes-des-ex-2")
+% (c2m231sra    "instrucoes-des-ex-2")
+% (c2m222srp 24 "exercicio-9")
+% (c2m222sra    "exercicio-9")
+
+{\bf Instruções de desenho: outro exercício}
+
+\scalebox{0.6}{\def\colwidth{10cm}\firstcol{
+
+A seção ``Mais sobre bolinhas'' daqui:
+
+\ssk
+
+{\scriptsize
+
+% (c2m212somas2p 53 "dirichlet-3")
+% (c2m212somas2a    "dirichlet-3")
+% (c2m211somas24p 29 "mais-sobre-bolinhas")
+% (c2m211somas24a    "mais-sobre-bolinhas")
+%    http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf#page=29
+\url{http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf\#page=29}
+
+}
+
+\ssk
+
+tem dicas sobre como visualizar subconjuntos
+
+``definidos por proposições'', como este aqui:
+%
+$$\setofst{x∈A}{P(a)}$$
+
+A gente primeiro marca cada ponto de $A$ com uma
+
+bolinha ou preta ou branca, e depois a gente pega
+
+o conjunto das bolinhas pretas e interpreta ele
+
+como um outro conjunto -- o resultado.
+
+\msk
+
+Use isto pra visualizar cada um dos conjuntos
+
+à direita e pra encontrar uma descrição mais simples
+
+para cada um deles. Geralmente essas ``descrições
+
+mais simples'' vão ser em notação de intervalos.
+
+\msk
+
+As funções $P, \ldots, S, P', \ldots, S'$ são as do exercício 8.
+
+O símbolo $\Rext$ denota a ``reta real estendida'':
+%
+$$\begin{array}{rcl}
+  \Rext &=& \R ∪ \{-∞,+∞\} \\
+        &=& (-∞,+∞) ∪ \{-∞,+∞\} \\
+        &=& [-∞,+∞] \\
+  \end{array}
+$$
+
+Para mais detalhes, veja:
+
+{\scriptsize
+
+% https://en.wikipedia.org/wiki/Extended_real_number_line
+\url{https://en.wikipedia.org/wiki/Extended_real_number_line}
+
+}
+
+
+
+}\anothercol{
+
+a) $\setofst{y∈[0,3]}{P(y)}$
+
+b) $\setofst{y∈[0,3]}{Q(y)}$
+
+c) $\setofst{y∈[0,3]}{R(y)}$
+
+d) $\setofst{y∈[0,3]}{S(y)}$
+
+\msk
+
+a') $\setofst{y∈[0,3]}{P'(y)}$
+
+b') $\setofst{y∈[0,3]}{Q'(y)}$
+
+c') $\setofst{y∈[0,3]}{R'(y)}$
+
+d') $\setofst{y∈[0,3]}{S'(y)}$
+
+\msk
+
+e) $\setofst{y∈\R}{P(y)}$
+
+f) $\setofst{y∈\R}{Q(y)}$
+
+g) $\setofst{y∈\R}{R(y)}$
+
+h) $\setofst{y∈\R}{S(y)}$
+
+\msk
+
+i) $\setofst{y∈\Rext}{P(y)}$
+
+j) $\setofst{y∈\Rext}{Q(y)}$
+
+k) $\setofst{y∈\Rext}{R(y)}$
+
+l) $\setofst{y∈\Rext}{S(y)}$
+
+
+}}
+
+\newpage
+
+%  ___       _                 ___       _         
+% |_ _|_ __ | |_ ___     ___  |_ _|_ __ | |_ _   _ 
+%  | || '_ \| __/ _ \   / _ \  | || '_ \| __| | | |
+%  | || | | | || (_) | |  __/  | || | | | |_| |_| |
+% |___|_| |_|\__\___/   \___| |___|_| |_|\__|\__,_|
+%                                                  
+% «into-e-intu»  (to ".into-e-intu")
+% (c2m231srp 26 "into-e-intu")
+% (c2m231sra    "into-e-intu")
+% (c2m222tfcsp 8 "exercicio-3")
+% (c2m222tfcsa   "exercicio-3")
+
+{\bf Aproximações por cima e por baixo}
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(9,7))
+%L spec   = "(0,3)--(2,1)o (2,3)c (2,5)o--(7,0)"
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList { curve:prethickness("2pt") }
+%L p:addputstrat(v(2.7,5.5), "\\cell{(2,5)}")
+%L p:addputstrat(v(7.7,0.5), "\\cell{(7,0)}")
+%L p:pgat("pgatc"):preunitlength("17pt"):sa("Exercicio 2"):output()
+\pu
+
+\scalebox{0.8}{\def\colwidth{8cm}\firstcol{
+
+\vspace*{0cm}
+
+Sejam
+%
+$f(x) = \scalebox{0.5}{$\ga{Exercicio 2}$}$
+
+\msk
+
+e $P=\{1,3,4,5\}$,
+
+e \ColorRed{por enquanto} considere que:
+%
+$$\begin{array}{rcl}
+  \sup(f(B)) &=& \max_{x∈B} f(x) \quad \text{e} \\
+  \inf(f(B)) &=& \min_{x∈B} f(x).
+  \end{array}
+$$
+
+\msk
+
+
+}\anothercol{
+
+Represente graficamente:
+
+\msk
+
+a) $\ga{into_P  f(x) dx}$
+
+\msk
+
+b) $\ga{intu_P  f(x) dx}$
+
+\msk
+
+c) $\ga{intou_P f(x) dx}$
+
+\msk
+
+d) $\INTP{\intou}{[1,5]_2}{f(x)}$
+
+\msk
+
+e) $\INTP{\intou}{[1,5]_4}{f(x)}$
+
+}}
+
+
+\newpage
+
+% «um-jogo»  (to ".um-jogo")
+% (c2m231srp 27 "um-jogo")
+% (c2m231sra    "um-jogo")
+
+% (c2m221isp 6 "exercicio-2")
+% (c2m221isa   "exercicio-2")
+% (c2m221isp 10 "exercicio-2-dica")
+% (c2m221isa    "exercicio-2-dica")
+
+% (c2m221isp 10 "exercicio-2-dica")
+% (c2m221isa    "exercicio-2-dica")
+
+{\bf Um jogo colaborativo}
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(2,2))
+%L spec   = [[ (0,0)--(0,1)--(1,1)--(1,0)--(0,0)--(0,1)
+%L          ]]
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList {
+%L     [[ \def\closeddot{\circle*{0.4}}% ]],
+%L     [[ \def\opendot  {\circle*{0.4}\color{white}\circle*{0.3}}% ]],
+%L     Pict2e.region0(v(0,0), v(1,0), v(1,1), v(0,1)):Color("Orange"),
+%L     -- curve:prethickness("3pt")
+%L  }
+%L p:pgat("pgatc"):preunitlength("10pt"):sa("Prop A'"):output()
+%L
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(2,2))
+%L spec   = [[ (0,0)--(0,1)--(1,1)--(1,0)--(0,0)--(0,1)
+%L          ]]
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList {
+%L     [[ \def\closeddot{\circle*{0.4}}% ]],
+%L     [[ \def\opendot  {\circle*{0.4}\color{white}\circle*{0.3}}% ]],
+%L     Pict2e.region0(v(0,0), v(1,0), v(1,1), v(0,1)):Color("Orange"),
+%L     curve:prethickness("2pt")
+%L  }
+%L p:pgat("pgatc"):preunitlength("10pt"):sa("Prop A''"):output()
+\pu
+
+\scalebox{0.52}{\def\colwidth{10.5cm}\firstcol{
+
+...ou: como debugar representações gráficas.
+
+Pense num jogo colaborativo. Os jogadores se chamam $P$
+(``proponente''), e $O$ (``oponente''). O $P$ quer encontrar uma
+representação gráfica pro conjunto $A$, e à primeira vista o $O$ quer
+mostrar que o $P$ está errado... mas na verdade o objetivo dos dois é
+fazer com que o $P$ chegue numa representação gráfica que não tem erro
+nenhum.
+
+\msk
+
+Digamos que
+%
+$$A = \setofxyst{x∈[1,2), \; y∈[1,2)}.$$
+
+O $P$ desenha uma representação gráfica \ColorRed{com um nome
+  diferente de $A$} e ``propõe'' ela --- por exemplo, o $P$ diz isso
+aqui:
+%
+\pu
+%
+$$A' = \ga{Prop A'}$$
+
+O oponente $O$ diz: ``verifica o ponto $(1,1)$''. Os dois verificam o
+ponto $(1,1)$ do $A'$ e vêem que o desenho do $A'$ é ambíguo no ponto
+$(1,1)$, já que esse é um ponto de fronteira e o $P$ não desenhou ele
+nem como linha grossa sólida nem com linha tracejada... então a
+resposta pra pergunta ``$(1,1)∈A'$?'' não é nem $\True$ nem $\False$,
+é ``erro'', e portanto $A≠A'$, e o $P$ ainda não conseguiu a
+representação gráfica certa. O oponente $O$ ganha essa rodada, e o $P$
+tem que propôr outra representação gráfica.
+
+}\anothercol{
+
+  Aí o $P$ propõe uma outra representação gráfica, \ColorRed{com um
+    outro nome, diferente de $A$ e de $A'$}. Por exemplo, $P$ propõe
+  isso aqui:
+%
+$$A'' = \ga{Prop A''}$$
+
+O oponente $O$ diz: ``verifica o ponto $(0,0)$''. Os dois verificam, e
+vêem que:
+%
+$$(0,0)\not∈A, \quad (0,0)∈A''$$
+
+E portanto $A≠A''$, e o $P$ ainda não conseguiu a representação
+gráfica certa. O oponente $O$ ganha mais essa rodada.
+
+\bsk
+
+Quando o $P$ propõe um desenho que o $O$ não consegue mostrar que está
+errado o $P$ ganha a rodada.
+
+\bsk
+
+Até vocês terem prática vocês vão jogar como o $P$, vão me mostrar as
+representações gráficas de vocês, e eu vou jogar como o $O$. Quando
+vocês tiverem mais prática vocês vão conseguir chutar representações
+gráficas (como o jogador $P$) e testá-las (fazendo o papel do jogador
+$O$ vocês mesmos).
+
+}}
+
+
+\newpage
+
+% «um-jogo-2»  (to ".um-jogo-2")
+% (c2m221isp 9 "exercicio-2")
+% (c2m221isa   "exercicio-2")
+% (find-pdf-page "~/2022.1-C2/C2-quadros-manha.pdf" 10)
+% (c2m212somas24p 4 "subconjunto-do-plano")
+% (c2m212somas24a   "subconjunto-do-plano")
+
+%L Pict2e.bounds = PictBounds.new(v(-1,-1), v(4,3))
+%L spec   = [[ (0,0)--(0,2)--(2,2)
+%L             (0.3,0)--(0.75,0) (1.25,0)--(1.7,0)
+%L             (2,0.3)--(2,0.75) (2,1.25)--(2,1.7)
+%L             (0,0)o (2,0)o (2,2)c (0,2)c
+%L          ]]
+%L pws    = PwSpec.from(spec)
+%L curve  = pws:topict()
+%L p = PictList {
+%L     [[ \def\closeddot{\circle*{0.4}}% ]],
+%L     [[ \def\opendot  {\circle*{0.4}\color{white}\circle*{0.3}}% ]],
+%L     Pict2e.region0(v(0,0), v(2,0), v(2,2), v(0,2)):Color("Orange"),
+%L     curve:prethickness("3pt")
+%L  }
+%L p:pgat("pgatc"):preunitlength("20pt"):sa("Exercicio 2 exemplo"):output()
+\pu
+
+{\bf Um jogo colaborativo (2)}
+
+\scalebox{0.60}{\def\colwidth{12cm}\firstcol{
+
+Represente graficamente os seguintes conjuntos:
+%
+$$\begin{array}{rcl}
+  A &=& \setofxyst{x∈[1,2), \; y∈[1,2)} \\
+  B &=& \setofst{(x,2x)}{x∈[1,2)} \\
+  C &=& \setofxyst{0≤x \;∧\; x+y<2} \\
+  \end{array}
+$$
+
+Dica: todos eles vão dar subconjuntos do plano feitos de
+
+infinitos pontos, e você vai ter que adaptar as convenções
+
+que usamos pra desenhar intervalos pra desenhar {\sl regiões}.
+
+\msk
+
+Use bolinhas cheias pra indicar ``este ponto pertence ao
+
+conjunto'', bolinhas ocas pra indicar ``este ponto não
+
+pertence ao conjunto'', linhas grossas contínuas pra
+
+indicar ``esse trecho da fronteira pertence ao conjunto''
+
+e linhas tracejadas pra indicar ``esse trecho da fronteira
+
+não pertence ao conjunto''. Por exemplo:
+%
+$$\ga{Exercicio 2 exemplo}$$
+
+%}\anothercol{
+}}
+
+\newpage
+
+% «dirichlet»  (to ".dirichlet")
+% (c2m231srp 29 "dirichlet")
+% (c2m231sra    "dirichlet")
+% (c2m222tfcsp 9 "exercicio-4")
+% (c2m222tfcsa   "exercicio-4")
+% (c2m212somas2p 51 "dirichlet")
+% (c2m212somas2a    "dirichlet")
+
+% «integral-como-limite»  (to ".integral-como-limite")
+% 2eT95 - Integral como limite
+% (c2m221tfc1p 34 "descontinuidades")
+% (c2m221tfc1p 36 "descontinuidades")
+% (c2m221tfc1a    "descontinuidades")
+
+% «TFC1»  (to ".TFC1")
+% 2eT74 - TFC1:
+% (c2m221tfc1p 15 "exemplo-1")
+% (c2m221tfc1a    "exemplo-1")
+
+
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+
+
+
+
+% (find-dmirandacalcpage 212 "7.2. Integral definida")
+
+
+% (c2m222srp 2 "somas-de-riemann-0")
+% (c2m222sra   "somas-de-riemann-0")
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2sr"
+% ee-tla: "c2m231sr"
+% End:

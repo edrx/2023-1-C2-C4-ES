@@ -1,0 +1,694 @@
+% (find-LATEX "2023-1-C2-macaco.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-macaco.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-macaco.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-macaco.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-macaco.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-macaco.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C2-macaco.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-macaco"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-macaco.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-macaco")
+% (find-pdf-page   "~/LATEX/2023-1-C2-macaco.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-macaco.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-macaco.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-macaco.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-macaco.pdf
+%               file:///tmp/2023-1-C2-macaco.pdf
+%           file:///tmp/pen/2023-1-C2-macaco.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-macaco.pdf
+% (find-LATEX "2019.mk")
+% (find-MM-aula-links "2023-1-C2-macaco" "C2" "c2m231macaco" "c2ma")
+% (find-anggfile "LUA/ELpeg1.lua" "cp")
+
+% «.defs»		(to "defs")
+% «.title»		(to "title")
+% «.links»		(to "links")
+% «.banana»		(to "banana")
+% «.contas-formais»	(to "contas-formais")
+% «.EDOs-RC-TFC2»	(to "EDOs-RC-TFC2")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231macaco" "2023-1-C2-macaco")
+% (code-eevvideo      "c2m231macaco" "2023-1-C2-macaco")
+% (code-eevlinksvideo "c2m231macaco" "2023-1-C2-macaco")
+% (find-c2m231macacovideo "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\pu
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% (find-angg "LUA/ELpeg-cme1.lua" "Freeze")
+%L require "ELpeg-cme1"              -- (find-angg "LUA/ELpeg-cme1.lua")
+%L parse_cme = Parser.freeze("expr")
+\pu
+\def\cme#1{\expr{parse_cme("#1"):totex()}}
+\def\CME#1{\expr{CME      ("#1"):totex()}}
+% $\cme{ .(f(g(x))) s .[ f(y):=e^y ;; g(x):=4x] }$
+
+% (find-LATEX "edrxgac2.tex" "C2-substnames")
+% 2dT13 EDOs por chutar e testar
+% (c2m212introp 12 "EDOs-chutar-testar")
+% (c2m212introa    "EDOs-chutar-testar")
+\def\redname#1{{\color{Red3}\text{#1}}}
+\sa  {RC}{\redname{[RC]}}
+\sa{TFC2}{\redname{[TFC2]}}
+\sa   {4}{\redname{[4]}}
+\sa   {5}{\redname{[5]}}
+\sa   {6}{\redname{[6]}}
+\sa   {7}{\redname{[7]}}
+\sa   {8}{\redname{[8]}}
+\sa  {II}{\redname{[II]}}
+
+% \ga{1}
+% \ga{RC}
+% \GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+% \end{document}
+
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231macacop 1 "title")
+% (c2m231macacoa   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2023.1}
+
+\bsk
+
+Aulas 4 até 9: o macaco integrador
+
+e integração por partes
+
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «links»  (to ".links")
+% (c2m231macacop 2 "links")
+% (c2m231macacoa   "links")
+
+{\bf Links}
+
+
+\scalebox{0.9}{\def\colwidth{13cm}\firstcol{
+
+\par \Ca{2fT2} PDF de 2022.2 sobre o `$[:=]$'
+\par \Ca{2dT8} PDF de 2021.2 sobre o `$[:=]$' e justificativas
+\par \Ca{Leit2p15} (p.68): Dois exemplos de contas com justificativas
+
+\msk
+
+\par \Ca{CalcEasy14:08} até 18:18: como o macaco deriva funções elementares
+\par \Ca{2fQ1} Quadros de 2022.2 sobre árvores
+
+\msk
+
+\par \Ca{2fT23} Outra definição para integral indefinida
+\par \Ca{2fT26} Integração por partes em 2022.2: pedaços do quadro
+\par \Ca{2fT30} Exercícios pra casa
+
+\msk
+
+\par \Ca{2gQ5} Quadros da aula 4 (14/abr/2023)
+\par \Ca{2gQ7} Quadros da aula 5 (18/abr/2023)
+\par \Ca{2gQ13} Quadros da aula 7 (25/abr/2023)
+\par \Ca{2gQ16} Quadros da aula 8 (28/abr/2023)
+\par \Ca{2gQ18} Quadros da aula 9 (02/mai/2023)
+
+}\anothercol{
+}}
+
+
+
+
+\newpage
+
+%  ____                                
+% | __ )  __ _ _ __   __ _ _ __   __ _ 
+% |  _ \ / _` | '_ \ / _` | '_ \ / _` |
+% | |_) | (_| | | | | (_| | | | | (_| |
+% |____/ \__,_|_| |_|\__,_|_| |_|\__,_|
+%                                      
+% «banana»  (to ".banana")
+% (c2m231macacop 3 "banana")
+% (c2m231macacoa   "banana")
+
+% $\cme{ .(f(g(x))) s .[ f(y):=e^y ;; g(x):=4x] }$
+
+\def\t#1{\text{#1}}
+\def\atoo{[\t{a}:=\t{o}]}
+
+
+{\bf O macaco substituidor: banana}
+
+\scalebox{0.5}{\def\colwidth{10.5cm}\firstcol{
+
+Os quadros da aula de 25/abril/2023 estão aqui:
+%
+$$\text{\Ca{2gQ13}}$$
+
+O objetivo deste slide é fazer você entender muito bem que a operação
+de {\sl substituição}, `$[:=]$', é uma operação MUITO diferente da
+{\sl igualdade}, `$=$'. Você provavelmente já sabe lidar bastante bem
+com igualdades. Leia este slide aqui várias vezes,
+%
+$$\text{\Ca{2gT13} Banana}$$
+
+até você entender bastante bem como o programa de substituir letras
+descrito nele funciona. Digamos que a notação abaixo
+%
+$$\t{banona} \, \atoo = \t{bonono}$$
+
+Seja uma {\sl abreviação} pra isto aqui:
+
+\begin{quote}
+  o resultado de substituir todas as letras `a' por `o' na palavra
+  ``banona'' é a palavra ``bonono''.
+\end{quote}
+
+\msk
+
+{\bf Dica pro exercício}
+
+Lembre que em C {\tt "123"} é um string de comprimento 3 e {\tt 123} é
+um número; {\tt 100+23} é igual a {\tt 123} mas {\tt "100+23"} não é
+igual a {\tt "123"}.
+
+}\anothercol{
+
+Em Cálculo 2 a gente vai ter algo parecido com essa distinção entre
+strings e números -- a gente vai distinguir entre {\sl expressões} e
+{\sl resultados de expressões}. Por exemplo, 2+5, 3+4 e 7 são três
+expressões diferentes mas com o mesmo resultado... e em alguns itens
+do exercício abaixo você vai ter que considerar que, por exemplo,
+bana+na é uma palavra com 7 caracteres, banana é uma palavra com 6
+caracteres, e que em nenhum momento o exercício pede pra você tratar
+bana+na como uma expressão cujo resultado vai ser banana se você
+definir o `+' como concatenação.
+
+\bsk
+
+{\bf Exercício}
+
+Quais das afirmações abaixo são verdadeiras?
+
+$$\begin{tabular}{rl}
+  a) & $\t{banana} \, \atoo = \t{bonono}$ \\
+  b) & $\t{bonono} \, \atoo = \t{banana}$ \\
+  c) & $\t{banana} \, \atoo = \t{bono}$ \\
+  d) & $\t{banana} \, \atoo = \t{bonono}$ \\
+  e) & $\t{banana} \, \atoo = \t{bono+no}$ \\
+  f) & $\t{banana} \, \atoo = \t{bononono}$ \\
+  g) & $\t{bonono} \, \atoo = \t{banona}$ \\
+  h) & $\t{banona} \, \atoo = \t{bonono}$ \\
+  \end{tabular}
+$$
+
+\bsk
+
+{\bf Péssima notícia}
+
+Em Cálculo 2 a gente vai trabalhar o tempo todo com expressões que são
+transformadas passo a passo. {\sl Talvez isto seja algo completamente
+  novo pra você.}
+
+}}
+
+
+
+\newpage
+
+%   ____            _               __                            _     
+%  / ___|___  _ __ | |_ __ _ ___   / _| ___  _ __ _ __ ___   __ _(_)___ 
+% | |   / _ \| '_ \| __/ _` / __| | |_ / _ \| '__| '_ ` _ \ / _` | / __|
+% | |__| (_) | | | | || (_| \__ \ |  _| (_) | |  | | | | | | (_| | \__ \
+%  \____\___/|_| |_|\__\__,_|___/ |_|  \___/|_|  |_| |_| |_|\__,_|_|___/
+%                                                                       
+% «contas-formais»  (to ".contas-formais")
+% (c2m231macacop 4 "contas-formais")
+% (c2m231macacoa   "contas-formais")
+{\bf O macaco e as contas formais}
+
+\scalebox{0.5}{\def\colwidth{11cm}\firstcol{
+
+Na aula de 25/abril nós passamos muito tempo revendo coisas que
+deveriam ser básicas -- já vou dizer quais -- e eu passei um dever de
+casa bem grande: {\sl leia o que você conseguir das seções do Miranda
+  e do Leithold sobre a regra da cadeia e faça todos os exercícios que
+  você puder.} Aqui tem links pra elas:
+
+\msk
+
+\Ca{Miranda87} Seção 3.5: regra da cadeia
+
+\Ca{Miranda228} Seção 7.5.1: TFC2
+
+\Ca{Leit3p45} (p.181) Seção 3.6: regra da cadeia
+
+\Ca{Leit5p61} (p.344) Seção 5.8: Os teoremas fundamentais do Cálculo
+
+\msk
+
+Lembre que: 1) um dos objetivos do curso é fazer vocês se tornarem
+capazes de estudar pelos livros, 2) as provas vão ter várias questões
+que vocês só vão conseguir fazer se vocês tiverem muita prática de
+fazer contas, e 3) o livro do Leithold é difícil em alguns lugares mas
+ele é INCRIVELMENTE bom -- estudem por ele sempre que puderem!
+
+\msk
+
+Outra coisa: dê uma olhada na seção do Miranda sobre a regra da cadeia
+-- você vai ver que essa fórmula tem uma demonstração, e que a fórmula
+e a demonstração só funcionam quando certas hipóteses são obedecidas.
+Aliás, uma questão da P1 do semestre passado foi sobre situações em
+que a fórmula do TFC2 dá resultados errados. Dê uma olhada nela:
+
+\msk
+
+\Ca{2fT110} A fórmula do TFC2 nem sempre vale
+
+\msk
+
+{\sl A P1 deste semestre vai ter uma questão parecida com essa.}
+
+
+}\anothercol{
+
+{}
+
+Em algumas situações nós vamos primeiro aplicar a fórmula como se ela
+valesse sempre, e só depois que nós fizermos todas as contas nós vamos
+descobrir quais são as hipóteses necessárias pra aquelas contas
+valerem. O nome ``oficial'' pra essas contas sem a verificação das
+hipóteses é ``contas formais'', mas eu vou usar a terminologia do
+Mathologer... ele fala muito no macaco que faz contas automaticamente
+sem fazer a menor idéia do que aquelas contas querem dizer, então eu
+vou usar expressões como ``aqui vamos fazer contas como o macaco''.
+
+\bsk
+
+{\bf Exercício}
+
+Use o que você lembra de Cálculo 1 pra obter boas fórmulas pras
+derivadas abaixo:
+%
+$$\begin{tabular}{rl}
+  a) & $\ddx \, e^{g(x)}$ \\
+  b) & $\ddx \, g(x)^{1/2}$ \\
+  c) & $\ddx \, \sqrt{g(x)}$ \\
+  c) & $\ddx \, f(4x)$ \\
+  \end{tabular}
+$$
+
+
+No próximo slide nós vamos ver como o macaco faz esssas contas usando
+a operação `$[:=]$'.
+
+
+}}
+
+\newpage
+
+%  _____ ____   ___          ____   ____     _____ _____ ____ ____  
+% | ____|  _ \ / _ \ ___    |  _ \ / ___|   |_   _|  ___/ ___|___ \ 
+% |  _| | | | | | | / __|   | |_) | |         | | | |_ | |     __) |
+% | |___| |_| | |_| \__ \_  |  _ <| |___ _    | | |  _|| |___ / __/ 
+% |_____|____/ \___/|___( ) |_| \_\\____( )   |_| |_|   \____|_____|
+%                       |/              |/                          
+%
+% «EDOs-RC-TFC2»  (to ".EDOs-RC-TFC2")
+% (c2m231macacop 5 "EDOs-RC-TFC2")
+% (c2m231macacoa   "EDOs-RC-TFC2")
+
+\def\bigeq#1{\Bigl(#1\Bigr)}
+\def\bigeq#1{\Bigl(#1\Bigr)}
+
+{\bf O macaco substituidor: EDOs, RC, TFC2}
+
+\scalebox{0.55}{\def\colwidth{14cm}\firstcol{
+
+Sejam:
+%
+$$\begin{array}{rcl}
+  \ga{4}    &=& \bigeq{ f'(x) = x^4               } \\
+  \ga{5}    &=& \bigeq{ f'(x) = 2f(x)             } \\
+  \ga{6}    &=& \bigeq{ f''(x) + f'(x) = 6f(x)    } \\
+  \ga{7}    &=& \bigeq{ f'(x) = -\frac{1}{f(x)}   } \\
+  \ga{8}    &=& \bigeq{ f'(x) = -\frac{x}{f(x)}   } \\
+  \ga{RC}   &=& \bigeq{ f(g(x))' = f'(g(x)) g'(x) } \\
+  \ga{TFC2} &=& \bigeq{ \Intx{a}{b}{f'(x)} = f(b) - f(a) } \\
+  \end{array}
+$$
+
+Note que as expressões $\ga{4}$, $\ga{5}$, $\ga{6}$, $\ga{7}$,
+$\ga{8}$, são as EDOs deste problema aqui:
+
+\ssk
+
+\Ca{2dT13} EDOs por chutar e testar.
+
+\bsk
+
+{\bf Exercício}
+
+Calcule o resultado de cada uma das substituições à direita. Lembre
+que o resultado de uma substituição é sempre uma {\sl expressão} --
+{\sl não simplifique ela}. Deixa eu fazer uma comparação com C: o
+resultado de substituir cada ocorrência do caracter {\tt 'a'} pelo
+caracter {\tt '2'} no string {\tt "a+5"} é o string {\tt "2+5"}, não o
+string {\tt "7"}, e nem o número {\tt 7}.
+
+}\anothercol{
+
+
+
+$\begin{tabular}[t]{rl}
+  a) & $f(g(x)) \CME{[x := 42]}$ \\
+  b) & $f(g(x)) \CME{[g(x) := 200*x]}$ \\
+  c) & $f(g(x)) \CME{[f(y) := y^2+y^3]}$ \\
+  d) & $f(g(x)) \CME{[f(y) := e^{y}]}$ \\
+  e) & $f(g(x)) \CME{[g(x) := 4*x]}$ \\
+  f) & $f(g(x)) \CME{.[f(y) := e^{y} ;; g(x) := 4*x]}$ \\
+  g) & $f(g(x)) \CME{[f(y) := y^{1/2}]}$ \\
+  h) & $f(g(x)) \CME{[f(y) := sqrt{y}]}$ \\
+  i) & $f(g(x)) \CME{[f(y) := sqrt{y}]}$ \\
+  j) & $f(g(x)) \CME{.[g(x) := e^x ;; g'(x) := e^x]}$ \\
+  k) & $f(g(x))' \CME{.[g(x) := e^x ;; g'(x) := e^x]}$ \\
+  l) & $\ga{RC}  \CME{.[f(y) := e^y ;; f'(y) := e^y]}$ \\
+  m) & $\ga{RC}  \CME{.[f(y) := y^{1/2} ;; f'(y) := {1//2} mul y^{-1/2}]}$ \\
+  n) & $\ga{RC}  \CME{.[f(y) := sqrt{y} ;; f'(y) := 1 // 2 mul sqrt{y}]}$ \\
+  o) & $\ga{6}   \CME{.[f  (x) :=       e^{2 mul x} ;;
+                        f' (x) := 2 mul e^{2 mul x} ;;
+                        f''(x) := 4 mul e^{2 mul x}]}$ \\
+  p) & $\ga{6}   \CME{.[f  (x) :=       e^{3 mul x} ;;
+                        f' (x) := 3 mul e^{3 mul x} ;;
+                        f''(x) := 9 mul e^{3 mul x}]}$ \\
+  q) & $\ga{TFC2}\CME{.[f  (x) := {1//2} mul x^2 ;;
+                        f' (x) := x ;;
+                        a      := 0 ;;
+                        b      := 2 ]}$ \\
+  r) & $\ga{8}   \CME{.[f  (x) := sqrt{1 - x^2} ;;
+                        f' (x) := -1 // x mul sqrt{1 - x^2}]}$ \\
+  \end{tabular}
+$
+
+}}
+
+\newpage
+
+{\bf Diferença}
+
+\scalebox{0.6}{\def\colwidth{9cm}\firstcol{
+
+Lembre que esta notação aqui
+%
+$$\Intx{a}{b}{f(x)}$$
+
+tem várias pronúncias:
+
+``a integral da função $f(x)$ entre $x=a$ e $x=b$'',
+
+``a área sob a curva $f(x)$ entre $x=a$ e $x=b$'',
+
+``a área sob a curva $f(x)$ desde $x=a$ até $x=b$'',
+
+etc...
+
+\msk
+
+A pronúncia desta operação daqui
+%
+$$\Difx{a}{b}{f(x)}$$
+
+vai ser ``a diferença da $f(x)$ entre $x=a$ e $x=b$'',
+
+e a definição formal dela vai ser esta:
+%
+$$\Difx{a}{b}{f(x)} = f(b)-f(a)$$
+
+
+}\anothercol{
+
+{\bf Exercício}
+
+O Leithold e o Miranda usam notações ligeiramente diferentes da minha
+para a operação diferença. Dê uma olhada nestas páginas aqui,
+
+\msk
+
+\Ca{Leit5p65} p.348
+
+\Ca{Miranda344}
+
+\msk
+
+e traduza a expressão
+
+$$\difx{3}{4}{(\sin 2x)}$$
+
+da minha notação para
+
+\msk
+
+a) a notação do Miranda,
+
+b) a notação do Leithold.
+
+}}
+
+% (find-leitholdptpage (+ 17 344) "5.8. Os Teoremas Fundamentais do Cálculo")
+% (find-leitholdptpage (+ 17 348)   "notação para diferença")
+% (find-dmirandacalcpage 228     "notação para diferença")
+
+\newpage
+
+%  ___       _     _           _ 
+% |_ _|_ __ | |_  (_)_ __   __| |
+%  | || '_ \| __| | | '_ \ / _` |
+%  | || | | | |_  | | | | | (_| |
+% |___|_| |_|\__| |_|_| |_|\__,_|
+%                                
+
+{\bf Integral indefinida}
+
+\scalebox{0.55}{\def\colwidth{10cm}\firstcol{
+
+Tanto o Leithold quanto o Miranda explicam a {\sl integral indefinida}
+antes da {\sl integral definida}. Dê uma olhada:
+
+\msk
+
+\Ca{Miranda181} 6. Integral Indefinida
+
+\Ca{Miranda207} 7. Integração definida
+
+\Ca{Leit5p3} (p.286) 5.1. Antidiferenciação
+
+\Ca{Leit5p41} (p.324) 5.5. A integral definida
+
+\msk
+
+{\sl Todos os modos fáceis de atribuir um significado intuitivo para
+  expressões como esta aqui}
+%
+$$\intx{f(x)}$$
+
+{\sl são gambiarras que funcionam mal.}
+
+\msk
+
+Eu vou usar esta definição aqui,
+
+\ssk
+
+\Ca{2fT23} (p.4) Outra definição para a integral indefinida
+
+\ssk
+
+e aqui tem um caso em que a definição usual quebra:
+
+\ssk
+
+\Ca{2fT24} (p.5) Meme: expanding brain, versão ln
+
+\msk
+
+}\anothercol{
+
+Nós vamos começar usando a integral indefinida como o macaco que faz
+contas sem ter idéia do significado do que está fazendo, e só depois
+que tivermos bastante prática nós vamos discutir os vários jeitos de
+atribuir significados intuitivos para % $\intx{f(x)}$.
+
+\msk
+
+A regra básica vai ser esta aqui:
+
+$$\ga{II} = \left( \intx{f'(x)} = f(x) \right)$$
+
+\bsk
+
+{\bf Exercícios}
+
+\msk
+
+Calcule:
+
+\ssk
+
+a) $\ga{II} \CME{.[f(x) := x+42 ;; f'(x) := 1]}$
+
+b) $\ga{II} \CME{.[f(x) := {1//2} mul x^2 ;; f'(x) := x]}$
+
+\msk
+
+c) Resolva os exercícios 1 a 10 daqui por chutar e testar:
+
+\Ca{Miranda185} Exercícios 6.1
+
+\msk
+
+d) Entenda tudo que esta nesta página:
+
+\Ca{Leit5p6} (p.289) 5.1.8. Teorema
+
+}}
+
+\newpage
+
+{\bf Integração por partes}
+
+\scalebox{0.9}{\def\colwidth{14cm}\firstcol{
+
+Vou usar isto, de 2022.2:
+
+\Ca{2fT25} (p.6) Pedaços do quadro
+
+% (find-books "__analysis/__analysis.el" "leithold")
+% (find-books "__analysis/__analysis.el" "leithold" "9.1. Integração por partes")
+% (find-books "__analysis/__analysis.el" "miranda")
+% (find-books "__analysis/__analysis.el" "miranda" "por Partes")
+% (find-dmirandacalcpage 182 "6.1.1 Regras Básicas de Integração")
+% (find-dmirandacalcpage 199 "6.3 Integração por Partes")
+% (find-leitholdptpage (+ 17 286) "5.1. Antidiferenciação")
+% (find-leitholdptpage (+ 17 294)   "Exercícios 5.1")
+% (find-leitholdptpage (+ 17 531) "9.1. Integração por partes")
+
+\msk
+
+E:
+
+\par \Ca{Leit9} 9. Técnicas de integração
+\par \Ca{Leit9p4} (p.531) 9.1. Integração por partes
+\par \Ca{Miranda182} 6.1.1 Regras Básicas de Integração
+\par \Ca{Miranda199} 6.3 Integração por partes
+
+\msk
+
+Ainda não \LaTeX ei as contas desta aula!
+
+Mas os quadros dela -- os sobre integração por partes --
+
+estão aqui: \Ca{2gQ20}.
+
+\msk
+
+
+
+}\anothercol{
+}}
+
+
+
+% (find-es "tex" "big-delimiters")
+
+% Se nós assumirmos que a=o então todas estas palavras ``são iguais'':
+% 
+% \begin{quote}
+%   banana, banano, banona, banono, \\
+%   bonana, bonano, bonona, bonono
+% \end{quote}
+
+
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2ma"
+% ee-tla: "c2m231macaco"
+% End:

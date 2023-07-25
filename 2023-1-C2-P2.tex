@@ -1,0 +1,808 @@
+% (find-LATEX "2023-1-C2-P2.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-P2.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-P2.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-P2.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-P2.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-P2.tex"))
+% (defun o () (interactive) (find-LATEX "2022-2-C2-P2.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-P2"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-P2.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-P2")
+% (find-pdf-page   "~/LATEX/2023-1-C2-P2.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-P2.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-P2.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-P2.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-P2.pdf
+%               file:///tmp/2023-1-C2-P2.pdf
+%           file:///tmp/pen/2023-1-C2-P2.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-P2.pdf
+% (find-LATEX "2019.mk")
+% (find-Deps1-links "Caepro5 Piecewise1")
+% (find-Deps1-cps   "Caepro5 Piecewise1")
+% (find-Deps1-anggs "Caepro5 Piecewise1")
+% (find-MM-aula-links "2023-1-C2-P2" "C2" "c2m231p2" "c2p2")
+
+% «.defs»		(to "defs")
+% «.defs-T-and-B»	(to "defs-T-and-B")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.title»		(to "title")
+% «.questao-1»		(to "questao-1")
+% «.questao-2»		(to "questao-2")
+% «.questao-3»		(to "questao-3")
+% «.questao-4»		(to "questao-4")
+% «.anexo-L»		(to "anexo-L")
+% «.anexo-R»		(to "anexo-R")
+% «.anexo»		(to "anexo")
+% «.questao-1-gab»	(to "questao-1-gab")
+% «.questao-2-gab»	(to "questao-2-gab")
+% «.links»		(to "links")
+%
+% «.djvuize»		(to "djvuize")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231p2" "2023-1-C2-P2")
+% (code-eevvideo      "c2m231p2" "2023-1-C2-P2")
+% (code-eevlinksvideo "c2m231p2" "2023-1-C2-P2")
+% (find-c2m231p2video "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+\sa{[M]}{\CFname{M}{}}
+\sa{[F]}{\CFname{F}{}}
+\sa{[S]}{\CFname{S}{}}
+
+% (find-LATEXgrep "grep --color=auto -nH --null -e mname 202{1,2}*.tex")
+\def\sumiN#1{\sum_{i=1}^N #1 (b_i-a_i)}
+\def\mname#1{\text{[#1]}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L -- dofile "QVis1.lua"             -- (find-LATEX "QVis1.lua")
+%L -- dofile "Pict3D1.lua"           -- (find-LATEX "Pict3D1.lua")
+%L -- dofile "C2Formulas1.lua"          -- (find-LATEX "C2Formulas1.lua")
+%L -- dofile "Lazy5.lua"                -- (find-LATEX "Lazy5.lua")
+%L -- dofile "2022-1-C2-P2.lua"         -- (find-LATEX "2022-1-C2-P2.lua")
+%L Pict2e.__index.suffix = "%"
+\pu
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L -- V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L V = MiniV
+%L v = V.fromab
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231p2p 1 "title")
+% (c2m231p2a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2023.1}
+
+\bsk
+
+P2 (Segunda prova)
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+%  _     _____ ____   _____     ______  
+% / |   | ____|  _ \ / _ \ \   / / ___| 
+% | |   |  _| | | | | | | \ \ / /\___ \ 
+% | |_  | |___| |_| | |_| |\ V /  ___) |
+% |_(_) |_____|____/ \___/  \_/  |____/ 
+%                                       
+% «questao-1»  (to ".questao-1")
+% (c2m231p2p 2 "questao-1")
+% (c2m231p2a   "questao-1")
+% (c2m222p2p 2 "questao-1")
+% (c2m222p2a   "questao-1")
+% (find-es "maxima" "separable-2")
+% (find-es "maxima" "2022-2-C2-P2-edovs")
+% (find-es "maxima" "2023-1-C2-P2-edovs")
+
+{\bf Questão 1}
+
+\sa{(M)}{
+  \left(\begin{array}{rcl}
+             \D \dydx &=& \D \frac{g(x)}{h(y)} \\
+             h(y)\,dy &=& g(x)\,dx \\
+          \inty{h(y)} &=& \intx{g(x)} \\
+           \mcc{\veq} & & \mcc{\veq} \\
+        \mcc{H(y)+C1} & & \mcc{G(x)+C2} \\
+             H(y)     &=& G(x)+C2-C1 \\
+                      &=& G(x)+C3 \\
+         H^{-1}(H(y)) &=& H^{-1}(G(x)+C3) \\
+           \mcc{\veq} & & \\
+              \mcc{y} & & \\
+   \end{array}
+   \right)
+  }
+\sa{(F)}{
+  \left(\begin{array}{rcl}
+             \D \dydx &=& \D \frac{g(x)}{h(y)} \\
+         H^{-1}(H(y)) &=& H^{-1}(G(x)+C3) \\
+           \mcc{\veq} & & \\
+              \mcc{y} & & \\
+   \end{array}
+   \right)
+  }
+
+
+\scalebox{0.5}{\def\colwidth{11cm}\firstcol{
+
+\vspace*{-0.4cm}
+
+\T(Total: 4.0 pts)
+
+Lembre que no curso eu mostrei que o meu modo preferido de escrever o
+``método'' para resolver EDOs com variáveis separáveis --- ``EDOVSs''
+--- é a ``demonstração'' \ga{[M]} abaixo... eu pus o termo
+``demonstração'' entre aspas porque alguns dos passos da \ga{[M]} são
+gambiarras nas quais a gente não pode confiar totalmente, e aí a gente
+precisa sempre testar as nossas soluções. O \ga{[F]} abaixo --- a
+``fórmula'' --- é uma versão resumida do \ga{[M]}.
+%
+$$\begin{array}{rcl}
+  \ga{[M]} &=& \ga{(M)} \\\\[-5pt]
+  \ga{[F]} &=& \ga{(F)} \\
+  \end{array}
+$$
+
+\vspace*{-5cm}
+
+}\anothercol{
+
+{}
+
+Seja $(*)$ esta EDOVS:
+%
+$$\frac{dy}{dx} \;=\; - \frac{1}{2y}
+$$
+
+a) \B (2.0 pts) Encontre as duas soluções gerais da EDO $(*)$ -- a
+solução ``positiva'' e a ``negativa'' -- e teste-as.
+
+\msk
+
+b) \B (1.0 pts) Encontre a solução particular que passa pelo ponto
+$(3,2)$ e teste-a.
+
+\msk
+
+c) \B (1.0 pts) Encontre a solução particular que passa pelo ponto
+$(4,-3)$ e teste-a.
+
+
+\bsk
+
+\standout{Muito importante:} em todas as questões desta prova exceto a
+questão sobre somas de Riemann eu vou corrigir as respostas de vocês
+como se eu fosse o ``colega menos seu amigo e sem paciência pra
+adivinhar nada'' da Dica 7 e do slide sobre contextos... por exemplo,
+se você escrever só ``$a=42$'' eu vou interpretar isso como ``aqui
+essa pessoa tá dizendo que é óbvio que `$a=42$' é sempre verdade -- e
+isso é falso!!!'', e aí babau. Ou seja, a parte em português das
+questões de vocês vai ser MUUUUITO importante!
+
+\msk
+
+A prova tem um anexo que é um gabarito de uma prova antiga, e que tem
+exemplos de uso de várias partículas em português como ``seja'',
+``isto é'', ``temos'' e ``então''. Esse anexo não tem exemplos de
+todas as partículas mais comuns -- por exemplo, faltam o ``queremos
+que'', o ``vamos testar se'' e o ``lembre que'' -- mas acho que ele
+deve ajudar bastante.
+
+
+
+
+% (find-es "maxima" "2022-2-C2-P2")
+
+
+
+}}
+
+\newpage
+
+%  ____      _____ ____   ___  _     ____ ____     
+% |___ \    | ____|  _ \ / _ \| |   / ___/ ___|___ 
+%   __) |   |  _| | | | | | | | |  | |  | |   / __|
+%  / __/ _  | |___| |_| | |_| | |__| |__| |___\__ \
+% |_____(_) |_____|____/ \___/|_____\____\____|___/
+%                                                  
+% «questao-2»  (to ".questao-2")
+% (c2m231p2p 3 "questao-2")
+% (c2m231p2a   "questao-2")
+% (c2m222p2p 3 "questao-2")
+% (c2m222p2a   "questao-2")
+% «edolccs»  (to ".edolccs")
+% (c2m222p2p 3 "edolccs")
+% (c2m222p2a   "edolccs")
+% (find-es "maxima" "2022-2-C2-P2-edolccs")
+
+
+{\bf Questão 2}
+
+\scalebox{0.7}{\def\colwidth{8cm}\firstcol{
+
+\vspace*{-0.4cm}
+
+\T(Total: 4.0 pts)
+
+Lembre que nós vimos dois tipos de EDOs lineares com coeficientes
+constantes --- ``EDOLCCs'' --- no curso: o primeiro tipo tinha
+soluções básicas da forma $e^{ax}$ e $e^{bx}$, onde $a$ e $b$ são
+reais, e o segundo tipo tinha ``soluções básicas complexas'' da forma
+$e^{(a+ib)x}$ e $e^{(a-ib)x}$ e ``soluções básicas reais'' da forma
+$e^{αx}\cos βx$ e $e^{αx}\sen βx$; as soluções básicas reais eram
+combinações lineares das soluções básicas complexas e vice-versa.
+
+\msk
+
+Sejam $(**)$ e $({*}{*}{*})$ as EDOs abaixo:
+%
+$$\begin{array}{rcll}
+  y'' +  y' - 20y &=& 0 & \qquad (**) \\
+  y'' + 4y' + 29y &=& 0 & \qquad ({*}{*}{*}) \\
+  \end{array}
+$$
+
+A EDO $(**)$ é do primeiro tipo e a EDO $({*}{*}{*})$ é do segundo tipo.
+
+}\anothercol{
+
+{}
+
+a) \B (0.5 pts) Encontre as soluções básicas e a solução geral da EDO
+$(**)$. Dê um nome para cada uma delas.
+
+\msk
+
+b) \B (1.5 pts) Encontre uma solução da EDO $(**)$ -- vou chamá-la de
+$g(x)$ -- que obedece $g(0) = 4$ e $g'(0)=5$, e teste-a. Dica: você
+vai ter que resolver um sistema pra descobrir a quantidade certa de
+cada ``vetor'' na combinação linear!
+
+\bsk
+
+c) \B (0.5 pts) Diga quais são as ``soluções básicas complexas'' e as
+``soluções básicas reais'' para a EDO $({*}{*}{*})$.
+
+\msk
+
+d) \B (1.5 pts) Escolha uma das suas ``soluções básicas reais'' do
+item anterior e verifique que ela realmente é uma solução da EDO
+$({*}{*}{*})$.
+
+
+
+% (find-es "maxima" "2022-2-C2-P2")
+
+
+
+}}
+
+\newpage
+
+
+%   ___                  _                _____ 
+%  / _ \ _   _  ___  ___| |_ __ _  ___   |___ / 
+% | | | | | | |/ _ \/ __| __/ _` |/ _ \    |_ \ 
+% | |_| | |_| |  __/\__ \ || (_| | (_) |  ___) |
+%  \__\_\\__,_|\___||___/\__\__,_|\___/  |____/ 
+%                                               
+% «questao-3»  (to ".questao-3")
+% (c2m231p2p 4 "questao-3")
+% (c2m231p2a   "questao-3")
+% (c2m222p2p 4 "questao-3")
+% (c2m222p2a   "questao-3")
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(7,6))
+%L spec = "(0,2)--(1,2)--(2,1)o (2,2)c (2,4)o--(3,3)--(4,3)o--(5,3)o--(7,3) (4,2)c (5,5)c"
+%L pws = PwSpec.from(spec)
+%L pws:topict():prethickness("1pt"):pgat("pgatc"):sa("F(x)"):output()
+\pu
+
+\unitlength=10pt
+
+{\bf Questão 3}
+
+
+\scalebox{0.45}{\def\colwidth{10.5cm}\firstcol{
+
+\vspace*{-0.25cm}
+
+\T(Total: 1.0 pts)
+
+Lembre que nós vimos estes tipos de Somas de Riemann,
+%
+$$\scalebox{0.95}{$
+  \begin{array}{ccl}
+  \mname{L}    &=& \sumiN {f(a_i)}                    \\[2pt]
+  \mname{R}    &=& \sumiN {f(b_i)}                    \\[2pt]
+  \mname{Trap} &=& \sumiN {\frac{f(a_i) + f(b_i)}{2}} \\[2pt]
+  \mname{M}    &=& \sumiN {f(\frac{a_i+b_i}{2})}      \\[2pt]
+  \mname{min}  &=& \sumiN {\min(f(a_i), f(b_i))}      \\[2pt]
+  \mname{max}  &=& \sumiN {\max(f(a_i), f(b_i))}      \\[2pt]
+  \mname{inf}  &=& \sumiN {\inf(f([a_i,b_i]))}        \\[2pt]
+  \mname{sup}  &=& \sumiN {\sup(f([a_i,b_i]))}        \\
+  \end{array}
+  $}
+$$
+
+% e vimos que o $\mname{Trap}$ pode ser interpretado tanto como uma soma
+% de trapézios como como uma soma de retângulos.
+
+\msk
+
+Seja $f(x)$ a função dos gráficos à direita.
+
+Represente graficamente cada um dos somatórios abaixo.
+
+\def\Sitem#1#2#3{#1) $\mname{#2}_{\{#3\}}$}
+
+\msk
+
+\begin{tabular}{lll}
+\Sitem a {sup} {1,6} &
+\Sitem b {sup} {1,3,6} &
+\Sitem c {sup} {1,3,5,6} \\
+\Sitem d {inf} {1,6} &
+\Sitem e {inf} {1,3,6} &
+\Sitem f {inf} {1,3,5,6} \\
+\Sitem g {max} {1,5} &
+\Sitem h {max} {1,3,5} &
+\Sitem i {max} {1,3,4,5} \\
+\Sitem j {min} {1,5} &
+\Sitem k {min} {1,3,5} &
+\Sitem l {min} {1,3,4,5} \\
+\end{tabular}
+
+
+% d) $\mname{Trap}_{\{1,3,5\}}$ usando retângulos
+
+% e) $\mname{Trap}_{\{1,3,5\}}$ usando trapézios
+
+\msk
+
+Indique claramente qual desenho é a resposta final de cada item e
+quais desenhos são rascunhos.
+
+}\anothercol{
+
+\vspace*{-2cm}
+
+\def\Fx{\scalebox{1.1}{$\ga{F(x)}$}}
+
+$\begin{matrix}
+ \Fx & \Fx & \Fx & \Fx & \Fx \\ \\[-5pt]
+ \Fx & \Fx & \Fx & \Fx & \Fx \\ \\[-5pt]
+ \Fx & \Fx & \Fx & \Fx & \Fx \\ \\[-5pt]
+ \Fx & \Fx & \Fx & \Fx & \Fx \\ \\[-5pt]
+ \Fx & \Fx & \Fx & \Fx & \Fx \\ \\[-5pt]
+ \Fx & \Fx & \Fx & \Fx & \Fx \\
+ \end{matrix}
+$
+
+\vspace*{-2cm}
+
+
+}}
+
+
+\newpage
+
+%  _  _      ____        _ _     _           
+% | || |    / ___|  ___ | (_) __| | ___  ___ 
+% | || |_   \___ \ / _ \| | |/ _` |/ _ \/ __|
+% |__   _|   ___) | (_) | | | (_| | (_) \__ \
+%    |_|(_) |____/ \___/|_|_|\__,_|\___/|___/
+%                                            
+% «questao-4»  (to ".questao-4")
+% (c2m231p2p 5 "questao-4")
+% (c2m231p2a   "questao-4")
+
+{\bf Questão 4}
+
+
+\scalebox{0.8}{\def\colwidth{11cm}\firstcol{
+
+\vspace*{-0.25cm}
+
+\T(Total: 2.0 pts)
+
+\msk
+
+Seja
+%
+$$A \;=\; \setofxyst{0≤x≤\pi, \; 0≤y≤1+\cos x}.
+$$
+
+Seja $B$ o sólido que obtemos rodando a região $A$ em torno do eixo
+$x$ e seja $C$ o sólido que obtemos rodando a região $A$ em torno do
+eixo $y$.
+
+\msk
+
+a) \B (0.2 pts) Faça um esboço da região $A$.
+
+\ssk
+
+b) \B (0.8 pts) Calcule o volume de $B$.
+
+\ssk
+
+c) \B (1.0 pts) Calcule o volume de $C$.
+
+\bsk
+
+\standout{Importante:} nos itens (b) e (c) você provavelmente vai
+chegar em integrais difíceis de resolver. Você não precisa resolver
+elas, basta chegar em respostas que sejam integrais definidas.
+
+
+
+}\anothercol{
+}}
+
+
+
+\newpage
+
+% «anexo-L»  (to ".anexo-L")
+\def\anexoL{
+
+A substituição é:
+%
+$$\ga{[S]} \;=\;
+  \bmat{
+    G(x) := x^4 + 5 \\
+    H(y) := y^2 + 3 \\
+    g(x) := 4x^3 \\
+    h(y) := 2y \\
+    H^{-1}(x) := \sqrt{x-3} \\
+  }
+$$
+
+a) Seja:
+%
+$$\frac{dy}{dx} = \frac{4x^3}{2y} \qquad (*)$$
+
+b)
+%
+ $\begin{array}[t]{lrcl}
+  \text{Seja:}  & H^{-1}(x) &=& \sqrt{x-3}. \\
+  \text{Temos:} & H^{-1}(H(y)) &=& \sqrt{H(y)-3} \\
+                &              &=& \sqrt{(y^2+3)-3} \\
+                &              &=& y. \\
+  \end{array}
+ $
+
+\msk
+
+c) $\begin{array}[t]{lrcl}
+       & y &=& H^{-1}(G(x)+C_3) \\
+          &&=& \sqrt{(G(x)+C_3)-3} \\
+          &&=& \sqrt{((x^4+5)+C_3)-3} \\
+          &&=& \sqrt{x^4+2+C_3} \\
+    \text{Seja:} &
+      f(x) &=& \sqrt{x^4+2+C_3}. \\
+    \end{array}
+   $
+
+}
+
+
+% «anexo-R»  (to ".anexo-R")
+
+\def\anexoR{
+
+d) $\begin{array}[t]{l}
+    \text{Será que $f(x)$ obedece $(*)$?} \\
+    \text{Temos }
+    f'(x) = \frac{2x^3}{\sqrt{x^4 + 2 + C_3}},
+    \text{ e com isso:}
+    \\
+    \\[-5pt]
+    \left(
+      f'(x) = \frac{4x^3}{2f(x)}
+    \right)
+    \bmat{
+      f(x) = \sqrt{x^4+2+C_3} \\
+      f'(x) = \frac{2x^3}{\sqrt{x^4 + 2 + C_3}} \\
+    }
+    \\
+    = \;\;
+    \left(
+      \frac{2x^3}{\sqrt{x^4 + 2 + C_3}}
+      = \frac{4x^3}{2\sqrt{x^4+2+C_3}}
+    \right)
+    \qquad \smile \\
+    \end{array}
+   $
+
+\bsk
+
+e) $\begin{array}[t]{lrcl}
+    \text{Se}    & f(x_1) &=& y_1, \\
+    \text{i.e.,} & f(1)   &=& 2,   \\
+    \text{então} & f(1)   &=& \sqrt{1^4+2+C_3} \\
+                         &&=& \sqrt{3+C_3} \\
+                         &&=& 2 \\
+                 & 2^2    &=& \sqrt{3+C_3}^2 \\
+                 & 4      &=&       3+C_3    \\
+                 & C_3    &=& 1 \\
+                 & f(x)   &=& \sqrt{x^4+2+C_3} \\
+                 &        &=& \sqrt{x^4+3} \\
+    \text{Seja:} & f_1(x) &=& \sqrt{x^4+3}. \\
+    \end{array}
+   $
+
+\bsk
+
+f) $\begin{array}[t]{lrcl}
+    \text{Será que} & f_1(x_1) &=& y_1, \\
+    \text{i.e.,}    & f_1(1)   &=& 2?   \\
+                & \sqrt{1^4+3} &=& \sqrt{4} \\
+                              &&=& 2 \qquad \smile \\
+    \end{array}
+   $
+
+}
+
+% «anexo»  (to ".anexo")
+
+\scalebox{0.6}{\def\colwidth{9cm}\firstcol{
+
+\vspace*{-0.5cm}
+
+{\bf Anexo: gabarito de uma}
+
+{\bf questão da P2 de 2022.2}
+
+\ssk
+
+\anexoL
+
+}\anothercol{
+
+\anexoR
+
+}}
+
+
+
+\newpage
+
+{\bf Mini-gabarito}
+
+
+\scalebox{0.6}{\def\colwidth{12cm}\firstcol{
+
+% «questao-1-gab»  (to ".questao-1-gab")
+% (c2m231p2p 7 "questao-1-gab")
+% (c2m231p2a   "questao-1-gab")
+% (find-es "maxima" "2023-1-C2-P2-edovs")
+
+1a)      $f_1(x) = \ph{ii} \sqrt{- x - C_3}$,
+
+\ph{aai} $f_2(x) = - \sqrt{- x - C_3}$
+
+1b) $f_3(x) = \ph{ii} \sqrt{7 - x}$ \ph{iii} (passa por $(x,y)=(3,2)$)
+
+1c) $f_4(x) = - \sqrt{13 - x}$ \ph{i} (passa por $(x,y)=(4,-3)$)
+
+\bsk
+
+
+% «questao-2-gab»  (to ".questao-2-gab")
+% (c2m231p2p 7 "questao-2-gab")
+% (c2m231p2a   "questao-2-gab")
+% (find-es "maxima" "2023-1-C2-P2-edolccs")
+
+2) $y''+y'-20y = (D+5)(D-4)y$,
+
+\ph{aa} $y''+4y'+29y = (D-(-2+5i))(D-(-2-5i))y$,
+
+2a) $f_1(x) = e^{4x}$, $f_2(x) = e^{-5x}$
+
+2b) $g(x) = \frac{25}{9} e^{4x} + \frac{11}{9} e^{-5x}$
+
+2c)  $f_1(x) = e^{(-2+5i)x}$, $f_2(x) = e^{(-2-5i)x}$,
+
+\ph{aai} $f_3(x) = e^{-2x}\cos 5x$, $f_2(x) = e^{-2x}\sen 5x$
+
+\bsk
+
+\def\area{\textsf{área}}
+\def\vol {\textsf{vol}}
+
+4b) $\begin{array}[t]{rcl}
+     r(x) &=& 1+\cos x \\
+     \area(x) &=& π(1+\cos x)^2 \\
+     \vol &=& \Intx{0}{π}{π(1+\cos x)^2} \\
+     \end{array}$
+
+4c) $\begin{array}[t]{rcl}
+     y   &=& 1+\cos x \\
+     y-1 &=& \cos x \\
+     x   &=& \arccos(y-1) \\
+     \area(y) &=& π(\arccos(y-1))^2 \\
+     \vol     &=& \Inty{0}{2}{π(\arccos(y-1))^2} \\
+     \end{array}$
+
+}\anothercol{
+}}
+
+
+
+
+\newpage
+
+
+
+%L Pict2e.bounds = PictBounds.new(v(0,0), v(7,6))
+%L spec = "(0,1)--(1,1)--(2,4)--(3,5)--(4,4)o (4,3)c (4,1)o--(6,3)--(7,3)"
+%L pws = PwSpec.from(spec)
+%L pws:topict():prethickness("1pt"):pgat("pgatc"):sa("F(x)"):output()
+\pu
+
+% «links»  (to ".links")
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2023.1-C2/")
+# (find-fline "~/LATEX/2023-1-C2/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -v $1.pdf;  textcleaner -f 50 -o  5 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 10 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 20 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 15" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 30" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 45" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2023.1-C2/
+       cp -fv        $1.pdf ~/LATEX/2023-1-C2/
+       cat <<%%%
+% (find-latexscan-links "C2" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2023-1-C2-P2 veryclean
+make -f 2019.mk STEM=2023-1-C2-P2 pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2p2"
+% ee-tla: "c2m231p2"
+% End:

@@ -1,0 +1,186 @@
+% (find-LATEX "2023-1-C4-dicas-pra-P2.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C4-dicas-pra-P2.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C4-dicas-pra-P2.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C4-dicas-pra-P2.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C4-dicas-pra-P2.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C4-dicas-pra-P2.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C4-dicas-pra-P1.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C4-dicas-pra-P2"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C4-dicas-pra-P2.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C4-dicas-pra-P2")
+% (find-pdf-page   "~/LATEX/2023-1-C4-dicas-pra-P2.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C4-dicas-pra-P2.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C4-dicas-pra-P2.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C4-dicas-pra-P2.pdf")
+%   file:///home/edrx/LATEX/2023-1-C4-dicas-pra-P2.pdf
+%               file:///tmp/2023-1-C4-dicas-pra-P2.pdf
+%           file:///tmp/pen/2023-1-C4-dicas-pra-P2.pdf
+%  http://anggtwu.net/LATEX/2023-1-C4-dicas-pra-P2.pdf
+% (find-LATEX "2019.mk")
+% (find-Deps1-links "Caepro5 Piecewise1")
+% (find-Deps1-cps   "Caepro5 Piecewise1")
+% (find-Deps1-anggs "Caepro5 Piecewise1")
+% (find-MM-aula-links "2023-1-C4-dicas-pra-P2" "C4" "c4m231dicasp2" "c4d2")
+
+% «.defs»		(to "defs")
+% «.defs-T-and-B»	(to "defs-T-and-B")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.title»		(to "title")
+% «.links»		(to "links")
+%
+% «.djvuize»		(to "djvuize")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c4m231dicasp2" "2023-1-C4-dicas-pra-P2")
+% (code-eevvideo      "c4m231dicasp2" "2023-1-C4-dicas-pra-P2")
+% (code-eevlinksvideo "c4m231dicasp2" "2023-1-C4-dicas-pra-P2")
+% (find-c4m231dicasp2video "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C4.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C4.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+\defφ{\origphi}
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c4m231dicasp2p 1 "title")
+% (c4m231dicasp2a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 4 - 2023.1}
+
+\bsk
+
+Aula 27: dicas pra P2
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C4.html}
+
+\end{center}
+
+\newpage
+
+% «links»  (to ".links")
+
+\scalebox{0.8}{\def\colwidth{14cm}\firstcol{
+
+\par \Ca{StewPtCap15p8} Definição 5: $dA = dx\,dy$
+\par \Ca{StewPtCap15p61} Fórmula 3: $dV = dx\,dy\,dz = ρ^2 \senφ\,dρ\,dφ\,dθ$
+\par \Ca{StewPtCap16p41} 16.6 Superfícies parametrizadas e suas áreas
+\par \Ca{StewPtCap16p43} Exemplo 4: $𝐛r(φ,θ)=\ldots$
+\par \Ca{StewPtCap16p47} Definição 6: $𝐛r(u,v)=\ldots$
+%\par \Ca{StewPtCap16p47} (Exemplo 10)
+\par \Ca{StewPtCap16p51} 16.7 Integrais de superfície
+\par \Ca{StewPtCap16p51} Superfícies parametrizadas: $𝐛r(u,v)=\ldots$
+\par \Ca{StewPtCap16p55} Figura 7: as duas orientações de uma superfície orientável
+\par \Ca{StewPtCap16p55} $𝐛r(φ,θ)=\ldots$
+\par \Ca{StewPtCap16p56} Definição 8: $\int\!\!\!\int_S 𝐛F·d𝐛S = \int\!\!\!\int_S 𝐛F·𝐛n\,dS$
+\par \Ca{StewPtCap16p57} \standout{Exemplo 4}
+\par \Ca{StewPtCap16p66} 16.9 O teorema do divergente
+\par \Ca{StewPtCap16p67} \standout{Exemplo 1}
+\par \Ca{StewPtCap16p69} \standout{Exercício 3}
+\par \Ca{StewPtCap16p70} \standout{Exercício 8}
+
+}\anothercol{
+}}
+
+
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c4d2"
+% ee-tla: "c4m231dicasp2"
+% End:

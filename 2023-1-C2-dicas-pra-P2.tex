@@ -1,0 +1,443 @@
+% (find-LATEX "2023-1-C2-dicas-pra-P2.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-dicas-pra-P2.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-dicas-pra-P2.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-dicas-pra-P2.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-dicas-pra-P2.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-dicas-pra-P2.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C2-dicas-pra-P2.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-dicas-pra-P2"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-dicas-pra-P2.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-dicas-pra-P2")
+% (find-pdf-page   "~/LATEX/2023-1-C2-dicas-pra-P2.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-dicas-pra-P2.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-dicas-pra-P2.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-dicas-pra-P2.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-dicas-pra-P2.pdf
+%               file:///tmp/2023-1-C2-dicas-pra-P2.pdf
+%           file:///tmp/pen/2023-1-C2-dicas-pra-P2.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-dicas-pra-P2.pdf
+% (find-LATEX "2019.mk")
+% (find-Deps1-links "Caepro5 Piecewise1")
+% (find-Deps1-cps   "Caepro5 Piecewise1")
+% (find-Deps1-anggs "Caepro5 Piecewise1")
+% (find-MM-aula-links "2023-1-C2-dicas-pra-P2" "C2" "c2m231dicasp2" "c2d2")
+
+% «.defs»		(to "defs")
+% «.defs-T-and-B»	(to "defs-T-and-B")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.title»		(to "title")
+% «.links»		(to "links")
+% «.as-questoes»	(to "as-questoes")
+% «.lembre-que»		(to "lembre-que")
+% «.dicas-edolccs»	(to "dicas-edolccs")
+%
+% «.djvuize»		(to "djvuize")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231dicasp2" "2023-1-C2-dicas-pra-P2")
+% (code-eevvideo      "c2m231dicasp2" "2023-1-C2-dicas-pra-P2")
+% (code-eevlinksvideo "c2m231dicasp2" "2023-1-C2-dicas-pra-P2")
+% (find-c2m231dicasp2video "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231dicasp2p 1 "title")
+% (c2m231dicasp2a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2023.1}
+
+\bsk
+
+Dicas pra P2
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «links»  (to ".links")
+
+
+\newpage
+
+% «as-questoes»  (to ".as-questoes")
+% (c2m231dicasp2p 2 "as-questoes")
+% (c2m231dicasp2a   "as-questoes")
+
+{\bf As questões da prova}
+
+\scalebox{0.55}{\def\colwidth{9.5cm}\firstcol{
+
+A P2 vai ter:
+
+\begin{itemize}
+
+\item Uma questão de somas de Riemann, valendo 1 ponto;
+
+\item Uma questão de volumes, valendo 1 ponto;
+
+\item Uma questão de EDOs com variáveis separáveis (``EDOVSs''),
+
+\item Uma questão de EDOs lineares com coeficientes constantes
+  (``EDOLCCs'').
+
+\end{itemize}
+
+As questões de EDOs provavelmente vão valer 4 pontos cada uma.
+
+\msk
+
+Nas questões sobre EDOs o jeito de escrever vai importar {\bf MUITO}.
+Se vocês não usarem as partículas em português do jeito certo as
+respostas de vocês vai ficar ou erradas ou ambíguas, e:
+
+\msk
+
+\standout{
+\begin{tabular}{l}
+nessas questões toda vez que eu encontrar algo \\
+ambíguo eu VOU interpretar do jeito errado!!!
+\end{tabular}
+}
+
+
+}\anothercol{
+
+{}
+
+Lembre que PRA MIM um dos objetivos principais do curso de Cálculo 2 é
+fazer as pessoas aprenderem a escrever contas muito complicadas de um
+jeito que essas contas fiquem não só corretas como muito fáceis de
+entender e de revisar!!!
+
+\msk
+
+Releia estas dicas várias vezes:
+
+\ssk
+
+\Ca{2gT4} (p.3) ``Releia a Dica 7''
+
+\Ca{2gT23} (p.22) Formal vs.\ coloquial
+
+\bsk
+
+O melhor modo de treinar como escrever de forma clara e precisa é
+tentar usar \standout{só} notação matemática e as ``partículas'' como
+``seja'', ``então'', ``digamos que'', ``se'', ``i.e.'', ``queremos
+que'', ``vamos testar se'', etc... isso vai te obrigar a fazer tudo na
+ordem certa -- exatamente como em linguagens de programação, em que se
+você trocar a ordem das linhas desse programa aqui ele vai fazer algo
+errado:
+%
+% (find-LATEX "edrx21defs.tex" "co")
+$$\begin{tabular}{l}
+  \textsf{a = 42;}   \\
+  \textsf{print(a);} \\
+  \end{tabular}
+$$
+
+\msk
+
+Você pode usar a VS do semestre passado como referência:
+
+\Ca{2fT135}, \Ca{2fT137} Questão 1, anexo
+
+% 2gQ53
+
+
+}}
+
+\newpage
+
+% «lembre-que»  (to ".lembre-que")
+% (c2m231dicasp2p 3 "lembre-que")
+% (c2m231dicasp2a   "lembre-que")
+
+{\bf ``Lembre que'' e ``queremos que''}
+
+\scalebox{0.9}{\def\colwidth{12cm}\firstcol{
+
+{}
+
+A VS do semestre passado não tem exemplos de todas as partículas
+importantes... por exemplo, ela não tem nem ``lembre que''s nem
+``queremos que''s. Dê uma olhada aqui:
+
+\msk
+
+\Ca{2gQ53} Quadros da aula 25 (27/jun/2023)
+
+\Ca{2gT20} (p.19) Contexto
+
+\msk
+
+% ...e lembre que 1) os livros básicos não usam o `[:=]', 2) eles 
+
+
+
+
+
+
+
+% Dica 1: releia os capítulos que nós usamos no curso e encontre os
+% lugares em que eles usam algo como o truque do ``lembre que'' pra usar
+% alguma fórmula cuja demonstração é complicada sem precisar demonstrar
+% ela de novo!
+% 
+% \ssk
+% 
+% Dica 2: Procure também os lugares em que eles fazem algo como o
+% ``queremos que''!
+
+}\anothercol{
+}}
+
+
+
+
+\newpage
+
+% «dicas-edolccs»  (to ".dicas-edolccs")
+% (c2m231dicasp2p 4 "dicas-edolccs")
+% (c2m231dicasp2a   "dicas-edolccs")
+
+{\bf Dicas pras questões de EDOLCCs}
+
+
+\scalebox{0.55}{\def\colwidth{10cm}\firstcol{
+
+Releia os quadros da aula de 23/jun/2023: \Ca{2gQ50}.
+
+\ssk
+
+As contas desses quadros têm alguns errinhos, você vai ter que
+corrigi-los!
+
+\ssk
+
+Treine bastante as contas que mostram que $e^{ix}$ e $e^{-ix}$ são
+combinações lineares de $\cos x$ e $\sen x$ e vice-versa e as contas
+que mostram que $e^{(α+βi)x}$ e $e^{(α-βi)x}$ são combinações lineares
+de $e^{γx}\cos δx$ e $e^{γx}\sen δx$ e vice-versa. Note que eu não
+estou dizendo qual é a relação entre $α$ e $β$ e $γ$ e $δ$; você vai
+ter que descobrir.
+
+\ssk
+
+Estude pelos livros!!!! Eles têm figuras que explicam porque algumas
+EDOLCCs ``com raízes complexas'' descrevem oscilações.
+
+\ssk
+
+Em alguns itens do tipo ``teste o seu resultado'' algumas contas vão
+ficar {\bf MUITO} mais curtas e fáceis de revisar se você souber
+definir funções intermediárias e souber usar o ``seja'' e o ``então''.
+Por exemplo, digamos que você precise calcular a quarta derivada de
+$e^{42x}\sen 99x$; essa conta fica muito mais fácil de fazer se você
+começar fazendo $f=e^{42x}$, $g=\sen 99x$ e $h=\cos 99x$. A maioria
+das pessoas faz de tudo pra evitar aprender a usar funções
+intermediárias, mas o Bob faz contas complicadas rápido porque ele
+sabe usar funções intermediárias muito bem! \standout{Seja como o
+  Bob!}
+
+}\anothercol{
+
+{}
+
+Treine o modo de encontrar as raízes de polinômios de 2º grau
+``simples'' por chutar-e-testar, sem usar Bhaskara -- ``simples'' aqui
+quer dizer ``com raízes inteiras''. Por exemplo,
+%
+\def\und#1#2{\underbrace{#1}_{#2}}
+%
+$$\begin{array}{l}
+  x^2-x-6 \\
+  = \; (x-a)(x-b) \\
+  = \; x^2-\und{(a+b)}{1}x+\und{ab}{-6} \\
+  \end{array}
+$$
+
+$$\begin{array}{rrrrr}
+  a & b & ab & a+b\!\!\!\!\! \\\hline
+  -6 & 1 & -6 & -5 \\
+  -3 & 2 & -6 & -1 \\
+  -2 & 3 & -6 & 1  \\
+  -1 & 6 & -6 & 5  \\
+   1 & -6 & -6 & -5  \\
+   2 & -3 & -6 & -1  \\
+   3 & -2 & -6 & 1  \\
+   6 & -1 & -6 & 5  \\
+  \end{array}
+$$
+
+Dá pra fazer algo parecido com equações de 2º grau cujas raízes são
+números complexos conjugados. Se $z=a+ib$ então $\ovl z=a-ib$; tente
+expandir $(x-z)(x-\ovl z)$ e simplificar o resultado o máximo que você
+puder, e depois faça alguns exemplos em que $a$ e $b$ são inteiros
+pequenos e tente montar você mesmo um método como o da tabela ali de
+acima.
+
+
+}}
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2023.1-C2/")
+# (find-fline "~/LATEX/2023-1-C2/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -v $1.pdf;  textcleaner -f 50 -o  5 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 10 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 20 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 15" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 30" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 45" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2023.1-C2/
+       cp -fv        $1.pdf ~/LATEX/2023-1-C2/
+       cat <<%%%
+% (find-latexscan-links "C2" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2023-1-C2-dicas-pra-P2 veryclean
+make -f 2019.mk STEM=2023-1-C2-dicas-pra-P2 pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2d2"
+% ee-tla: "c2m231dicasp2"
+% End:

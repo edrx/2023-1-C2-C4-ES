@@ -1,0 +1,362 @@
+% (find-LATEX "2023-1-C2-edovs.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-edovs.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-edovs.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-edovs.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-edovs.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-edovs.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C2-edovs.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-edovs"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-edovs.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-edovs")
+% (find-pdf-page   "~/LATEX/2023-1-C2-edovs.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-edovs.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-edovs.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-edovs.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-edovs.pdf
+%               file:///tmp/2023-1-C2-edovs.pdf
+%           file:///tmp/pen/2023-1-C2-edovs.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-edovs.pdf
+% (find-LATEX "2019.mk")
+% (find-Deps1-links "Caepro5 Piecewise1")
+% (find-Deps1-cps   "Caepro5 Piecewise1")
+% (find-Deps1-anggs "Caepro5 Piecewise1")
+% (find-MM-aula-links "2023-1-C2-edovs" "C2" "c2m231edovs" "c2ev")
+
+% «.defs»		(to "defs")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.title»		(to "title")
+% «.links»		(to "links")
+%
+% «.djvuize»		(to "djvuize")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231edovs" "2023-1-C2-edovs")
+% (code-eevvideo      "c2m231edovs" "2023-1-C2-edovs")
+% (code-eevlinksvideo "c2m231edovs" "2023-1-C2-edovs")
+% (find-c2m231edovsvideo "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231edovsp 1 "title")
+% (c2m231edovsa   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2023.1}
+
+\bsk
+
+Aulas 21 e 22: EDOs com variáveis separáveis.
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «links»  (to ".links")
+% (c2m222edovsp 1 "title")
+% (c2m222edovsa   "title")
+
+
+{\bf Links}
+
+\scalebox{0.8}{\def\colwidth{12cm}\firstcol{
+
+Algumas figuras de campos de direções:
+
+\Ca{DiffyQsP27},
+\Ca{Stew9p9},
+\Ca{2eT214}
+
+\ssk
+
+\par EDOs por chutar e testar:
+\par \Ca{2gT40}, \Ca{2dT13}
+
+\ssk
+
+\par \Ca{2dT293} Material sobre EDOVSs de 2021.2
+\par \Ca{2dT306} Slides sobre inversas de 2021.2
+\par \Ca{Leit7} Funções inversas, logarítmicas e exponenciais
+
+\ssk
+
+\par Questões sobre EDOVSs nas provas de 2022.2:
+\par \Ca{2fT123}, \Ca{2fT126} P2, gabarito
+\par \Ca{2fT135}, \Ca{2fT137} VS, anexo
+
+\ssk
+
+\par \Ca{ZillCullenInicioP13} (p.6) Soluções implícitas e explícitas
+\par \Ca{ZillCullenInicioP16} (p.9) parâmetros, solução particular
+\par \Ca{ZillCullenInicioP51} (p.44) 2.2: Variáveis separáveis
+\par \Ca{Stew9p18} (p.618) 9.3: Separable equations
+
+\bsk
+
+\par \Ca{2gQ41} Quadros da aula 21 (13/jun/2023)
+\par \Ca{2gQ43} Quadros da aula 22 (16/jun/2023)
+
+}\anothercol{
+}}
+
+
+% (c2m211edovsp 1 "title")
+% (c2m211edovsa   "title")
+
+
+% (find-books "__analysis/__analysis.el" "boyce-diprima")
+% (find-books "__analysis/__analysis.el" "boyce-diprima" "2.2")
+% (find-boycediprima11page (+ 14 33) "2.2 Separable Differential Equations")
+% (find-books "__analysis/__analysis.el" "lebl")
+% (find-books "__analysis/__analysis.el" "lebl" "1.3")
+% (find-diffyqspage 33 "1.3 Separable equations")
+% (find-books "__analysis/__analysis.el" "stewart")
+% (find-books "__analysis/__analysis.el" "stewart" "9.3")
+% (find-stewart7page (+ 32 618) "9.3 Separable Equations")
+% (find-books "__analysis/__analysis.el" "thomas")
+% (find-books "__analysis/__analysis.el" "thomas" "9.1")
+% (find-thomas11-1page (+ 108 642) "9.1 Slope Fields and Separable Differential Equations")
+% (find-books "__analysis/__analysis.el" "trench")
+% (find-books "__analysis/__analysis.el" "trench" "2.2")
+% (find-trenchpage (+ 10 45) "2.2 Separable Equations")
+% Stew9p18
+
+\newpage
+
+{\bf Inversas: introdução}
+
+\scalebox{0.7}{\def\colwidth{16cm}\firstcol{
+
+Dê uma olhada nestes links:
+
+\Ca{ZillCullenInicioP13} (p.6) Soluções implícitas e explícitas
+
+\Ca{ZillCullenInicioP16} (p.9) parâmetros, solução particular
+
+\Ca{ZillCullenInicioP51} (p.44) 2.2: Variáveis separáveis
+
+\ssk
+
+O método pra resolver EDOs com variáveis separáveis nos dá primeiro
+``soluções implícitas'', como $x^2+y^2=C$ or $x^2+y^2=42$, e aí depois
+disso a gente tem que transformar essas soluções implícitas em
+``soluções explícitas'', em que $y$ é uma função de $x$... por
+exemplo:
+%
+$$\begin{array}{rcl}
+  x =   \sqrt{C-x^2} &⇒& f_1(x)=\sqrt{C-x^2} \\
+  x =  -\sqrt{C-x^2} &⇒& f_2(x)=-\sqrt{C-x^2} \\
+  x =  \sqrt{42-x^2} &⇒& f_3(x)=\sqrt{42-x^2} \\
+  x = -\sqrt{42-x^2} &⇒& f_4(x)=-\sqrt{42-x^2} \\
+  \end{array}
+$$
+
+Praticamente todo mundo se enrola na hora de passar das ``soluções
+implícitas'' pras ``soluções implícitas'', principalmente nos casos em
+que a gente tem ``várias inversas''...
+
+\ssk
+
+Eu vou usar uma terminologia que é meio errada, e vou dizer que
+$g_1(y)=\sqrt{y}$ e $g_2(y)=-\sqrt{y}$ são duas inversas diferentes
+para $f(x)=x^2$. Um bom lugar pra aprender a terminologia correta --
+que precisa que a gente especifique os domínios! -- é o capítulo 7 do
+Leithold: \Ca{Leit7}.
+
+}\anothercol{
+}}
+
+
+\newpage
+
+{\bf Inversas: um exemplo complicado}
+
+\scalebox{0.48}{\def\colwidth{11.5cm}\firstcol{
+
+Digamos que queremos inverter esta função:
+%
+$$f(x) = (x+3)^4+5
+$$
+
+O método é este aqui, mas repare que ele tem uma bifurcação...
+
+\def\MA{
+             y  &=& (x+3)^4+5 \\
+           y-5  &=& (x+3)^4 \\
+  \sqrt[4]{y-5} &=& \sqrt[4]{(x+3)^4} \\
+}
+\def\MB{
+  \sqrt[4]{y-5} &=& x+3 \\
+  -3 + \sqrt[4]{y-5} &=& x \\
+}
+\def\MC{
+      \sqrt[4]{y-5}  &=& -(x+3) \\
+      \sqrt[4]{y-5}  &=& -x-3 \\
+      \sqrt[4]{y-5}  &=& -x-3 \\
+    3+\sqrt[4]{y-5}  &=& -x \\
+  -(3+\sqrt[4]{y-5}) &=& x \\
+}
+
+\msk
+
+$\begin{array}{c}
+    \begin{array}{rcl}\MA\end{array} \\ \\
+    \begin{array}[t]{rcl}\MB\end{array}
+    \begin{array}[t]{rcl}\MC\end{array} \\
+  \end{array}
+$
+
+\bsk
+
+Se a gente segue o caminho da esquerda a gente obtém
+$$f^{-1}(y) = -3 + \sqrt[4]{y-5},$$
+e se a gente segue o caminho da direita a gente obtém
+$$f^-1(y)=-(3+\sqrt[4]{y-5}).$$
+
+}\anothercol{
+
+%\vspace*{0.25cm}
+
+Sabemos que $\sqrt[4]{α^4} = |α|$, e portanto:
+%
+$$\begin{array}{rcl}
+  α≥0 &⇒& \sqrt[4]{α^4} = α \\
+  α≤0 &⇒& \sqrt[4]{α^4} = -α \\
+  x+3≥0 &⇒& \sqrt[4]{(x+3)^4} = x+3 \\
+  x+3≤0 &⇒& \sqrt[4]{(x+3)^4} = -(x+3) \\
+  \end{array}
+$$
+
+Ou seja, nas contas à esquerda se $x+3≥0$ nós temos que seguir o
+caminho da esquerda, e se $x+3≤0$ nós temos que seguir o caminho da
+direita.
+
+\ssk
+
+O melhor modo da gente entender essas duas inversas é esse aqui.
+Considere estes três conjuntos de $\R^2$:
+%
+$$\begin{array}{rcl}
+  A_1 &=& \setofxyst{y=(x+3)^4+5}\\
+  A_2 &=& \setofxyst{y=(x+3)^4+5, \; x+3≥0}\\
+  A_3 &=& \setofxyst{y=(x+3)^4+5, \; x+3≤0}\\
+  \end{array}
+$$
+
+Os conjuntos $A_2$ e $A_3$ são gráficos de funções inversíveis e $A_1$
+é o gráfico de uma função não-inversível. Os domínios dessas funções
+são relativamente fáceis de calcular -- eles são $\R$,
+$\setofst{x∈\R}{x+3≥0}$ e $\setofst{x∈\R}{x+3≤0}$ respectivamente --
+mas as imagens são um pouco mais complicadas...
+
+\msk
+
+...mas lembre que em C2 a gente costuma fazer as contas em duas
+etapas: na primeira etapa a gente finge que as hipóteses vão ser todas
+obedecidas e a gente nem escreve quais são essas hipóteses, e só na
+segunda etapa a gente escreve explicitamente quais são essas hipóteses
+e a gente vê se tudo realmente dá certo quando elas são obedecidas.
+{\sl E neste curso a gente raramente vai ter tempo pra segunda etapa.}
+
+}}
+
+
+
+
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2ev"
+% ee-tla: "c2m231edovs"
+% End:

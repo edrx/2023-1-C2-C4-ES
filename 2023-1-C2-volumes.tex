@@ -1,0 +1,238 @@
+% (find-LATEX "2023-1-C2-volumes.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-volumes.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-volumes.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-volumes.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-volumes.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-volumes.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C2-volumes.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-volumes"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-volumes.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-volumes")
+% (find-pdf-page   "~/LATEX/2023-1-C2-volumes.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-volumes.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-volumes.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-volumes.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-volumes.pdf
+%               file:///tmp/2023-1-C2-volumes.pdf
+%           file:///tmp/pen/2023-1-C2-volumes.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-volumes.pdf
+% (find-LATEX "2019.mk")
+% (find-Deps1-links "Caepro5 Piecewise1")
+% (find-Deps1-cps   "Caepro5 Piecewise1")
+% (find-Deps1-anggs "Caepro5 Piecewise1")
+% (find-MM-aula-links "2023-1-C2-volumes" "C2" "c2m231volumes" "c2vo")
+
+% «.defs»		(to "defs")
+% «.defs-T-and-B»	(to "defs-T-and-B")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.title»		(to "title")
+% «.links»		(to "links")
+%
+% «.djvuize»		(to "djvuize")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231volumes" "2023-1-C2-volumes")
+% (code-eevvideo      "c2m231volumes" "2023-1-C2-volumes")
+% (code-eevlinksvideo "c2m231volumes" "2023-1-C2-volumes")
+% (find-c2m231volumesvideo "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231volumesp 1 "title")
+% (c2m231volumesa   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2023.1}
+
+\bsk
+
+Aula 27: volumes e comprimento de arco
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «links»  (to ".links")
+
+{\bf Links}
+
+\scalebox{0.9}{\def\colwidth{12cm}\firstcol{
+
+\par \Ca{StewPtCap15p6} (p.874) 15.1 Integrais múltiplas sobre retângulos
+\par \Ca{Miranda285} 9.3 Volume
+\par \Ca{Miranda288} O volume da esfera de raio $r$ é $\frac43πr^3$
+\par \Ca{Miranda285} 9.3.1 Secções transversais
+\par \Ca{Miranda289} 9.3.2 Sólidos de revolução
+\par \Ca{Miranda292} \standout{Façam os exercícios 2, 3, 4 e 5}
+
+\msk
+
+\par \Ca{3cT75} Pirâmide (3D)
+\par \Ca{3cT76} Cruz (3D)
+\par \Ca{3eT23} Low Poly (até o final do PDFzão)
+
+% (find-books "__analysis/__analysis.el" "bressoud")
+
+% (find-dmirandacalcpage 285 "9.3 Volume")
+% (find-dmirandacalcpage 288   "volume da esfera")
+% (find-dmirandacalctext 288   "volume da esfera")
+% (find-dmirandacalcpage 285 "9.3.1 Secções Transversais")
+% (find-dmirandacalcpage 289 "9.3.2 Sólidos de Revolução")
+
+}\anothercol{
+}}
+
+
+\newpage
+
+{\bf Introdução a volumes}
+
+Preciso digitar essas contas daqui:
+
+\par \Ca{2gQ58}
+
+
+\newpage
+
+{\bf Comprimento de arco}
+
+\def\dx  {x_i-x_{i-i}}
+\def\dy  {y_i-y_{i-i}}
+\def\pdx{(\dx)}
+\def\pdy{(\dy)}
+\def\dydx{\frac{\dy}{\dx}}
+\def\yx{f'(x_i)}
+
+\scalebox{0.6}{\def\colwidth{9cm}\firstcol{
+
+As contas começam assim, mas eu não terminei...
+
+$$\begin{array}{l}
+  \sqrt{dx^2 + dy^2} \\
+  =\; \sqrt{dx^2 + (\frac{dy}{dx}dx)^2} \\
+  =\; \sqrt{dx^2 + (y_xdx)^2} \\
+  =\; \sqrt{dx^2 + {y_x}^2 dx^2} \\
+  =\; \sqrt{(1+{y_x}^2)dx^2} \\
+  =\; \sqrt{(1+{y_x}^2)}\;\sqrt{dx^2} \\
+  =\; \sqrt{(1+{y_x}^2)}\;dx^2 \\
+  \end{array}
+$$
+
+$$\begin{array}{l}
+  \sqrt{\pdx^2 + \pdy^2} \\
+  =\; \sqrt{\pdx^2 + (\dydx\pdx)^2} \\
+  =\; \sqrt{\pdx^2 + (\yx\pdx)^2} \\
+  =\; \sqrt{\pdx^2 + \yx^2 \pdx^2} \\
+  =\; \sqrt{(1+\yx^2)\pdx^2} \\
+  =\; \sqrt{(1+\yx^2)}\;\sqrt{\pdx^2} \\
+  =\; \sqrt{(1+\yx^2}\;\pdx \\
+  \end{array}
+$$
+
+}\anothercol{
+}}
+
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2vo"
+% ee-tla: "c2m231volumes"
+% End:

@@ -1,0 +1,338 @@
+% (find-LATEX "2023-1-C4-P2.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C4-P2.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C4-P2.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C4-P2.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C4-P2.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C4-P2.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C4-P2.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C4-P2"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C4-P2.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C4-P2")
+% (find-pdf-page   "~/LATEX/2023-1-C4-P2.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C4-P2.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C4-P2.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C4-P2.pdf")
+%   file:///home/edrx/LATEX/2023-1-C4-P2.pdf
+%               file:///tmp/2023-1-C4-P2.pdf
+%           file:///tmp/pen/2023-1-C4-P2.pdf
+%  http://anggtwu.net/LATEX/2023-1-C4-P2.pdf
+% (find-LATEX "2019.mk")
+% (find-Deps1-links "Caepro5 Piecewise1")
+% (find-Deps1-cps   "Caepro5 Piecewise1")
+% (find-Deps1-anggs "Caepro5 Piecewise1")
+% (find-MM-aula-links "2023-1-C4-P2" "C4" "c4m231p2" "c4p2")
+
+% «.defs»		(to "defs")
+% «.defs-T-and-B»	(to "defs-T-and-B")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.title»		(to "title")
+% «.formulas»		(to "formulas")
+% «.questao-1»		(to "questao-1")
+% «.links»		(to "links")
+% «.stewart»		(to "stewart")
+%
+% «.djvuize»		(to "djvuize")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c4m231p2" "2023-1-C4-P2")
+% (code-eevvideo      "c4m231p2" "2023-1-C4-P2")
+% (code-eevlinksvideo "c4m231p2" "2023-1-C4-P2")
+% (find-c4m231p2video "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C4.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C4.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+\def\div{\operatorname{div}}
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c4m231p2p 1 "title")
+% (c4m231p2a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 4 - 2023.1}
+
+\bsk
+
+Segunda prova (P2)
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C4.html}
+
+\end{center}
+
+\newpage
+
+% «formulas»  (to ".formulas")
+
+
+
+\scalebox{0.5}{\def\colwidth{12cm}\firstcol{
+
+% «questao-1»  (to ".questao-1")
+% (c4m231p2p 2 "questao-1")
+% (c4m231p2a   "questao-1")
+
+{\bf Questão 1 (e única)}
+
+\T(Total: 10.0 pts)
+
+\msk
+
+O objetivo desta questão é mostrar que esta igualdade
+%
+$$
+  \int\!\!\!\!\int_{∂B} 𝐛F·𝐛n \, dS
+    \;=\; \int\!\!\!\!\int\!\!\!\!\int_B \div\,𝐛F(x,y,z)\,dV
+$$
+%
+é verdadeira quando $B$ é a esfera de raio 2 centrada na origem e:
+%
+$$𝐛F(x,y,z) \;=\; (x^3+y^3)𝐛i + (y^3+z^3)𝐛j + (z^3+x^3)𝐛k
+$$
+
+a) \B(1.0 pts) Calcule $\div F$.
+
+\ssk
+
+b) \B(4.5 pts) Calcule o lado esquerdo da igualdade.
+
+\ssk
+
+c) \B(4.5 pts) Calcule o lado direito da igualdade.
+
+
+% \par \Ca{StewPtCap16p70} \standout{Exercício 8}
+
+}\anothercol{
+
+{\bf Algumas fórmulas:}
+
+$$\begin{array}{rcll}
+  % dA &=& dx\,dy, \quad \text{ou:} \\    % StewPtCap15p8
+  (x,y,z) &=&  (ρ \senϕ \cosθ,    \\    % StewPtCap15p59
+           && \;\,ρ \senϕ \senθ,  \\
+           && \;\,ρ \cosϕ)        & (p.927) \\
+  dV &=& dx\,dy\,dz               \\
+     &=& ρ^2 \senϕ\,dρ\,dϕ\,dθ    & (p.929) \\    % StewPtCap15p61
+  \\[-5pt]
+  % dA &=& du\,dv                   \\
+  \div 𝐛F &=& ∇·𝐛F = (\frac{∂}{∂x}, \frac{∂}{∂y}, \frac{∂}{∂z})·𝐛F & (p.979) \\   % StewPtCap16p37
+  \int\!\!\!\int_S f(x,y,z) \,dS &=&
+    \int\!\!\!\int_D f(𝐛r(u,v))\,|𝐛r_u × 𝐛r_v| \,dA & (p.994) \\  % StewPtCap16p52
+    \\[-10pt]
+  𝐛n &=& \D \frac{𝐛r_u × 𝐛r_v}{|𝐛r_u × 𝐛r_v|} & (p.997) \\  % StewPtCap16p55
+    \\[-10pt]
+  \D \frac{𝐛r_ϕ × 𝐛r_θ}{|𝐛r_ϕ × 𝐛r_θ|} &=& \D \frac1a \; 𝐛r(ϕ,θ) & (p.998) \\  % StewPtCap16p56
+    \\[-10pt]
+  \int\!\!\!\int_S 𝐛F·d𝐛S
+    &=& \int\!\!\!\int_S 𝐛F·𝐛n \, dS          & (p.998) \\  % StewPtCap16p56
+    &=& \int\!\!\!\int_S 𝐛F·(𝐛r_u×𝐛r_v) \, dA & (p.999) \\  % StewPtCap16p57
+  \int\!\!\!\int_S 𝐛F·𝐛n \, dS
+    &=& \int\!\!\!\int\!\!\!\int_E \div\,𝐛F(x,y,z)\,dV & (p.1008) \\ % StewPtCap16p66
+  \end{array}
+$$
+
+\bsk
+
+Algumas das fórmulas acima só fazem sentido no contexto certo. Você
+vai receber cópias de algumas páginas do Stewart (7ª ed) em português
+pra consulta; ``(p.42)'' quer dizer que aquela fórmula aparece na
+página 42.
+
+}\anothercol{
+}}
+
+
+
+% \par \Ca{StewPtCap15p8} Definição 5: $dA$
+% \par \Ca{StewPtCap16p41} 16.6 Superfícies parametrizadas e suas áreas
+% \par \Ca{StewPtCap16p43} Exemplo 4: $𝐛r(ϕ,θ)=\ldots$
+% \par \Ca{StewPtCap16p47} Definição 6: $𝐛r(u,v)=\ldots$
+% %\par \Ca{StewPtCap16p47} (Exemplo 10)
+% \par \Ca{StewPtCap16p51} 16.7 Integrais de superfície
+% \par \Ca{StewPtCap16p52} dS =
+% \par \Ca{StewPtCap16p51} Superfícies parametrizadas: $𝐛r(u,v)=\ldots$
+% \par \Ca{StewPtCap16p55} Figura 7: as duas orientações de uma superfície orientável
+% \par \Ca{StewPtCap16p55} $𝐛r(ϕ,θ)=\ldots$
+% \par \Ca{StewPtCap16p56} Definição 8: $\int\!\!\!\int_S 𝐛F·d𝐛S = \int\!\!\!\int_S 𝐛F·𝐛n\,dS$
+% \par \Ca{StewPtCap16p57} \standout{Exemplo 4}
+% \par \Ca{StewPtCap16p66} 16.9 O teorema do divergente
+% \par \Ca{StewPtCap16p67} \standout{Exemplo 1}
+% \par \Ca{StewPtCap16p69} \standout{Exercício 3}
+% \par \Ca{StewPtCap16p70} \standout{Exercício 8}
+
+
+\newpage
+
+% «links»  (to ".links")
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+% «stewart»  (to ".stewart")
+
+ (eepitch-lua51)
+ (eepitch-kill)
+ (eepitch-lua51)
+ps = "927,929,979,994,997,998,999,1008"
+for p in ps:gmatch("%d+") do
+  printf("(find-stewart72ptpage (+ -489 %s))\n", p)
+end
+f = function (s) return s-489 end
+= (ps:gsub("%d+", f))
+
+-- file:///home/edrx/books/__analysis/stewart__calculo_7a_ed_vol_2.pdf
+-- 438,440,490,505,508,509,510,519
+
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2023.1-C4/")
+# (find-fline "~/LATEX/2023-1-C4/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -v $1.pdf;  textcleaner -f 50 -o  5 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 10 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 20 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 15" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 30" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 45" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2023.1-C4/
+       cp -fv        $1.pdf ~/LATEX/2023-1-C4/
+       cat <<%%%
+% (find-latexscan-links "C4" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2023-1-C4-P2 veryclean
+make -f 2019.mk STEM=2023-1-C4-P2 pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c4p2"
+% ee-tla: "c4m231p2"
+% End:

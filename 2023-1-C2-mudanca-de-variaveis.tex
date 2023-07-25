@@ -1,0 +1,1119 @@
+% (find-LATEX "2023-1-C2-mudanca-de-variaveis.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-mudanca-de-variaveis.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-mudanca-de-variaveis.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-mudanca-de-variaveis.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-mudanca-de-variaveis.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-mudanca-de-variaveis.tex"))
+% (defun o () (interactive) (find-LATEX "2022-2-C2-mudanca-de-variaveis.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-mudanca-de-variaveis"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-mudanca-de-variaveis.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-mudanca-de-variaveis")
+% (find-pdf-page   "~/LATEX/2023-1-C2-mudanca-de-variaveis.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-mudanca-de-variaveis.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-mudanca-de-variaveis.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-mudanca-de-variaveis.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-mudanca-de-variaveis.pdf
+%               file:///tmp/2023-1-C2-mudanca-de-variaveis.pdf
+%           file:///tmp/pen/2023-1-C2-mudanca-de-variaveis.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-mudanca-de-variaveis.pdf
+% (find-LATEX "2019.mk")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Piecewise1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Pict3D1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v C2Subst1.lua C2Formulas1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Gram2.lua Tree1.lua Caepro5.lua ~/LATEX/")
+% (find-MM-aula-links "2023-1-C2-mudanca-de-variaveis" "C2" "c2m231mv" "c2mv")
+
+% «.defs»		(to "defs")
+% «.defs-caepro»	(to "defs-caepro")
+% «.title»		(to "title")
+% «.links»		(to "links")
+% «.contas-1»		(to "contas-1")
+% «.contas-2»		(to "contas-2")
+% «.um-exemplo»		(to "um-exemplo")
+% «.horriveis-1»	(to "horriveis-1")
+% «.mais-anotacoes»	(to "mais-anotacoes")
+% «.MVI»		(to "MVI")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231mv" "2023-1-C2-mudanca-de-variaveis")
+% (code-eevvideo      "c2m231mv" "2023-1-C2-mudanca-de-variaveis")
+% (code-eevlinksvideo "c2m231mv" "2023-1-C2-mudanca-de-variaveis")
+% (find-c2m231mvvideo "0:00")
+
+%\documentclass[oneside,12pt]{article}
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+\pu
+
+\def\eqnpfull#1{\overset{\scriptscriptstyle(#1)}{=}}
+\def\eqnpbare#1{=}
+\def\eqnp      {\eqnpfull}
+
+\def\redname#1{{\color{Red3}\text{#1}}}
+\sa{II}{\redname{[II]}}
+\sa{MVI}{\redname{[MVI]}}
+
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231mvp 1 "title")
+% (c2m231mva   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo C2 - 2023.1}
+
+\bsk
+
+Aulas 10 até 13: mudança de variáveis
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «links»  (to ".links")
+% (c2m231mvp 2 "links")
+% (c2m231mva   "links")
+% (c2m222mvp 2 "links")
+% (c2m222mva   "links")
+
+{\bf Links}
+
+\scalebox{0.6}{\def\colwidth{12cm}\firstcol{
+
+Mudança de variável na integral definida (MVD):
+
+% (c2m221atisp 12 "substituicao-figura")
+% (c2m221atisa    "substituicao-figura")
+\Ca{2eT131} (t-ints, p.12) Uma figura pra mudança de variável
+
+% (find-books "__analysis/__analysis.el" "thomas" "Substitution in definite integrals")
+\Ca{Thomas55p11} (p.376) Theorem 5: Substitution in definite integrals
+
+\Ca{2fT49} Meu PDF de 2022.2 sobre mudança de variáveis
+
+\bsk
+
+Mudança de variável na integral indefinida (MVI):
+
+% (c2m221atisp 14 "exemplo-contas")
+% (c2m221atisa    "exemplo-contas")
+\Ca{2eT133} (t-ints, p.14) Um exemplo com contas
+
+% (c2m221atisp 16 "exemplo-contas-2")
+% (c2m221atisa    "exemplo-contas-2")
+\Ca{2eT135} (t-ints, p.16) Outro exemplo com contas
+
+% (find-books "__analysis/__analysis.el" "thomas")
+% (find-books "__analysis/__analysis.el" "thomas" "5: The substitution rule")
+% (find-books "__analysis/__analysis.el" "thomas" "5: The substitution rule" "Example 3")
+\Ca{Thomas55p3} (p.370) Theorem 5: The substitution rule
+
+% (find-books "__analysis/__analysis.el" "leithold")
+% (find-books "__analysis/__analysis.el" "leithold" "5.2.1. Regra da cadeia")
+% (find-books "__analysis/__analysis.el" "leithold" "9.2" "potências de seno e co-seno")
+\Ca{Leit5p13} (p.296) A regra da cadeia para a antidiferenciação
+
+\Ca{Leit9p10} (p.537) Integração de potências de sen e cos
+
+% (find-dmirandacalcpage 189 "6.2 Integração por Substituição")
+% (find-dmirandacalcpage 192   "Exemplo 6.6")
+% (find-dmirandacalcpage 193   "não podemos")
+% (find-dmirandacalcpage 196   "Exercícios")
+% (find-dmirandacalcpage 255 "8.3 Integrais Trigonométricas")
+\Ca{Miranda189} 6.2. Integração por substituição
+
+\Ca{Miranda192} Exemplo 6.6
+
+\Ca{Miranda193} Não podemos
+
+\Ca{Miranda196} Exercícios
+
+\Ca{Miranda255} 8.3 Integrais Trigonométricas
+
+\msk
+
+Vídeo do Reginaldo:
+
+\url{https://www.youtube.com/watch?v=PTCUjrEBc4g}
+
+\msk
+
+\msk
+
+\par \Ca{2gQ22} Quadros da aula 10 (05/maio/2023)
+\par \Ca{2gQ24} Quadros da aula 11 (09/maio/2023)
+\par \Ca{2gQ26} Quadros da aula 12 (12/maio/2023)
+\par \Ca{2gQ28} Quadros da aula 13 (16/maio/2023)
+
+
+
+% (c2m221vsbp 8 "questao-3-gab")
+% (c2m221vsba   "questao-3-gab")
+% (find-books "__analysis/__analysis.el" "miranda")
+% (find-books "__analysis/__analysis.el" "miranda" "6.2 Integração por Substituição")
+% (find-books "__analysis/__analysis.el" "miranda" "Exemplo 6.6")
+% (find-books "__analysis/__analysis.el" "miranda" "8.3 Integrais Trigonométricas")
+
+% (find-fline "/home/angg_slow_html/eev-videos/" "2020_int_subst_1.mp4")
+% (find-LATEX "2020-1-C2-int-subst.tex" "videos" "2020_int_subst_1")
+
+}\anothercol{
+}}
+
+\newpage
+
+% «contas-1»  (to ".contas-1")
+% (c2m231mvp 3 "contas-1")
+% (c2m231mva   "contas-1")
+
+{\bf Contas (1)}
+
+\scalebox{0.9}{\def\colwidth{12cm}\firstcol{
+
+$$\begin{array}{rcl}
+  \Intx  {a}{b}{f'(x)}    & \eqnp {1} & \difx{a}{b}{f(x)} \\
+  \Intu  {α}{β}{f'(u)}    & \eqnp {2} & \difu{α}{β}{f(u)} \\
+  \Intx  {a}{b}{ \cos  x} & \eqnp {3} & \difx  {a}{b}{ \sen  x} \\
+  \Intx  {a}{b}{2\cos 2x} & \eqnp {4} & \difx  {a}{b}{ \sen 2x} \\
+                          & \eqnp {5} & \sen 2b - \sen 2a \\
+                          & \eqnp {6} & \difu{2a}{2b}{ \sen  u} \\
+  \Intu  {α}{β}{ \cos  u} & \eqnp {7} & \difu  {α}{β}{ \sen  u} \\
+  \Intu{2a}{2b}{ \cos  u} & \eqnp {8} & \difu{2a}{2b}{ \sen  u} \\
+                          & \eqnp {9} & \sen 2b - \sen 2a \\
+                          & \eqnp{10} & \difx  {a}{b}{ \sen 2x} \\
+                          & \eqnp{11} & \Intx  {a}{b}{2\cos 2x} \\
+  \Intx  {a}{b}{2\cos 2x} & \eqnp{12} & \Intu{2a}{2b}{ \cos  u} \\
+  \end{array}
+$$
+
+}\anothercol{
+}}
+
+\newpage
+
+% «contas-2»  (to ".contas-2")
+% (c2m231mvp 4 "contas-2")
+% (c2m231mva   "contas-2")
+
+{\bf Contas (2)}
+
+\scalebox{0.7}{\def\colwidth{12cm}\firstcol{
+
+$$\begin{array}{rcl}
+  \Intx  {a}{b}{f'(x)}         & \eqnp {1} & \difx    {a}{b}{f(x)}     \\
+  \Intu  {α}{β}{f'(u)}         & \eqnp {2} & \difu    {α}{β}{f(u)}     \\ \\[-5pt]
+  %
+  \Intx  {a}{b}{(\cos x^2)·2x} & \eqnp {3} & \difx    {a}{b}{\sen x^2} \\
+                               & \eqnp {4} & \sen b^2 - \sen a^2       \\
+                               & \eqnp {5} & \difu{a^2}{b^2}{\sen   u} \\
+  \Intu{a^2}{b^2}{\cos u}      & \eqnp {6} & \difu{a^2}{b^2}{\sen   u} \\ \\[-5pt]
+  \Intx  {a}{b}{(\cos x^2)·2x} & \eqnp {7} & \Intu{a^2}{b^2}{\cos   u} \\ \\[-5pt]
+  %
+  \Intx  {a}{b}{g'(h(x))h'(x)} & \eqnp {8} & \difx      {a}{b}{g(h(x))} \\
+                               & \eqnp {9} & g(h(b)) - g(h(a))          \\
+                               & \eqnp {10} & \difu{h(a)}{h(b)}{g(u)}   \\
+  \Intu{h(a)}{h(b)}{g'(u)}     & \eqnp {11} & \difu{h(a)}{h(b)}{g(u)}   \\ \\[-5pt]
+  \Intx  {a}{b}{g'(h(x))h'(x)} & \eqnp {12} & \Intu{h(a)}{h(b)}{g'(u)}  \\ \\[-5pt]
+  \Intx  {a}{b}{g (h(x))h'(x)} & \eqnp {13} & \Intu{h(a)}{h(b)}{g (u)}  \\
+  \end{array}
+$$
+
+}\anothercol{
+}}
+
+
+\newpage
+
+%  _   _                                           _       
+% | | | |_ __ ___     _____  _____ _ __ ___  _ __ | | ___  
+% | | | | '_ ` _ \   / _ \ \/ / _ \ '_ ` _ \| '_ \| |/ _ \ 
+% | |_| | | | | | | |  __/>  <  __/ | | | | | |_) | | (_) |
+%  \___/|_| |_| |_|  \___/_/\_\___|_| |_| |_| .__/|_|\___/ 
+%                                           |_|            
+% «um-exemplo»  (to ".um-exemplo")
+% (c2m231mvp 5 "um-exemplo")
+% (c2m231mva   "um-exemplo")
+% (c2m221atisp 14 "exemplo-contas")
+% (c2m221atisa    "exemplo-contas")
+% (c2m221atisp 16 "exemplo-contas-2")
+% (c2m221atisa    "exemplo-contas-2")
+% \Ca{2eT133} (t-ints, p.14) Um exemplo com contas
+% \Ca{2eT135} (t-ints, p.16) Outro exemplo com contas
+
+{\bf Um exemplo}
+
+\sa{2 cos(3x+4) full}{
+  \begin{array}{l}
+  \D \Intx{a}{b}{2 \cos(3x+4)}                                 \\[8pt]
+  = \;\; \D \Intu{3a+4}{3b+4} {2 (\cos u) · \frac13}           \\[8pt]
+  = \;\; \D \frac23 \Intu{3a+4}{3b+4} {\cos u}                 \\[8pt]
+  = \;\; \D \frac23 \left(\difu{3a+4}{3b+4} {(\sen u)} \right) \\[8pt]
+  = \;\; \D \frac23 \left(\difx{a}{b} {(\sen (3x+4))} \right)  \\
+  \end{array}
+}
+\sa{2 cos(3x+4) thin}{
+  \begin{array}{l}
+  \D \intx{2 \cos(3x+4)}                 \\[8pt]
+  = \;\; \D \intu {2 (\cos u) · \frac13} \\[8pt]
+  = \;\; \D \frac23 \intu{\cos u}        \\[8pt]
+  = \;\; \D \frac23 \sen u               \\[8pt]
+  = \;\; \D \frac23 \sen (3x+4)          \\
+  \end{array}
+}
+
+\scalebox{0.65}{\def\colwidth{8.5cm}\firstcol{
+
+Isto aqui é um exemplo de como contas com mudança
+de variável costumam ser feitas na prática:
+%
+$$\scalebox{0.95}{$
+  \ga{2 cos(3x+4) thin}
+  $}
+$$
+
+É necessário indicar em algum lugar que a relação
+entre a variável nova e a antiga é esta: $u=3x+4$.
+
+\msk
+
+Compare com:
+
+\Ca{Miranda189} 6.2: Integração por substituição
+
+\Ca{Leit5p13} (p.296) Teorema 5.2.1: a regra da
+
+cadeia para a antidiferenciação
+
+\Ca{Leit5p16} (p.299) Exemplo 5
+
+}\anothercol{
+
+  Compare as contas à esquerda, que não têm nem os limites de
+  integração nem as barras de diferença, com estas:
+  % 
+  $$\scalebox{0.8}{$
+    \ga{2 cos(3x+4) full}
+    $}
+  $$
+
+\ssk
+
+Nós vamos tratar a versão à esquerda como uma abreviação pra versão da
+direita. Note que pra ir da versão ``completa'' pra ``abreviada'' é
+super fácil, é só apagar os limites de integração e as barras de
+diferença -- mas pra ir da versão ``abreviada'' pra ``completa'' a
+gente precisa reconstruir os limites de integração e as barras de
+diferença, o que é bem mais difícil.
+
+}}
+
+\newpage
+
+{\bf Caixinhas de anotações}
+
+\scalebox{0.725}{\def\colwidth{7.5cm}\firstcol{
+
+  O meu truque preferido pra não me enrolar nas contas de uma mudança
+  de variável é fazer uma caixinha de anotações como essa aqui,
+  %
+  $$\bmat{
+    u = 3x+4 \\
+    \frac{du}{dx} = \ddx(3x+4) = 3 \\
+    \frac{du}{dx} = 3 \\
+    \ColorRed{du = 3 \, dx} \\
+    \ColorRed{dx = \frac13 \,du} \\
+    }
+  $$
+
+  na qual: a) a primeira linha diz a relação entre a variável antiga e
+  a variável nova -- que nesse exemplo é $u=3x+4$, b) todas as outras
+  linhas da caixinha são consequências dessa primeira, e c) dentro da
+  caixinha a gente permite gambiarras como:
+  %
+  $$dx = 42\,du$$
+
+}\anothercol{
+
+  Durante quase todo o curso de C2 a gente vai tratar esse tipo de
+  coisa como uma igualdade entre expressões incompletas -- mais ou
+  menos como se a gente estivesse dizendo isso aqui:
+  %
+  $$+20) = /99]$$
+
+  Na caixinha à esquerda eu colori as linhas que são gambiarras em
+  vermelho.
+
+  \bsk
+  \bsk
+  \bsk
+
+  Aqui tem um exemplo grande:
+
+  \Ca{2fT112} (C2-P1, p.5) Questão 1: gabarito
+
+
+}}
+
+
+\newpage
+
+% «horriveis-1»  (to ".horriveis-1")
+% (c2m231mvp 5 "horriveis-1")
+% (c2m231mva   "horriveis-1")
+
+{\bf Os detalhes horríveis}
+
+\scalebox{0.55}{\def\colwidth{10cm}\firstcol{
+
+    Nesta página aqui -- \Ca{Miranda193} -- o Miranda diz ``Não
+    podemos calcular uma integral que possui tanto um $x$ e um $u$
+    nela'', mas ele não explica porquê... se em
+    % 
+    $$\Intx{a}{b}{2 \cos(u)}$$
+    % 
+    esse $u$ fosse uma abreviação para $3x+4$ essa integral acima
+    seria equivalente à do início do slide anterior, né?... \frown
+
+    \msk
+
+    Neste slide eu vou tentar contar o que eu sei sobre como o método
+    da substituição funciona -- {\sl pra convencer vocês de que não
+      vale a pena vocês tentarem entender os detalhes agora}.
+
+    \msk
+
+    Toda mudança de variável numa integral definida é consequência da
+    igualdade (13) do slide ``Contas (2)''. Por exemplo, compare:
+    %
+    $$\begin{array}{rcl}
+      \D \Intx{a}{b}{g (h(x))h'(x)} &\eqnp{13}& \D \Intu{h(a)}{h(b)}{g (u)} \\
+      \D \Intx{a}{b}{2 \cos(3x+4)}  & =       & \D \Intu{3a+4}{3b+4}{2(\cos u)·\frac13} \\
+      \end{array}
+    $$
+
+}\anothercol{
+
+  A gente pode tentar descobrir qual é a substituição certa passo a
+  passo, começando pelas funções mais simples.... eu faria assim:
+  olhando pra parte direita eu chuto que $g(u) = 2(\cos u)·\frac13$;
+  olhando pra parte esquerda eu chuto que $h(x) = 3x+4$, e daí
+  $h'(x) = 3$; aí eu testo esta substituição aqui,
+  %
+  $$(13) \bmat{g(u):=2(\cos u)·\frac13 \\
+               h(x):=3x+4 \\
+               h'(x):=3 \\
+              }
+  $$
+
+  e vejo que o resultado dela é {\sl equivalente} (mas não igual!!!) à
+  última igualdade da coluna da esquerda -- não preciso nem substituir
+  o $a$ e o $b$.
+
+}}
+
+\newpage
+
+{\bf Os detalhes horríveis (2)}
+
+\scalebox{0.62}{\def\colwidth{14cm}\firstcol{
+
+Estas contas aqui,
+%
+$$\begin{array}{rcl}
+  u &=& x^4 \\
+  \frac{du}{dx} &=& 4x^3 \\
+  du &=& \frac{du}{dx} dx \\
+     &=& 4x^3 \, dx \\
+  \end{array}
+$$
+
+fazem sentido se a gente considerar que:
+
+\msk
+
+1. $x$ é uma variável independente,
+
+2. $u$ é uma variável dependente, com $u=u(x)=x^4$,
+
+3. $dx$ é uma variável independente,
+
+4. $du$ é uma variável dependente, com $du=\frac{du}{dx}dx$,
+
+5. estas regras sobre diferenciais valem: \Ca{Leit4p61} (p.275),
+
+6. estas regras sobre variáveis dependentes valem: \Ca{Stew14p53} (p.951),
+
+7. o $dx$ num $\intx{f(x)}$ funciona como uma diferencial.
+
+\msk
+
+Eu já perguntei pra vários matemáticos fodões que eu conheço --
+incluindo os desenvolvedores do Maxima, na mailing list -- onde eu
+posso encontrar alguma formalização das regras de como lidar com
+variáveis dependentes, diferenciais e mudança de variável na integral
+indefinida, e todos eles me responderam a mesma coisa: ``{\sl não faço
+  a menor idéia! Eu sei algumas das regras mas não todas, e não sei
+  onde você pode procurar...}'' \frown
+
+\msk
+
+Moral: \standout{é melhor a gente tratar o $du = 4x^3 \, dx$ como uma
+  gambiarra...}
+
+}\anothercol{
+}}
+
+\newpage
+
+% «mais-anotacoes»  (to ".mais-anotacoes")
+% (c2m231mvp 9 "mais-anotacoes")
+% (c2m231mva   "mais-anotacoes")
+
+\def\S{\senθ}
+\def\C{\cosθ}
+
+{\bf Caixinhas com mais anotações}
+
+\scalebox{0.8}{\def\colwidth{8cm}\firstcol{
+
+$$\begin{array}{rcl}
+  \intth{(\S)^4(\C)^7} &=& \intth{(\S)^4(\C)^6\C}       \\
+                       &=& \intth{(\S)^4((\C)^2)^3\C}   \\
+                       &=& \intth{(\S)^4(1-(\S)^2)^3\C} \\
+                       &=& \ints {   s^4(1-   s^2)^3  } \\
+  \end{array}
+$$
+
+$$\begin{array}{rcl}
+  \intth{(\S)^4(\C)^7} &=& \intth{(\S)^4(\C)^6\C}       \\
+                       &=& \ints {   s^4(1-   s^2)^3  } \\
+  \end{array}
+$$
+
+}\anothercol{
+
+\vspace*{0.25cm}
+
+$$\bmat{\senθ = s \\
+        \frac{ds}{dθ} = \frac{d}{dθ}\senθ = \cosθ \\
+        ds = \cosθ \,dθ \\
+        \cosθ \,dθ = ds \\
+       }
+$$
+
+\bsk
+
+$$\bmat{\senθ = s \\
+        \frac{ds}{dθ} = \frac{d}{dθ}\senθ = \cosθ \\
+        ds = \cosθ \,dθ \\
+        \cosθ \,dθ = ds \\
+        (\C)^2 = 1-(\S^2) \\
+        (\C)^2 = 1-s^2 \\
+        (\C)^6 = (1-s^2)^3 \\
+       }
+$$
+
+}}
+
+
+\newpage
+
+{\bf Caixinhas com mais anotações (2)}
+
+\scalebox{0.6}{\def\colwidth{7.5cm}\firstcol{
+
+$$\begin{array}{rcl}
+  \D \ints{s \sqrt{1-s^2}} &=& \D \intth{(\S) \sqrt{1-(\S)^2} \C} \\
+                           &=& \D \intth{(\S) \sqrt{(\C)^2} \C} \\
+                           &=& \D \intth{(\S) (\C) \C} \\
+                           &=& \D \intth{(\S) (\C)^2} \\
+  \end{array}
+$$
+
+$$\begin{array}{rcl}
+  \D \ints{s \sqrt{1-s^2}} &=& \D \intth{(\S) (\C) \C} \\
+                           &=& \D \intth{(\S) (\C)^2} \\
+  \end{array}
+$$
+
+$$\begin{array}{rcl}
+  \D \ints{\frac{1}{\sqrt{1-s^2}}} &=& \D \intth{\frac{1}{\C} \C} \\
+                                   &=& \D \intth{1} \\
+                                   &=& θ \\
+                                   &=& \arcsen s \\
+  \end{array}
+$$
+
+}\anothercol{
+
+\vspace*{0.25cm}
+
+$$\bmat{s = \senθ \\
+        \frac{ds}{dθ} = \frac{d}{dθ}\senθ = \cosθ \\
+        ds = \cosθ \,dθ \\
+       }
+$$
+
+\vspace*{3cm}
+
+$$\bmat{s = \senθ \\
+        \frac{ds}{dθ} = \frac{d}{dθ}\senθ = \cosθ \\
+        ds = \cosθ \,dθ     \\
+        s^2 = (\S)^2        \\
+        1 - s^2 = 1-(\S)^2  \\
+        1 - s^2 = (\C)^2    \\
+        \sqrt{1 - s^2} = \C \\
+        \arcsen s = \arcsen \sen θ \\
+        \arcsen s = θ \\
+        θ = \arcsen s \\
+       }
+$$
+
+}}
+
+
+\newpage
+
+{\bf O macaco, de novo}
+
+\scalebox{0.7}{\def\colwidth{8cm}\firstcol{
+
+Estas duas igualdades são falsas
+%
+$$\begin{array}{rcl}
+  \sqrt{1-(\S)^2} &=& \cos θ \\
+  \arcsen \sen θ  &=& θ \\
+  \end{array}
+$$
+
+quando $θ=π$... confira!
+
+\msk
+
+Mas elas são verdadeiras para $θ=0$, e para todo $θ$ num certo
+intervalo em torno do 0 que eu não quero contar qual é.
+
+\msk
+
+Lembre quem em Cálculo 2 a gente vai primeiro fazer as contas como o
+macaco que faz todas as contas como se tudo funcionasse, e a gente vai
+deixar pra checar os detalhes, como se $θ$ está no intervalo certo, só
+no final, depois de termos feito as contas todas.
+
+}\anothercol{
+
+  O Leithold é super cuidadoso nas contas e nesses detalhes como os
+  domínios da funções e o intervalo onde mora o $θ$, mas a maioria dos
+  outros livros de Cálculo 2 que eu conheço não são -- eles são meio
+  porcalhões com esses detalhes... e a gente também vai ser, senão não
+  vai dar tempo de cobrir o suficiente da matéria.
+
+}}
+
+
+\newpage
+
+{\bf Desabreviando o $42=99$}
+
+\scalebox{0.675}{\def\colwidth{8cm}\firstcol{
+
+    Lembre que a nossa regra básica pra integral indefinida é esta
+    aqui,
+    %
+    $$\ga{II} \;=\; \left( \D\intx{f'(x)} = f(x) \right)$$
+
+    e eu usei ela pra demostrar isto aqui:
+    %
+    $$\begin{array}{rcll}
+        \D \intx{0} &\eqnp{1}& 42 \\
+        \D \intx{0} &\eqnp{2}& 99 \\
+                 42 &\eqnp{3}& 99 \\
+      \end{array}
+    $$
+
+    As justificativas são:
+
+    (1): por $\ga{II}$, com $f(x)=42$
+
+    (2): por $\ga{II}$, com $f(x)=99$
+
+    (3): por (1) e (2)
+
+}\anothercol{
+
+  Se a gente desabreviar as contas da esquerda -- como num dos
+  primeiros slides -- a gente obtém isto aqui:
+  % 
+  $$\begin{array}{rcll}
+      \D \Intx{a}{b}{0} &\eqnp{4}& \difx{a}{b}{42} \\
+      \D \Intx{a}{b}{0} &\eqnp{5}& \difx{a}{b}{99} \\
+        \difx{a}{b}{42} &\eqnp{6}& \difx{a}{b}{99} \\
+    \end{array}
+  $$
+
+  E agora a igualdade (6) é claramente verdade -- confira!
+
+}}
+
+
+\newpage
+
+{\bf O truque dos intervalos}
+
+\scalebox{0.9}{\def\colwidth{10cm}\firstcol{
+
+    Dê uma olhada nas primeiras páginas daqui:
+
+    \ssk
+
+    \Ca{Leit5p3} 5.1. Antidiferenciação
+
+    \msk
+
+    O Leithold usa expressões como ``num intervalo $I$'', ``para todo
+    $x∈I$'' e ``definidas no mesmo intervalo'' um montão de vezes. O
+    truque de usar sempre intervalos resolve esse esse problema daqui
+    super bem:
+
+    \ssk
+
+    \Ca{2fT24} Meme: expanding brain, versão ln
+
+    \bsk
+
+    A minha definição preferida pra integral indefinida,
+
+    \ssk
+
+    \Ca{2fT23} Outra definição pra integral indefinida
+
+    \ssk
+
+    também resolve o problema -- de um modo bem mais simples, e que é
+    suficiente pro tipo de conta que a gente tem que treinar em
+    Cálculo 2.
+
+
+}\anothercol{
+}}
+
+
+
+\newpage
+
+%  __  ____     _____ 
+% |  \/  \ \   / /_ _|
+% | |\/| |\ \ / / | | 
+% | |  | | \ V /  | | 
+% |_|  |_|  \_/  |___|
+%                     
+% «MVI»  (to ".MVI")
+% (c2m231mvp 14 "MVI")
+% (c2m231mva    "MVI")
+
+{\bf MVI}
+
+\def\und#1#2{\underbrace{#1}_{#2}}
+\def\P#1{\left(#1\right)}
+\sa{MVA H short}{
+   \D \intx{f'(g(x))g'(x)}
+   \;=\;
+   \D \intu{f'(u)}
+  }
+\sa{MVA H}{
+   \D \intx{f'(g(x))g'(x)}
+   \;=\;
+   f(g(x))
+   \;=\;
+   f(u)
+   \;=\;
+   \D \intu{f'(u)}
+  }
+\sa{MVA Hund}{
+   \und{ \D\ddx\P{ \intx{f'(g(x))g'(x)}} }{f'(g(x))g'(x)}
+   \;=\;
+   \und{ \D\ddx f(g(x)) }{f'(g(x))g'(x)}
+   \;=\;
+   \und{ \D\ddx \und{f(u)}{f(g(x))} }{f'(g(x))g'(x)}
+   \;=\;
+   \und{ \D\ddx \und{\und{\intu{f'(u)}}{f(u)}}{f(g(x))} }{f'(g(x))g'(x)}
+  }
+
+
+\scalebox{0.6}{\def\colwidth{15cm}\firstcol{
+
+% (c2m222mvp 4 "justificando-cada")
+% (c2m222mva   "justificando-cada")
+% \Ca{2fT52} Justificando cada igualdade
+
+    A nossa fórmula pra mudança de variável na integral indefinida vai
+    ser esta aqui:
+    %
+    $$\ga{MVI} \;=\; \P{\ga{MVA H short}}$$
+
+    Dá pra demonstrar ela deste jeito,
+    %
+    $$\ga{MVA H}$$
+
+    onde a primeira e a terceira igualdades são consequências do
+    $\ga{II}$, e a igualdade do meio só vale se tivermos $u=g(x)$.
+
+    \msk
+
+    Os livros demonstram a $\ga{MVI}$ de um jeitos que eu nunca achei
+    muito convincentes -- ou fingindo que tudo é óbvio, ou ``derivando
+    tudo em $x$''. As contas abaixo me ajudaram a entender o que
+    acontece quando a gente ``deriva tudo em $x$'':
+
+    % \Ca{Miranda189} 6.2: Integração por substituição
+
+    $$\ga{MVA Hund}$$
+
+}\anothercol{
+}}
+
+
+\newpage
+
+% (c2m222strigp 3 "exercicio-1")
+% (c2m222striga   "exercicio-1")
+
+{\bf Simplificando raizes quadradas}
+
+\scalebox{0.6}{\def\colwidth{9cm}\firstcol{
+
+Na aula de 16/maio/2023 você aprendeu -- na prática, não vendo uma
+definição formal -- o que é transformar uma integral mais difícil
+numa integral mais fácil, que nós sabemos integrar...
+
+\ssk
+
+a) Digamos que você sabe integrar $\ints{\sqrt{1-s^2}}$.
+
+Transforme $\intx{\sqrt{1-(5x)^2}}$ em algo que você sabe integrar.
+
+\ssk
+
+b) Transforme $\intx{\sqrt{1-(ax)^2}}$ em algo que você sabe integrar.
+
+\ssk
+
+c) Digamos que você sabe integrar $\ints{\sqrt{1-s^2}^{\,k}}$ para
+qualquer valor de $k$.
+
+Transforme $\intx{{\sqrt{1-(5x)^2}}^{\,42}}$ em algo que você sabe
+integrar.
+
+\ssk
+
+d) Transforme $\intx{\sqrt{1-(ax)^2}^{\,42}}$ em algo que você sabe
+integrar.
+
+\ssk
+
+e) Transforme $\intx{\sqrt{1-(ax)^2}^{\,k}}$ em algo que você sabe integrar.
+
+\ssk
+
+f) Transforme $\intx{\sqrt{1-(ax)^2}^{\,k}}$ em algo que você sabe integrar.
+
+}\anothercol{
+
+\ssk
+
+g) Entenda este truque aqui:
+%
+$$\begin{array}{rcl}
+  \sqrt{3^2 - x^2} &=& \sqrt{3^2 - 3^2 \frac{1}{3^2} x^2} \\
+                   &=& \sqrt{3^2 - 3^2(\frac x3)^2} \\
+                   &=& \sqrt{3^2(1 - (\frac x3)^2)} \\
+                   &=& \sqrt{3^2}\sqrt{1 - (\frac x3)^2} \\
+                   &=& 3\sqrt{1 - (\frac x3)^2} \\
+  \end{array}
+$$
+
+Use ele -- com adaptações, óbvio -- pra transformar
+$\intx{\sqrt{25-x^2}}$ em algo que você sabe integrar.
+
+\ssk
+
+h) Use ele pra transformar
+$\intx{\sqrt{25-x^2}^{\,42}}$ em algo que você sabe integrar.
+
+\ssk
+
+i) Use ele pra transformar $\intx{\sqrt{a^2-x^2}}$ em algo que você
+sabe integrar.
+
+\ssk
+
+j) Use ele pra transformar
+$\intx{\sqrt{a^2-x^2}^{\,k}}$ em algo que você sabe integrar.
+
+\ssk
+
+j) Use ele pra transformar $\intx{x^{20} \sqrt{a^2-x^2}^{\,k}}$ em
+algo que você sabe integrar.
+
+
+}}
+
+
+
+\newpage
+
+{\bf Exercício 2}
+
+\sa{[DFI]}{\CFname{DFI}{}}
+
+
+\scalebox{0.58}{\def\colwidth{9cm}\firstcol{
+
+(Obs: ainda não atualizei este slide!)
+
+\ssk
+
+No final da aula de 28/set/2022 -- veja a foto do quadro:
+
+\ssk
+
+{\scriptsize
+
+% (find-angg ".emacs" "c2q222")
+% (find-angg ".emacs" "c2q222" "22" "set28: substituição trigonométrica")
+% http://angg.twu.net/2022.2-C2/C2-quadros.pdf#page=23
+\url{http://angg.twu.net/2022.2-C2/C2-quadros.pdf\#page=23}
+
+}
+
+\ssk
+
+nós vimos que a demonstração de que $\ddx \ln x = \frac1x$ pode ser
+generalizada, e aí a gente obtém a ``fórmula da derivada da função
+inversa'', que eu chamei de \ga{[DFI]}...
+
+Essa generalização pode ser ``especializada'' pra obter outros casos
+particulares diferentes de $\ddx \ln x = \frac1x$.
+
+\msk
+
+a) Faça o primeiro exercício que eu pus no quadro:
+%
+$$\ga{[DFI]}
+  \bmat{
+    g(x) := \arcsen x \\
+    g'(x) := \arcsen' x \\
+    f(x) := \sen x \\
+    f'(x) := \cos x \\
+  } = \Rq
+$$
+
+b) Faça o segundo exercício do quadro:
+%
+$$\ga{[DFI]}
+  \bmat{
+    g(x) := \arcsen x \\
+    g'(x) := \arcsen' x \\
+    f(x) := \sen x \\
+    f'(x) := \sqrt{1 - (\sen x)^2} \\
+  } = \Rq
+$$
+
+}\anothercol{
+
+
+
+  c) Use as identidades trigonométricas que vamos ver em sala pra
+  encontrar uma fórmula pra derivada do $\arctan$.
+
+\msk
+
+  d) Use as identidades trigonométricas que vamos ver em sala pra
+  encontrar uma fórmula pra derivada do $\arcsec$.
+
+
+}}
+
+
+
+\newpage
+
+{\bf Exercício 3}
+
+
+\scalebox{0.54}{\def\colwidth{10cm}\firstcol{
+
+Slogan:
+
+\begin{quote}
+
+  {\sl Toda integral que pode ser resolvida por uma sequência de mudanças
+  de variável pode ser resolvida por uma mudança de variável só.}
+
+\end{quote}
+
+Durante a quarentena eu dei algumas questões de prova sobre este
+slogan. Dê uma olhada:
+
+\ssk
+
+{\footnotesize
+
+% (c2m202p1p 4 "questao-2")
+% (c2m202p1a   "questao-2")
+%    http://angg.twu.net/LATEX/2020-2-C2-P1.pdf#page=4
+\url{http://angg.twu.net/LATEX/2020-2-C2-P1.pdf\#page=4}
+
+% (c2m202p1p 9 "gabarito-2")
+% (c2m202p1a   "gabarito-2")
+%    http://angg.twu.net/LATEX/2020-2-C2-P1.pdf#page=9
+\url{http://angg.twu.net/LATEX/2020-2-C2-P1.pdf\#page=9}
+
+% (c2m211p1p 15 "gabarito-2-2020.2")
+% (c2m211p1a    "gabarito-2-2020.2")
+%    http://angg.twu.net/LATEX/2021-1-C2-P1.pdf#page=15
+\url{http://angg.twu.net/LATEX/2021-1-C2-P1.pdf\#page=15}
+
+}
+
+\msk
+
+a) Resolva a integral abaixo usando uma mudança de variável só (dica:
+$u=g(h(x))$):
+%
+$$\intx{f'(g(h(x)))g'(h(x))h'(x)} = \Rq$$
+
+b) Resolva a integral acima usando duas mudanças de variável. Dica:
+comece com $u=h(x)$.
+
+\bsk
+\bsk
+
+O Miranda e o Leithold preferem fazer em um passo só certas mudanças
+de variáveis que eu prefiro fazer em dois ou três passos. Entenda o
+exemplo 8.1 do Miranda -- o da seção 8.4, na página 264...
+
+\ssk
+
+{\scriptsize
+
+% (find-books "__analysis/__analysis.el" "miranda")
+% (find-books "__analysis/__analysis.el" "miranda" "8.4 Substituição Trigonométrica")
+% (find-dmirandacalcpage 263 "8.4 Substituição Trigonométrica")
+% http://hostel.ufabc.edu.br/~daniel.miranda/calculo/calculo.pdf#263
+\url{http://hostel.ufabc.edu.br/~daniel.miranda/calculo/calculo.pdf\#263}
+
+}
+
+}\anothercol{
+
+% a
+
+  c) ...e descubra como resolver a integral dele fazendo duas mudanças
+  de variáveis ao invés de uma só. A segunda mudança de variável vai
+  ser $s = \sen θ$, e a primeira eu prefiro não contar qual é -- tente
+  usar as idéias do exercício 1 pra descobrir qual ela tem que ser.
+
+
+\bsk
+\bsk
+\bsk
+\bsk
+\bsk
+\bsk
+\bsk
+\bsk
+\bsk
+\bsk
+\bsk
+
+{\sl (Obs: ainda não atualizei este slide!)}
+
+
+
+}}
+
+
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2mv"
+% ee-tla: "c2m231mv"
+% End:

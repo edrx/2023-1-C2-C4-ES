@@ -1,0 +1,655 @@
+% (find-LATEX "2023-1-C2-P1.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-P1.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-P1.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-P1.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-P1.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-P1.tex"))
+% (defun o () (interactive) (find-LATEX "2022-2-C2-P1.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-P1"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-P1.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-P1")
+% (find-pdf-page   "~/LATEX/2023-1-C2-P1.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-P1.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-P1.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-P1.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-P1.pdf
+%               file:///tmp/2023-1-C2-P1.pdf
+%           file:///tmp/pen/2023-1-C2-P1.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-P1.pdf
+% (find-LATEX "2019.mk")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Piecewise1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Pict3D1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v C2Subst1.lua C2Formulas1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Gram2.lua Tree1.lua Caepro5.lua ~/LATEX/")
+% (find-MM-aula-links "2023-1-C2-P1" "C2" "c2m231p1" "c2p1")
+
+% «.defs»		(to "defs")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.defs-T-and-B»	(to "defs-T-and-B")
+% «.title»		(to "title")
+% «.questoes-123»	(to "questoes-123")
+% «.questoes-123-dicas»	(to "questoes-123-dicas")
+% «.questoes-45»	(to "questoes-45")
+% «.questao-5-grids»	(to "questao-5-grids")
+% «.questao-1-gab»	(to "questao-1-gab")
+% «.questao-2-gab»	(to "questao-2-gab")
+% «.questao-3-gab»	(to "questao-3-gab")
+% «.questao-4-gab»	(to "questao-4-gab")
+% «.questao-5-gab»	(to "questao-5-gab")
+% «.links»		(to "links")
+%
+% «.djvuize»		(to "djvuize")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231p1" "2023-1-C2-P1")
+% (code-eevvideo      "c2m231p1" "2023-1-C2-P1")
+% (code-eevlinksvideo "c2m231p1" "2023-1-C2-P1")
+% (find-c2m231p1video "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% (find-LATEX "2023-1-C2-carro.tex" "defs-caepro")
+% (find-LATEX "2023-1-C2-carro.tex" "defs-pict2e")
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+\sa{[IP]}{\CFname{IP}{}}
+\sa{[TFC2]}{\CFname{TFC2}{}}
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231p1p 1 "title")
+% (c2m231p1a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2023.1}
+
+\bsk
+
+P1 (Primeira prova)
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «questoes-123»  (to ".questoes-123")
+% (c2m231p1p 2 "questoes-123")
+% (c2m231p1a   "questoes-123")
+
+% (c2m222p1p 1 "questao-1")
+% (c2m222p1a   "questao-1")
+% (c2m222p1p 2 "subst-trig")
+% (c2m222p1a   "subst-trig")
+% (c2m222mva "title")
+% (c2m222mva "title" "Aula 10: Mudança de variáveis")
+% (c2m222tudop 49)
+% (c2m222striga "title")
+% (c2m222striga "title" "Aulas 11 e 12: substituição trigonométrica")
+% (find-es "maxima" "subst-trig-questions")
+% (find-es "maxima" "subst-trig-questions" "F(2,1)")
+
+%\vspace*{-0.4cm}
+
+
+\scalebox{0.6}{\def\colwidth{9cm}\firstcol{
+
+{\bf Questão 1}
+
+\T(Total: 2.5 pts)
+
+\msk
+
+Calcule:
+
+$$\ints{s^3 \sqrt{1-s^2}}\;.$$
+
+\bsk
+
+
+{\bf Questão 2}
+
+\T(Total: 2.5 pts)
+
+\msk
+
+Calcule a integral abaixo fazendo pelo menos duas mudanças de variável
+e teste o seu resultado:
+
+$$\intx{\frac{\cos(2+\sqrt x)}{2 \sqrt x}}.$$
+
+\bsk
+
+{\bf Questão 3}
+
+\T(Total: 2.5 pts)
+
+\msk
+
+Calcule e teste o seu resultado:
+
+$$\intx{\frac{2x+3}{(x-4)(x+5)}}\;.$$
+
+\bsk
+
+% (setq eepitch-preprocess-regexp "^")
+% (setq eepitch-preprocess-regexp "^%T ?")
+% (find-es "maxima" "subst-trig-questions")
+%
+%T  (eepitch-maxima)
+%T  (eepitch-kill)
+%T  (eepitch-maxima)
+%T
+%T f(a,b) := x^a * sqrt(1 - x^2)^b;
+%T F(a,b) := integrate(f(a,b), x);
+%T f(3,1);
+%T F(3,1);
+%T
+%T F : sin(2+sqrt(x));
+%T diff(F, x);
+%T
+%T f : (2*x + 3) / ((x-4) * (x+5));
+%T F : integrate(f, x);
+
+
+
+
+}\anothercol{
+
+% «questoes-123-dicas»  (to ".questoes-123-dicas")
+% (c2m231p1p 2 "questoes-123-dicas")
+% (c2m231p1a   "questoes-123-dicas")
+{}
+
+{\bf Dicas:}
+
+\ssk
+
+1) Nestas questões o que vai contar mais pontos é você organizar as
+contas de modo que cada passo seja fácil de entender, de verificar, e
+de justificar -- ``chegar no resultado certo'' vai valer relativamente
+pouco.
+
+\ssk
+
+2) Recomendo que vocês usem o método das ``caixinhas de anotações''
+nas mudanças de variável... numa caixinha de anotações a primeira
+linha diz a relação entre a variável nova e a antiga, todas as outras
+linhas são consequências da primeira, e dentro da caixinha de
+anotações você pode usar as gambiarras com diferenciais, como isto
+aqui: $dx = 42\,du$...
+
+\ssk
+
+3) ...por exemplo:
+%
+$$\bmat{
+  s = \sen θ \\
+  \sqrt{1-s^2} = \cos θ \\
+  \frac{ds}{dθ} = \cos θ \\
+  ds = \cos θ \, dθ \\
+  θ = \arcsen s \\
+  }
+$$
+
+}}
+
+
+
+\newpage
+
+%  _  _            ____  
+% | || |     ___  | ___| 
+% | || |_   / _ \ |___ \ 
+% |__   _| |  __/  ___) |
+%    |_|    \___| |____/ 
+%                        
+% «questoes-45»  (to ".questoes-45")
+% (c2m231p1p 3 "questoes-45")
+% (c2m231p1a   "questoes-45")
+
+\scalebox{0.6}{\def\colwidth{9cm}\firstcol{
+
+{\bf Questão 4}
+
+\T(Total: 1.5 pts)
+
+\msk
+
+No curso nós definimos que {\sl pra nós} a ``fórmula'' do TFC2 seria
+esta aqui:
+%
+$$\ga{[TFC2]}
+  \;=\;
+  \left( \Intx{a}{b}{F'(x)} \;=\; \difx{a}{b}{F(x)} \right)
+$$
+
+Mostre que quando $a=1$, $b=3$ e
+%
+$$F(x) =
+  \begin{cases}
+     x & \text{quando $x<2$}, \\
+     -x & \text{quando $x≥2$} \\
+  \end{cases}
+$$
+
+a fórmula $\ga{[TFC2]}$ é falsa.
+
+\msk
+
+Dicas: o melhor modo de fazer isto é representando graficamente $F(x)$
+e $F'(x)$ e calculando certas coisas a partir dos gráficos. Considere
+que o leitor sabe calcular áreas de retângulos, triângulos e trapézios
+no olhômetro quando as coordenadas deles são números simples, mas
+complemente os seus gráficos com um pouquinho de português quando nem
+tudo for óbvio só a partir dos gráficos.
+
+
+
+}\anothercol{
+
+{\bf Questão 5}
+
+\T(Total: 1.0 pts)
+
+\msk
+
+Seja $f(t)$ a função no topo da página seguinte.
+
+Seja
+%
+$$F(x) \;=\; \Intt{5}{x}{f(t)}.$$
+
+Desenhe o gráfico de $F(x)$ em algum dos grids vazios da próxima
+página. Indique claramente qual é a versão final e quais desenhos são
+rascunhos.
+
+}}
+
+\newpage
+
+% «questao-5-grids»  (to ".questao-5-grids")
+% (c2m231p1p 4 "questao-5-grids")
+% (c2m231p1a   "questao-5-grids")
+% (c2m222p1p 4 "questao-5-grids")
+% (c2m222p1a   "questao-5-grids")
+
+%L -- (find-angg "LUA/Pict2e1-1.lua" "FromYs")
+%L fryF = FromYs.fromys({0,-1,1,-2,2,-3,3,-3,2,-2,1,-1,0}):getYs(1)
+%L fryF = FromYs.fromys({0,-1,-3,3,1,0,1,2,1,0,-1,-2,-1,0}):getYs(0)
+%L fryF:getypict():pgat("pgatc"):sa("fig f"):output()
+%L fryF:getYpict():pgat("pgatc"):sa("fig F"):output()
+%L fryF:getYgrid(-4,4):
+%L                pgat("pgatc"):sa("grid F"):output()
+\pu
+
+\unitlength=8pt
+
+$\begin{array}{ll}
+ \ga{fig f}  \phantom{mm} & \ga{fig f}  \\ \\
+ \ga{grid F} & \ga{grid F} \\ \\
+ \ga{grid F} & \ga{grid F} \\
+ \end{array}
+$
+
+
+
+\newpage
+
+% «questao-1-gab»  (to ".questao-1-gab")
+% (c2m231p1p 5 "questao-1-gab")
+% (c2m231p1a   "questao-1-gab")
+% (c2m222p1p 5 "questao-1-gab")
+% (c2m222p1a   "questao-1-gab")
+
+% (setq eepitch-preprocess-regexp "^")
+% (setq eepitch-preprocess-regexp "^%T ")
+%
+%T  (eepitch-maxima)
+%T  (eepitch-kill)
+%T  (eepitch-maxima)
+%T s : sqrt(1-4*x^2);
+%T f : x^3 * s;
+%T F : integrate(f, x);
+%T G : (1/16) * (s^5/5 - s^3/3);
+%T g : diff(G, x);
+%T expand(rat(g*s));
+%T expand(rat(f*s));
+
+{\bf Questão 1: gabarito}
+
+$$\scalebox{0.6}{$
+  \begin{array}{rcl}
+  \ints{s^3 \sqrt{1-s^2}}
+   %&=& \intu{\frac18 u^3 \sqrt{1-u^2}·\frac12} \\
+   %&=& \frac1{16}\intu{u^3 \sqrt{1-u^2}} \\
+    &=& \intth{(\senθ)^3 (\cosθ)(\cosθ)} \\
+    &=& \intth{(\cosθ)^2 (\senθ)^3} \\
+    &=& \intth{(\cosθ)^2 (\senθ)^2 (\senθ)} \\
+    &=& \intc{c^2 (1-c^2)(-1)} \\
+    &=& \intc{c^2 (c^2-1)} \\
+    &=& \intc{c^4 - c^2} \\
+    &=& \frac{c^5}{5} - \frac{c^3}{3} \\
+    &=& \frac{(\cosθ)^5}{5} - \frac{(\cosθ)^3}{3} \\
+    &=& \frac{\sqrt{1-s^2}^5}{5} - \frac{\sqrt{1-s^2}^3}{3} \\
+    \\
+    \frac{d}{ds}(\frac{\sqrt{1-s^2}^5}{5} - \frac{\sqrt{1-s^2}^3}{3})
+    &=& \frac15 \frac{d}{ds} \sqrt{1-s^2}^5 - \frac13 \frac{d}{ds} \sqrt{1-s^2}^3 \\
+    &=& \frac15 \frac{d}{ds} (1-s^2)^{5/2} - \frac13 \frac{d}{ds} (1-s^2)^{3/2} \\
+    &=& \frac15 \frac52 (1-s^2)^{3/2} \frac{d}{ds}(1-s^2)
+      - \frac13 \frac32 (1-s^2)^{1/2} \frac{d}{ds}(1-s^2) \\
+    &=& \frac15 \frac52 (1-s^2)^{3/2} (-2s)
+      - \frac13 \frac32 (1-s^2)^{1/2} (-2s) \\
+    &=& \frac15 \frac52 (-2)s (1-s^2)^{3/2}
+      - \frac13 \frac32 (-2)s (1-s^2)^{1/2} \\
+    &=& - s (1-s^2)^{3/2}
+        + s (1-s^2)^{1/2} \\
+    &=& - s (1-s^2)^{2/2} (1-s^2)^{1/2}
+        + s (1-s^2)^{1/2} \\
+    &=& - s (1-s^2) (1-s^2)^{1/2}
+        + s (1-s^2)^{1/2} \\
+    &=& (- s (1-s^2) + s) (1-s^2)^{1/2} \\
+    &=& (- s + s^3 + s) (1-s^2)^{1/2} \\
+    &=& s^3  \sqrt{1-s^2} \\
+  \end{array}
+  \hspace*{-3cm}
+  \begin{array}{l}
+    % \bsm{u = 2x \\
+    %      u^2 = 4x^2 \\
+    %      x = u/2 \\
+    %      x^3 = u^3/8 \\
+    %      du = 2dx \\
+    %      dx = \frac12 du \\
+    %     } \\
+    % \\[-7pt]
+    \bsm{s = \senθ \\
+         s^2 = (\senθ)^2 \\
+         1-s^2 = (\cosθ)^2 \\
+         \sqrt{1-s^2} = \cosθ \\
+         \frac{ds}{dθ} = \cosθ \\
+         ds = \cosθ\,dθ \\
+        } \\
+    \\[-7pt]
+    \bsm{c = \cosθ \\
+         \frac{dc}{dθ} = -\senθ \\
+         dc = -\senθ\,dθ \\
+         (-1)dc = \senθ\,dθ \\
+         (\senθ)^2 = 1-c^2 \\
+        } \\
+    \\
+    \vspace*{6cm}
+  \end{array}
+  $}
+$$
+
+
+
+\newpage
+
+% «questao-2-gab»  (to ".questao-2-gab")
+% (c2m231p1p 6 "questao-2-gab")
+% (c2m231p1a   "questao-2-gab")
+% (c2m222p1p 6 "questao-2-gab")
+% (c2m222p1a   "questao-2-gab")
+
+{\bf Questão 2: gabarito}
+
+$$\begin{array}{rcl}
+  \intx{\frac{\cos(2+\sqrt x)}{2 \sqrt x}}
+    &=& \intu{\cos(2+u)} \\
+    &=& \intv{\cos v} \\
+    &=& \sen v \\
+    &=& \sen(2+u) \\
+    &=& \sen(2+\sqrt{x}) \\
+  \\[-5pt]
+  \ddx \sen(2+\sqrt{x})
+    &=& \cos(2+\sqrt{x}) \, \ddx(2+\sqrt{x}) \\
+    &=& \cos(2+\sqrt{x}) \, \ddx x^{1/2} \\
+    &=& \cos(2+\sqrt{x}) \, \frac{1}{2} x^{-1/2} \\
+    &=& \cos(2+\sqrt{x}) \, \frac{1}{2\sqrt{x}} \\
+    &=& \frac{\cos(2+\sqrt{x})}{2\sqrt{x}} \\
+  \end{array}
+  %\qquad
+  \begin{array}{c}
+    \subst{u \;=\; \sqrt{x} \;=\; x^{1/2} \\
+           \frac{du}{dx} \;=\; \frac12 x^{-1/2} \;=\; \frac{1}{2\sqrt{x}} \\
+           du \;=\; \frac{1}{2\sqrt{x}} dx \\
+           u^2 \;=\; x \\
+           x \;=\; u^2 \\
+          } \\
+    \\[-5pt]
+    \subst{v \;=\; 2+u \\
+           dv \;=\; du \\
+           v-2 \;=\; u \\
+           u \;=\; v-2 \\
+          } \\
+    \\
+    \vspace*{1.5cm}
+  \end{array}
+$$
+
+\newpage
+
+% «questao-3-gab»  (to ".questao-3-gab")
+% (c2m231p1p 7 "questao-3-gab")
+% (c2m231p1a   "questao-3-gab")
+% (c2m222p1p 8 "questao-4-gab")
+% (c2m222p1a   "questao-4-gab")
+
+{\bf Questão 3: gabarito}
+
+$$\scalebox{0.6}{$
+  \begin{array}{rcl}
+  \frac{2x+3}{(x-4)(x+5)} &=& \frac{A}{x-4} + \frac{B}{x+5} \\
+                          &=& \frac{A(x+5)}{(x-4)(x+5)} + \frac{B(x-4)}{(x-4)(x+5)} \\
+                          &=& \frac{A(x+5)+B(x-4)}{(x-4)(x+5)} \\
+                          &=& \frac{Ax+5A+Bx-4B}{(x-4)(x+5)} \\
+                          &=& \frac{(A+B)x+(5A-4B)}{(x-4)(x+5)} \\
+                          \\[-5pt]
+                     2x+3 &=& (A+B)x+(5A-4B) \\
+                      A+B &=& 2 \\
+                    5A-4B &=& 3 \\
+                        A &=& 11/9 \\
+                        B &=& 7/9 \\
+                          \\[-5pt]
+        \frac{2x+3}{(x-4)(x+5)}  &=& \frac{11/9}{x-4} + \frac{7/9}{x+5} \\
+  \intx{\frac{2x+3}{(x-4)(x+5)}} &=& \intx{\frac{11/9}{x-4} + \frac{7/9}{x+5}} \\
+                                 &=& \frac{11}{9}\intx{\frac{1}{x-4}}
+                                   + \frac{7}{9}\intx{\frac{1}{x+5}} \\
+                                 &=& \frac{11}{9} \ln |x-4|
+                                   + \frac{7}{9}  \ln |x+5| \\
+                          \\[-5pt]
+  \ddx(\frac{11}{9} \ln |x-4| + \frac{7}{9} \ln |x+5|)
+    &=& \frac{11}{9} \frac{1}{x-4} + \frac{7}{9} \frac{1}{x+5} \\
+    &=& \frac{\frac{11}{9}(x+5) + \frac{7}{9}(x-4)}{(x-4)(x+5)} \\
+    &=& \frac{(\frac{11}{9}+ \frac{7}{9})x + (\frac{55}{9} - \frac{28}{9})}{(x-4)(x+5)} \\
+    &=& \frac{2x+3}{(x-4)(x+5)} \\
+  \end{array}
+  $}
+$$
+
+
+% (setq eepitch-preprocess-regexp "^")
+% (setq eepitch-preprocess-regexp "^%T ?")
+%
+%T  (eepitch-maxima)
+%T  (eepitch-kill)
+%T  (eepitch-maxima)
+%T linsolve ([A+B=4, 3*A-2*B=5], [A, B]);
+%T linsolve ([A+B=2, 5*A-4*B=3], [A, B]);
+%T
+%T f : (4*x + 5) / ((x-2)*(x+3));
+%T partfrac(f, x);
+%T F : integrate(f, x);
+
+\newpage
+
+% «questao-4-gab»  (to ".questao-4-gab")
+% (c2m231p1p 8 "questao-4-gab")
+% (c2m231p1a   "questao-4-gab")
+% (c2m222p1p 7 "questao-3-gab")
+% (c2m222p1a   "questao-3-gab")
+% (c2m221atisp 21 "1-then-2")
+% (c2m221atisa    "1-then-2")
+
+{\bf Questão 4: gabarito}
+
+%L Pict2e.bounds = PictBounds.new(v(0,-4), v(4,4))
+%L spec = "(0,0)--(2,2)c (2,-2)o--(4,-4)"
+%L pws = PwSpec.from(spec)
+%L pws:topict():prethickness("1pt"):pgat("pgatc"):sa("F(x)"):output()
+%L
+%L Pict2e.bounds = PictBounds.new(v(0,-4), v(4,4))
+%L spec = "(0,1)--(2,1)o (2,-1)o--(4,-1)"
+%L pws = PwSpec.from(spec)
+%L pws:topict():prethickness("1pt"):pgat("pgatc"):sa("F'(x)"):output()
+%L
+%L spec = "(0,1)--(2,1)o (2,-1)c--(4,-1)"
+%L pwsa = PwSpec.from(spec)
+%L pf = PictList{
+%L   pwsa:topwfunction():areaify(1, 3):Color("Orange"),
+%L   pws:topict()
+%L }
+%L pf:pgat("pgatc"):sa("int F'(x)"):output()
+
+\pu
+
+\msk
+
+\unitlength=5pt
+
+$$F(x) = \ga{F(x)}
+ \quad
+ F'(x) = \ga{F'(x)}
+ \quad
+ \textstyle \Intx{1}{3}{F'(x)} = \ga{int F'(x)} = 0
+$$
+
+\def\und#1#2{\underbrace{#1}_{#2}}
+
+$$\und{
+  \und{\Intx{1}{3}{F'(x)}}{0} \;=\;
+  \und{\und{\und{\difx{1}{3}{F(x)}}{F(3)-F(1)}}{(-3)-1}}{-4}
+  }{\False}
+$$
+
+% (c2m221vsbp 6 "questao-1-gab")
+% (c2m221vsba   "questao-1-gab")
+
+\newpage
+
+% «questao-5-gab»  (to ".questao-5-gab")
+% (c2m231p1p 9 "questao-5-gab")
+% (c2m231p1a   "questao-5-gab")
+% (c2m222p1p 9 "questao-5-gab")
+% (c2m222p1a   "questao-5-gab")
+
+{\bf Questão 5: gabarito}
+
+\unitlength=10pt
+
+$$\begin{array}{r}
+ f(x) \;=\; \ga{fig f}  \\ \\
+ F(x) \;=\; \Intt{5}{x}{f(t)}
+      \;=\; \ga{fig F}  \\
+ \end{array}
+$$
+
+
+
+% «links»  (to ".links")
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2p1"
+% ee-tla: "c2m231p1"
+% End:

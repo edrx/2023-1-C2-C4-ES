@@ -1,0 +1,514 @@
+% (find-LATEX "2023-1-C2-carro.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C2-carro.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C2-carro.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C2-carro.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C2-carro.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C2-carro.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C2-carro.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C2-carro"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C2-carro.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C2-carro")
+% (find-pdf-page   "~/LATEX/2023-1-C2-carro.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-carro.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C2-carro.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C2-carro.pdf")
+%   file:///home/edrx/LATEX/2023-1-C2-carro.pdf
+%               file:///tmp/2023-1-C2-carro.pdf
+%           file:///tmp/pen/2023-1-C2-carro.pdf
+%  http://anggtwu.net/LATEX/2023-1-C2-carro.pdf
+% (find-LATEX "2019.mk")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Piecewise1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Pict3D1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Gram2.lua Tree1.lua Caepro5.lua ~/LATEX/")
+% (find-Deps1-links "Caepro5 Piecewise1")
+% (find-Deps1-cps   "Caepro5 Piecewise1")
+% (find-Deps1-anggs "Caepro5 Piecewise1")
+% (find-MM-aula-links "2023-1-C2-carro" "C2" "c2m231carro" "c2ca")
+
+% «.defs»		(to "defs")
+% «.defs-caepro»	(to "defs-caepro")
+% «.defs-pict2e»	(to "defs-pict2e")
+% «.title»		(to "title")
+% «.introducao»		(to "introducao")
+% «.links»		(to "links")
+% «.exercicio-1»	(to "exercicio-1")
+% «.exercicio-1-dicas»	(to "exercicio-1-dicas")
+% «.exercicio-2»	(to "exercicio-2")
+% «.exercicio-5»	(to "exercicio-5")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c2m231carro" "2023-1-C2-carro")
+% (code-eevvideo      "c2m231carro" "2023-1-C2-carro")
+% (code-eevlinksvideo "c2m231carro" "2023-1-C2-carro")
+% (find-c2m231carrovideo "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+\def\u#1{\par{\footnotesize \url{#1}}}
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C2.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% «defs-caepro»  (to ".defs-caepro")
+%L dofile "Caepro5.lua"              -- (find-angg "LUA/Caepro5.lua" "LaTeX")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+
+% «defs-pict2e»  (to ".defs-pict2e")
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+\pu
+
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m231carrop 1 "title")
+% (c2m231carroa   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2023.1}
+
+\bsk
+
+Aulas 1 e 3: integração e derivação
+
+com o mathologermóvel
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «introducao»  (to ".introducao")
+% (c2m231carrop 2 "introducao")
+% (c2m231carroa   "introducao")
+
+{\bf Introdução}
+
+\scalebox{0.7}{\def\colwidth{12cm}\firstcol{
+
+Nesta parte do curso nós vamos tentar entender
+
+este trecho do vídeo do Mathologer,
+
+\ssk
+
+\Ca{CalcEasy03:19} até 12:47
+
+\bsk
+
+e vamos fazer alguns exercícios --
+
+que podem ser feitos em vários níveis de detalhe.
+
+Leia estes trechos das legendas de uns vídeos meus:
+
+\ssk
+
+\par \Ca{Slogans01:10} até 08:51: sobre chutar e testar
+\par \Ca{Slogans07:17} até 07:48: ...do tamanho de um apartamento
+\par \Ca{Visaud45:14} até 52:24: ajustar o nível de detalhe
+\par \Ca{Slogans1:11:02} até 1:17:42: seja o seu prório Geogebra
+\par \Ca{Slogans1:39:46} até 1:45:02: ...com quem vale a pena estudar
+
+\bsk
+
+Leia também estes slides:
+
+\par \Ca{2gT4}  (intro, p.3) ``Releia a Dica 7''
+\par \Ca{2gT13} (intro, p.12) Sobre Português
+\par \Ca{2gT14} (intro, p.13) Sobre Português (2)
+\par \Ca{2gT16} (intro, p.15) Unexpected end of input
+\par \Ca{2gT19} (intro, p.18) Retas reversas
+
+}\anothercol{
+}}
+
+
+
+\newpage
+
+
+% «links»  (to ".links")
+% (c2m231carrop 99 "links")
+% (c2m231carroa    "links")
+
+{\bf Links}
+
+\scalebox{0.9}{\def\colwidth{12cm}\firstcol{
+
+Os slides das próximas páginas são versões ligeiramente
+
+reescritas destes slides de outros semestres:
+
+\ssk
+
+\par \Ca{2fT17} (mathologermovel, p.3) Item 3
+\par \Ca{2fT18} (mathologermovel, p.4) Item 4
+\par \Ca{2eT62} (TFC1, p.3) Algumas propriedades da integral
+\par \Ca{2eT66} (TFC1, p.7) Exercício 1
+\par \Ca{2eT69} (TFC1, p.10) A função G(x) é esta aqui
+\par \Ca{2dT225} (MT3, p.4) Uma espécie de gabarito
+\par \Ca{2eT199} (P1, p.7) eu defini as funções f e g desta forma
+\par \Ca{2eT200} (P1, p.8) gabarito
+
+}\anothercol{
+}}
+
+
+\newpage
+
+% «exercicio-1»  (to ".exercicio-1")
+% (c2m231carrop 4 "exercicio-1")
+% (c2m231carroa   "exercicio-1")
+% (c2m221tfc1p 10 "exercicio-4")
+% (c2m221tfc1a    "exercicio-4")
+
+{\bf Exercício 1.}
+
+\scalebox{1.0}{\def\colwidth{10.5cm}\firstcol{
+
+Seja $G(x)$ esta função:
+%
+%L putcellat = function (xy, str) return pformat("\\put%s{\\cell{%s}}", xy, str) end
+%L Pict2e.bounds = PictBounds.new(v(0,-2), v(15,5))
+%L spec = 
+%L   "(0,-1)--(1,-1)--(2,0)--(3,-1)--(3.5,0)--" ..
+%L   "(4,1)--(5,0)--(6,1)--(8,1)--(9,5)--(10,2)--(11,4)--(12,3)--(13,4)--(15,2)"
+%L pws = PwSpec.from(spec)
+%L p = PictList {
+%L   pws:topict():prethickness("1.5pt"),
+%L   putcellat(v(5, -0.7), "5"),
+%L   putcellat(v(10,-0.7), "10")
+%L }
+%L p:pgat("pgatc"):sa("Ex 4"):output()
+\pu
+%
+$$G(x) \;\;=\;\;\,
+    \unitlength=15pt
+    \scalebox{0.7}{$\ga{Ex 4}$}
+$$
+
+Relembre como calcular coeficientes angulares e derivadas
+
+no olhômetro e faça um gráfico da função $G'(x)$.
+
+\ssk
+
+Dica 1: $G'(3.5)=2$.
+
+Dica 2: $G'(4)$ não existe --- use uma bolinha
+
+vazia pra representar isso no seu gráfico.
+
+}\anothercol{
+}}
+
+\newpage
+
+% «exercicio-1-dicas»  (to ".exercicio-1-dicas")
+% (c2m231carrop 5 "exercicio-1-dicas")
+% (c2m231carroa   "exercicio-1-dicas")
+% (c2m221tfc1p 11 "exercicio-4-dicas")
+% (c2m221tfc1a    "exercicio-4-dicas")
+
+{\bf Exercício 1: mais dicas}
+
+\scalebox{1.0}{\def\colwidth{9cm}\firstcol{
+
+\vspace*{0.0cm}
+
+\par \Ca{Leit1p18} (p.17: inclinação)
+\par \Ca{Miranda66} (Capítulo 3: Derivadas)
+\par \Ca{Miranda22} (Seção 1.4: Limites laterais)
+\par \Ca{Miranda74} (Seção 3.2.3: Derivadas laterais)
+
+\msk
+
+\par \Ca{2eT70} (TFC1, p.11) Dicas pro exercício 4
+
+}\anothercol{
+}}
+
+\newpage
+
+% «exercicio-2»  (to ".exercicio-2")
+% (c2m231carrop 6 "exercicio-2")
+% (c2m231carroa   "exercicio-2")
+% (c2m221tfc1p 7 "exercicio-1")
+% (c2m221tfc1a   "exercicio-1")
+
+{\bf Exercício 2.}
+
+%L Pict2e.bounds = PictBounds.new(v(0,-2), v(7,4))
+%L spec = "(0,0)--(1,0)o (1,2)c--(2,2)o (2,3)c--(4,3)c (4,-1)o--(6,-1)o (6,0)c--(7,0)"
+%L pws = PwSpec.from(spec)
+%L pws:topict():prethickness("1.5pt"):pgat("pgatc"):sa("Ex 1"):output()
+\pu
+
+\unitlength=7.5pt
+
+\ssk
+
+Seja $f(x) \; = \;\; \ga{Ex 1}$ \; .
+
+Note que:
+
+$\Intx{1}{2}{f(x)} = 2·(2-1)$,
+
+$\Intx{3}{4}{f(x)} = 3·(4-3)$,
+
+$\Intx{4}{6}{f(x)} = -1·(6-4)$,
+
+\msk
+
+Calcule:
+
+a) $\Intx{1.5}{2}{f(x)}$
+
+b) $\Intx{2}{4}{f(x)}$
+
+c) $\Intx{1.5}{4}{f(x)}$
+
+d) $\Intx{1.5}{6}{f(x)}$
+
+
+
+
+\newpage
+
+{\bf Exercício 3.}
+
+\msk
+
+Sejam $f(x) \; = \;\; \ga{Ex 1}$
+
+e $F(β) = \Intx{2}{β}{f(x)}$.
+
+\msk
+
+a) Calcule $F(2), F(2.5), F(3), \ldots, F(6)$.
+
+b) Calcule $F(1.5), F(1), F(0.5), F(0)$.
+
+
+\newpage
+
+% (c2m221tfc1p 9 "exercicio-3")
+% (c2m221tfc1a   "exercicio-3")
+
+{\bf Exercício 4.}
+
+No exercício 3 você obteve alguns valores da função $F(β)$,
+
+mas não todos... por exemplo, você {\sl ainda} não calculou $F(2.1)$.
+
+\msk
+
+a) Desenhe num gráfico só todos os pontos $(x,F(x))$
+
+que você calculou nos itens (a) e (b) do exercício 3.
+
+Dica: o conjunto que você quer desenhar é este aqui:
+
+$\{(0,F(0)), \, (0.5,F(0.5)), \ldots, (6,F(6))\}$.
+
+\msk
+
+b) Tente descobrir --- lendo os próximos slides, assitindo
+
+o vídeo, e discutindo com os seus colegas --- qual é o jeito
+
+certo de ligar os pontos do item (a).
+
+
+
+\newpage
+
+% «exercicio-5»  (to ".exercicio-5")
+
+{\bf Exercício 5.}
+
+% 2fT18 (c2m222mmp 4 "item-4")
+%       (c2m222mma   "item-4")
+% (c2m221p1p 7 "escadas")
+% (c2m221p1a   "escadas")
+
+%L hx = function (x, y) return format(" (%s,%s)c--(%s,%s)o", x-1,y, x,y) end
+%L hxs = function (ys)
+%L     local str = ""
+%L     for x,y in ipairs(ys) do str = str .. hx(x, y) end
+%L     return str
+%L   end
+%L mtintegralspec = function (specf, xmax, y0)
+%L     local pws = PwSpec.from(specf)
+%L     local f = pws:fun()
+%L     local ys = {[0] = y0}
+%L     for x=1,xmax do
+%L       PP("FOO", x, f(x-0.5), ys)
+%L       ys[x] = ys[x - 1] + f(x - 0.5)
+%L     end
+%L     local strx = function (x) return tostring(v(x, ys[x])) end
+%L     local specF = mapconcat(strx, seq(0, xmax), "--")
+%L     return specF
+%L   end
+%L
+%L ysf   = {1, 2, 1, 0, -1, -2, -1, 0, 1, 2, 1, 0}
+%L specf = hxs(ysf)
+%L ysg   = {0, 1, 2, 3, -2, -1, 0, -1, -2, 3, 2, 1, 0}
+%L specg = hxs(ysg)
+%L specF = mtintegralspec(specf, #ysf,  0)
+%L specG = mtintegralspec(specf, #ysf, -3)
+%L specI = mtintegralspec(specg, #ysg,  0)
+%L pwsf  = PwSpec.from(specf)
+%L pwsg  = PwSpec.from(specg)
+%L pwsF  = PwSpec.from(specF)
+%L pwsG  = PwSpec.from(specG)
+%L pwsI  = PwSpec.from(specI)
+%L pf    = pwsf:topict():setbounds(v(0,-2), v(#ysf,2)):pgat("pgatc")
+%L pg    = pwsg:topict():setbounds(v(0,-2), v(#ysg,3)):pgat("pgatc")
+%L pF    = pwsF:topict():setbounds(v(0,-0), v(#ysf,4)):pgat("pgatc")
+%L pG    = pwsG:topict():setbounds(v(0,-3), v(#ysf,1)):pgat("pgatc")
+%L pI    = pwsI:topict():setbounds(v(0,0),  v(#ysg,6)):pgat("pgatc")
+%L pf:sa("Fig f"):output()
+%L pg:sa("Fig g"):output()
+%L pF:sa("Fig F"):output()
+%L pG:sa("Fig G"):output()
+%L pI:sa("Fig I"):output()
+%L
+%L PictList{}:setbounds(v(0,-4),v(13,4)):pgat("pgatc"):sa("respgrid"):output()
+%L
+%L mtintegralspec2 = function (x0, y0, Dys, dot0, dot1)
+%L     local mkxy = function (x,y) return format("(%d,%d)", x, y) end
+%L     local xys = { mkxy(x0,y0) .. (dot0 or "") }
+%L     local x,y = x0,y0
+%L     for i,Dy in ipairs(Dys) do
+%L       x = x + 1
+%L       y = y + Dy
+%L       table.insert(xys, mkxy(x,y))
+%L     end
+%L     xys[#xys] = xys[#xys] .. (dot1 or "")
+%L     return table.concat(xys, "--")
+%L   end
+%L
+%L -- = mtintegralspec2(10, 20, {1, 2, -3, -3}, "a", "b")
+%L ysf   = {1, 2, 1, 0, -1, -2, -1, 0, 1, 2, 1, 0}
+%L ysf_  = {1, 2, 1, 0, -1, -2, -1}
+%L ysg   = {0, 1, 2, 3, -2, -1,  0, -1, -2, 3, 2, 1, 0}
+%L ysg_  =                         {-1, -2, 3, 2, 1}
+%L specH = mtintegralspec2(0, -4, ysf_, "", "o\n") ..
+%L         mtintegralspec2(7,  1, ysg_, "o", "")
+%L specM = mtintegralspec2(0, -4, ysf_, "", "o\n") ..
+%L         mtintegralspec2(7,  2, ysg_, "o", "")
+%L -- = specH
+%L -- = specM
+%L pwsH  = PwSpec.from(specH)
+%L pwsM  = PwSpec.from(specM)
+%L pH    = pwsH:topict():setbounds(v(0,-4), v(12,4)):pgat("pgatc")
+%L pM    = pwsM:topict():setbounds(v(0,-4),  v(12,5)):pgat("pgatc")
+%L pH:sa("Fig H"):output()
+%L pM:sa("Fig M"):output()
+\pu
+
+\unitlength=9pt
+
+Sejam:
+
+\msk
+
+$\begin{array}{lcc}
+  f(x) = \ga{Fig f} \; , \\
+  g(x) = \ga{Fig g} \; .\\
+  \end{array}
+$
+
+\msk
+
+Faça os gráficos destas funções:
+
+\ssk
+
+a) $\D F(x) = \Intt{0}{x}{f(t)}$
+
+\ssk
+
+b) $\D G(x) = \Intt{3}{x}{g(t)}$
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2ca"
+% ee-tla: "c2m231carro"
+% End:

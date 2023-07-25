@@ -1,0 +1,554 @@
+% (find-LATEX "2023-1-C4-intro.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2023-1-C4-intro.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2023-1-C4-intro.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2023-1-C4-intro.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2023-1-C4-intro.pdf"))
+% (defun e () (interactive) (find-LATEX "2023-1-C4-intro.tex"))
+% (defun o () (interactive) (find-LATEX "2023-1-C4-intro.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2023-1-C4-intro"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2023-1-C4-intro.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2023-1-C4-intro")
+% (find-pdf-page   "~/LATEX/2023-1-C4-intro.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C4-intro.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2023-1-C4-intro.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2023-1-C4-intro.pdf")
+%   file:///home/edrx/LATEX/2023-1-C4-intro.pdf
+%               file:///tmp/2023-1-C4-intro.pdf
+%           file:///tmp/pen/2023-1-C4-intro.pdf
+%  http://anggtwu.net/LATEX/2023-1-C4-intro.pdf
+% (find-LATEX "2019.mk")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Piecewise1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Pict2e1.lua Pict2e1-1.lua Pict3D1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v C2Subst1.lua C2Formulas1.lua ~/LATEX/")
+% (find-sh0 "cd ~/LUA/; cp -v Gram2.lua Tree1.lua Caepro5.lua ~/LATEX/")
+% (find-MM-aula-links "2023-1-C4-intro" "C4" "c4m231intro" "c4mi")
+
+% «.defs»		(to "defs")
+% «.title»		(to "title")
+% «.links»		(to "links")
+% «.exercicio-1»	(to "exercicio-1")
+% «.geogebra-1»		(to "geogebra-1")
+% «.geogebra-2»		(to "geogebra-2")
+% «.exercicio-3»	(to "exercicio-3")
+% «.exercicio-4»	(to "exercicio-4")
+
+
+
+% <videos>
+% Video (not yet):
+% (find-ssr-links     "c4m231intro" "2023-1-C4-intro")
+% (code-eevvideo      "c4m231intro" "2023-1-C4-intro")
+% (code-eevlinksvideo "c4m231intro" "2023-1-C4-intro")
+% (find-c4m231introvideo "0:00")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%\usepackage{emaxima}              % (find-LATEX "emaxima.sty")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+%L dofile "Caepro5.lua"              -- (find-LATEX "Caepro5.lua")
+\def\Caurl   #1{\expr{Caurl("#1")}}
+\def\Cahref#1#2{\href{\Caurl{#1}}{#2}}
+\def\Ca      #1{\Cahref{#1}{#1}}
+\pu
+%L V = nil                           -- (find-angg "LUA/Pict2e1.lua" "MiniV")
+%L dofile "Piecewise1.lua"           -- (find-LATEX "Piecewise1.lua")
+%L Pict2e.__index.suffix = "%"
+\pu
+\def\pictgridstyle{\color{GrayPale}\linethickness{0.3pt}}
+\def\pictaxesstyle{\linethickness{0.5pt}}
+\def\pictnaxesstyle{\color{GrayPale}\linethickness{0.5pt}}
+\celllower=2.5pt
+
+% %L dofile "QVis1.lua"                -- (find-LATEX "QVis1.lua")
+% %L dofile "Pict3D1.lua"              -- (find-LATEX "Pict3D1.lua")
+% %L dofile "C2Formulas1.lua"          -- (find-LATEX "C2Formulas1.lua")
+
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx21defs.tex" "colors")
+% (find-LATEX "edrx21.sty")
+
+\def\u#1{\par{\footnotesize \url{#1}}}
+
+\def\drafturl{http://anggtwu.net/LATEX/2023-1-C4.pdf}
+\def\drafturl{http://anggtwu.net/2023.1-C4.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c4m231introp 1 "title")
+% (c4m231introa   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 4 - 2023.1}
+
+\bsk
+
+Aulas 1 e 4: Introdução ao curso,
+
+revisão de Cálculo 2 e Cálculo 3
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://anggtwu.net/2023.1-C4.html}
+
+\end{center}
+
+\newpage
+
+%  _     _       _        
+% | |   (_)_ __ | | _____ 
+% | |   | | '_ \| |/ / __|
+% | |___| | | | |   <\__ \
+% |_____|_|_| |_|_|\_\___/
+%                         
+% «links»  (to ".links")
+% (c2m231introp 16 "retas-reversas")
+% (c2m231introa    "retas-reversas")
+
+{\bf Links}
+
+
+\scalebox{0.9}{\def\colwidth{12cm}\firstcol{
+
+Página do curso:
+
+\url{http://anggtwu.net/2023.1-C4.html}
+
+\msk
+
+\Ca{4gQ1} quadros da primeira aula
+
+\Ca{Slogans01:10} até 08:51: sobre chutar e testar
+
+\Ca{Slogans07:17} até 07:48: ...do tamanho de um apartamento
+
+\Ca{Slogans1:11:02} até 1:17:42: seja o seu prório Geogebra
+
+% \Ca{Visaud45:14} até 52:24: ajustar o nível de detalhe
+
+\Ca{3fT16} (tipos, p.4): Tipos
+
+\msk
+
+\Ca{Leit6p17} (p.388: 6.3 Comprimento de arco)
+
+\Ca{MirandaP301} (p.301: 9.5 Comprimento de arco)
+
+\Ca{Stew8p3} (p.562: 8.1 Arc Length)
+
+\Ca{Stew10p15} (p.672: 10.2, fig.4: Arc Length)
+
+\Ca{Stew13p16} (p.877: 13.3 Arc Length and Curvature)
+
+}\anothercol{
+}}
+
+\newpage
+
+% «exercicio-1»  (to ".exercicio-1")
+% (c4m231introp 3 "exercicio-1")
+% (c4m231introa   "exercicio-1")
+
+{\bf Exercício 1.}
+
+\scalebox{0.55}{\def\colwidth{9.5cm}\firstcol{
+
+    Digamos que a função $F(t)$ é a que eu desenhei no quadro na
+    primeira aula. Ela obedecia
+
+$$\begin{array}{rcl}
+  F(0) &=& (1,1) \\
+  F(1) &=& (2,1) \\
+  F(2) &=& (3,2) \\
+  F(3) &=& (3,3) \\
+  \end{array}
+$$
+
+e o gráfico dela era formado por três segmentos de reta.
+
+\msk
+
+a) Encontre uma definição por casos pra $F(x)$ que ``tenha a forma da
+função $F_1(t)$ da coluna da direita''. Note que você vai ter que
+mudar todos os números da $F_1(t)$, e note que o modo normal, usual,
+correto e formal de enunciar este problema seria usando variáveis ao
+invés dos números $2, 3, \ldots, 17$... mas se eu disser ``troque
+todos os números da definição pelos números corretos'' todo mundo
+entende.
+
+\msk
+
+b) Faça a mesma coisa para a função $F_2(t)$.
+
+\msk
+
+c) Faça a mesma coisa para a função $F_3(t)$. Aqui há muitas soluções
+possíveis; encontre uma na qual os números 4, 5, 6, 10, 11, 12, 17, 18
+e 19 sejam trocados por números que tenham um significado geométrico e
+olhométrico claro.
+
+}\anothercol{
+
+$$F_1(t) =
+  \begin{cases}
+     (2t+3, 4t+5)  & \text{$t<6$}, \\
+     (7t+8, 9t+10) & \text{$11≤t≤12$}, \\
+     (13t+14, 15t+16) & \text{$17<t$} \\
+  \end{cases}
+$$
+
+$$F_2(t) =
+  \begin{cases}
+     (2,3) + t\VEC{4,5}  & \text{$t<6$}, \\
+     (7,8) + t\VEC{9,10} & \text{$11≤t≤12$}, \\
+     (13,14) + t\VEC{15,16} & \text{$17<t$} \\
+  \end{cases}
+$$
+
+$$F_3(t) =
+  \begin{cases}
+     (2,3) + (t-4)\VEC{5,6}    & \text{$t<7$}, \\
+     (8,9) + (t-10)\VEC{11,12} & \text{$13≤t≤14$}, \\
+     (15,16) + (t-17)\VEC{18,19} & \text{$20<t$} \\
+  \end{cases}
+$$
+
+
+}}
+
+\newpage
+
+%   ____             ____      _               
+%  / ___| ___  ___  / ___| ___| |__  _ __ __ _ 
+% | |  _ / _ \/ _ \| |  _ / _ \ '_ \| '__/ _` |
+% | |_| |  __/ (_) | |_| |  __/ |_) | | | (_| |
+%  \____|\___|\___/ \____|\___|_.__/|_|  \__,_|
+%                                              
+% «geogebra-1»  (to ".geogebra-1")
+% (c4m231introp 4 "geogebra-1")
+% (c4m231introa   "geogebra-1")
+
+{\bf Seja o seu próprio GeoGebra}
+
+\scalebox{0.58}{\def\colwidth{9cm}\firstcol{
+
+    Na aula de 14/abril/2023 eu descobri que nenhuma das pessoas que
+    veio sabia os truques do ``Seja o seu próprio GeoGebra''... a
+    idéia está explicada por alto neste trecho de um vídeo:
+
+    \ssk
+
+    \Ca{Slogans1:11:02} até 1:17:42
+
+    \bsk
+
+    {\bf Exercício 2.}
+
+    a) Relembre como usar esta notação de ``underbraces'' para
+    escrever os resultados intermediários de uma expressão:
+    %
+    $$\def\und#1#2{\underbrace{#1}_{#2}}
+      \und{(1,2)+\und{3\VEC{4,5}}{\VEC{12,15}}}{\VEC{13,17}}
+    $$
+
+    Dica: releia este slide:
+
+    \ssk
+
+    \Ca{3fT14} (p.2: C)
+
+    \bsk
+
+    b) Tente calcular de cabeça os pontos da reta $r$ -- definida à
+    direita -- para estes valores de $t$: $t=0$, $t=1$, $t=4$, $t=5$,
+    $t=1.23$. Para quais destes valores as contas são mais fáceis de
+    fazer de cabeça?
+
+}\anothercol{
+
+  $$\begin{array}{rcl}
+      r   &=& \setofst{(0,3)+(t-4)\VEC{2,0}}{t∈\R} \\
+      r_1 &=& \setofst{(α,3)+(t-4)\VEC{2,0}}{t∈\R} \\
+      r_2 &=& \setofst{(0,β)+(t-4)\VEC{2,0}}{t∈\R} \\
+      r_3 &=& \setofst{(0,3)+(t-γ)\VEC{2,0}}{t∈\R} \\
+      r_4 &=& \setofst{(0,3)+(t-4)\VEC{δ,0}}{t∈\R} \\
+      r_5 &=& \setofst{(0,3)+(t-4)\VEC{2,ε}}{t∈\R} \\
+    \end{array}
+    $$
+
+    \bsk
+
+    c) Digamos que $α=5$ e que queremos desenhar a reta $r_1$
+    desenhando dois pontos fáceis de calcular dela e escrevendo do
+    lado de cada um deles o $t$ correspondente a eles. É fácil ver que
+    o ponto com $t=1.23$ é difícil de calcular de cabeça. {\sl
+      Descubra quais são os dois `$t$'s em que as contas são mais
+      fáceis, desenhe estes dois pontos no plano, e desenhe o resto da
+      reta.}
+
+    \msk
+
+    d) Use este truque dos pontos mais fáceis pra desenhar $r_1$
+    quando $α=0$, quando $α=1$, e quando $α=2$. {\sl Descubra o que
+      muda no desenho da $r_1$ quando o $α$ varia.}
+
+
+}}
+
+\newpage
+
+% «geogebra-2»  (to ".geogebra-2")
+% (c4m231introp 5 "geogebra-2")
+% (c4m231introa   "geogebra-2")
+
+{\bf Seja o seu próprio GeoGebra (2)}
+
+\scalebox{0.6}{\def\colwidth{9.5cm}\firstcol{
+
+    (Continuação do exercício 2...)
+
+    \msk
+
+    e) Use este truque dos pontos mais fáceis pra desenhar $r_2$
+    quando $β=0$, quando $β=1$, e quando $β=2$. {\sl Descubra o que
+      muda no desenho da $r_2$ quando o $β$ varia.}
+
+    \msk
+
+    f) Use este truque dos pontos mais fáceis pra desenhar $r_3$
+    quando $γ=0$, quando $γ=1$, e quando $γ=2$. {\sl Descubra o que
+      muda no desenho da $r_3$ quando o $γ$ varia. IMPORTANTE: aqui os
+      `$t$'s mais fáceis vão ser diferentes para cada valor de $γ$.}
+
+    \msk
+
+    g) Use o truque dos pontos mais fáceis pra desenhar $r_4$ para
+    três valores de $δ$ diferentes -- mas aqui você é que vai ter que
+    escolher os valores de $δ$. IMPORTANTE: descubre três valores de
+    $δ$ que deixam as contas e os desenhos bem fáceis de fazer, e use
+    estes valores. Depois que você tiver feito os desenhos descubra o
+    que no desenho da $r_4$ varia quando o $δ$ varia.
+
+    \msk
+
+    h) Use estes mesmos truques -- todos eles! -- pra desenhar a reta
+    $r_5$ para três valores fáceis de $ε$ e para descobrir o que muda
+    no desenho da $r_5$ quando o $ε$ varia.
+
+}\anothercol{
+
+    \vspace*{0.1cm}
+
+    Digamos que a reta $r_6$ tem esta definição aqui,
+    %
+    $$\begin{array}{rcl}
+        r_6 &=& \setofst{(α,β)+(t-γ)\VEC{δ,ε}}{t∈\R} \\
+    \end{array}
+    $$
+    %
+    e imagine que cada um dos parâmetros $α$, $β$, $γ$, $δ$ e $ε$ pode
+    ser controlado por um slider, como neste trecho do vídeo:
+
+    \ssk
+
+    \Ca{Slogans1:11:32} até 1:11:59
+
+    \bsk
+
+    i) Releia tudo o que você fez até agora várias vezes, até você
+    conseguir visualizar mentalmente, {\sl sem escrever nada e
+      (quase?) sem fazer contas de cabeça,} como a reta $r_6$ muda
+    quando você varia os parâmetros $α$, $β$, $γ$, $δ$ e $ε$.
+
+    \msk
+
+    j) Descubra, {\sl sem escrever nada e quase sem fazer contas de
+      cabeça}, qual é a reta desta forma aqui
+    %
+    $$\begin{array}{rcl}
+        r_7 &=& \setofst{(α,β)+(t-γ)\VEC{δ,ε}}{t∈\R} \\
+    \end{array}
+    $$
+
+    que passa pelo ponto $(2,5)$ quando $t=6$ e pelo ponto
+    $(2+20,5+42)$ quando $t=7$; quando você conseguir uma hipótese
+    bastante boa escreva-a e teste-a.
+
+
+
+
+}}
+
+
+
+
+
+
+\newpage
+
+% «exercicio-3»  (to ".exercicio-3")
+% (c4m231introp 6 "exercicio-3")
+% (c4m231introa   "exercicio-3")
+
+{\bf Exercício 3.}
+
+\scalebox{0.65}{\def\colwidth{10cm}\firstcol{
+
+    Seja $F(t)$ a função do exercício 1, e digamos que
+    $F(t) = (x(t),y(t))$.
+
+    \bsk
+    
+    a) Faça o gráfico da função $x(t)$.
+    
+    b) Faça o gráfico da função $y(t)$.
+    
+    \msk
+    
+    c) Dê definições por casos das funções $x(t)$ e $y(t)$ em formatos
+    parecidos com o da $F_3(t)$ do exercício 1, em que cada número tinha
+    um significado geométrico e olhométrico claro.
+    
+    \msk
+    
+    d) Calcule $\Intt{0}{3}{x(t)}$ e $\Intt{0}{3}{y(t)}$ só olhando pros
+    gráficos delas e contando quadrados e triângulos.
+    
+    \bsk
+    
+    Agora reveja as definições de somas de Riemann, partições, e dos
+    métodos [L] e [R] nestes links aqui...
+    
+    \msk
+    
+    \Ca{2dT178} (def-integral, p.14) Partição preferida
+    
+    \Ca{2fT67} (somas-de-riemann, p.8) métodos a e b
+    
+    \Ca{2fT91} (TFC1-e-TFC2, p.3) A definição de partição
+    
+    \Ca{2eT34} (somas-3, p.13) Métodos L e R
+    
+    \Ca{2fT125} (P2, p.4) Métodos L e R
+
+}\anothercol{
+
+  ...e represente graficamente cada uma
+  
+  destas somas de retângulos:
+  
+  \msk
+  
+  e) $[L]_{\{0,1,2,3\}}$
+  
+  f) $[L]_{\{0,1,1.5, 2,3\}}$
+  
+  g) $[R]_{\{0,1,2,3\}}$
+  
+  h) $[R]_{\{0,1,1.5, 2,3\}}$
+  
+  i) $[L]_{\{0, 0.25, 0.5, \ldots, 3\}}$
+  
+  j) $[R]_{\{0, 0.25, 0.5, \ldots, 3\}}$
+
+}}
+
+\newpage
+
+% «exercicio-4»  (to ".exercicio-4")
+% (c4m231introp 7 "exercicio-4")
+% (c4m231introa   "exercicio-4")
+
+{\bf Exercício 4.}
+
+\scalebox{0.9}{\def\colwidth{10.5cm}\firstcol{
+
+Leia isto aqui:
+
+\Ca{Stew10p15} (p.672: Arc Length)
+
+\msk
+
+a) Calcule o comprimento de arco da curva $F(t)$ entre $t=0$ e $t=3$
+no olhômetro.
+
+\msk
+
+b) Faça um desenho parecido com o da figura 4 dessa página para a
+curva $F(t)$. Considere que $t_0=0$, $t_1=1$, $t_2=2$ e $t_3=3$.
+
+\msk
+
+c) Escreva a sua idéia do item (a) como uma soma de três raizes
+quadradas -- como se você tivesse pego o somatório da última linha
+dessa página e expandido ele.
+
+\msk
+
+d) Agora reescreva o que você fez no item (c) usando o `$\sum$'.
+
+
+
+
+
+}\anothercol{
+}}
+
+
+
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c4mi"
+% ee-tla: "c4m231intro"
+% End:
